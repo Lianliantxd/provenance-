@@ -1,0 +1,52 @@
+{
+  "events": [
+    {
+      "flags": "O_RDONLY",
+      "object": "input.bin",
+      "op": "openat",
+      "process": "CASE_MAIN",
+      "requested": null,
+      "returned": true
+    },
+    {
+      "flags": null,
+      "object": "input.bin",
+      "op": "read",
+      "process": "CASE_MAIN",
+      "requested": 17,
+      "returned": 17
+    },
+    {
+      "flags": null,
+      "object": "input.bin",
+      "op": "close",
+      "process": "CASE_MAIN",
+      "requested": null,
+      "returned": 0
+    },
+    {
+      "flags": "O_WRONLY|O_CREAT|O_TRUNC",
+      "object": "output.bin",
+      "op": "openat",
+      "process": "CASE_MAIN",
+      "requested": null,
+      "returned": true
+    },
+    {
+      "flags": null,
+      "object": "output.bin",
+      "op": "write",
+      "process": "CASE_MAIN",
+      "requested": 16,
+      "returned": 16
+    },
+    {
+      "flags": null,
+      "object": "output.bin",
+      "op": "close",
+      "process": "CASE_MAIN",
+      "requested": null,
+      "returned": 0
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+test_01_time_order_not_value_flow (test_gate_contract.GateContract.test_01_time_order_not_value_flow) ... ok
+test_02_question_types_separate (test_gate_contract.GateContract.test_02_question_types_separate) ... ok
+test_03_abstain_not_nondependence (test_gate_contract.GateContract.test_03_abstain_not_nondependence) ... ok
+test_04_raw_and_projection_separate (test_gate_contract.GateContract.test_04_raw_and_projection_separate) ... ok
+test_05_full_raw_not_claimed_equivalent (test_gate_contract.GateContract.test_05_full_raw_not_claimed_equivalent) ... ok
+test_06_same_binary_cmd_env_paths (test_gate_contract.GateContract.test_06_same_binary_cmd_env_paths) ... ok
+test_07_intervention_control_preserved (test_gate_contract.GateContract.test_07_intervention_control_preserved) ... ok
+test_08_oracle_not_in_predictor (test_gate_contract.GateContract.test_08_oracle_not_in_predictor) ... ok
+test_09_request_id_not_value_proof (test_gate_contract.GateContract.test_09_request_id_not_value_proof) ... ok
+test_10_historical_collection_not_retroactive (test_gate_contract.GateContract.test_10_historical_collection_not_retroactive) ... ok
+test_11_denominators (test_gate_contract.GateContract.test_11_denominators) ... ok
+test_12_same_cost_comparison (test_gate_contract.GateContract.test_12_same_cost_comparison) ... ok
+test_13_not_kernel_sensor (test_gate_contract.GateContract.test_13_not_kernel_sensor) ... ok
+test_14_no_root_or_network (test_gate_contract.GateContract.test_14_no_root_or_network) ... ok
+test_15_random_copy_counterexample_is_synthetic (test_gate_contract.GateContract.test_15_random_copy_counterexample_is_synthetic) ... ok
+test_16_trivial_field_addition_trigger (test_gate_contract.GateContract.test_16_trivial_field_addition_trigger) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.004s
+
+OK

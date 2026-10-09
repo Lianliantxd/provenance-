@@ -1,0 +1,163 @@
+{
+  "mechanism": "application-instrumented pointer identity, not general value taint",
+  "baseline_untraced": [
+    {
+      "run_id": "r01",
+      "wall_us": 939.024,
+      "exit_code": 0
+    },
+    {
+      "run_id": "r02",
+      "wall_us": 639.857,
+      "exit_code": 0
+    },
+    {
+      "run_id": "r03",
+      "wall_us": 602.834,
+      "exit_code": 0
+    },
+    {
+      "run_id": "r04",
+      "wall_us": 567.579,
+      "exit_code": 0
+    },
+    {
+      "run_id": "r05",
+      "wall_us": 555.436,
+      "exit_code": 0
+    },
+    {
+      "run_id": "r06",
+      "wall_us": 539.084,
+      "exit_code": 0
+    },
+    {
+      "run_id": "r07",
+      "wall_us": 521.156,
+      "exit_code": 0
+    },
+    {
+      "run_id": "r08",
+      "wall_us": 530.582,
+      "exit_code": 0
+    },
+    {
+      "run_id": "r09",
+      "wall_us": 521.807,
+      "exit_code": 0
+    },
+    {
+      "run_id": "r10",
+      "wall_us": 520.28,
+      "exit_code": 0
+    },
+    {
+      "run_id": "r11",
+      "wall_us": 531.928,
+      "exit_code": 0
+    },
+    {
+      "run_id": "r12",
+      "wall_us": 528.387,
+      "exit_code": 0
+    }
+  ],
+  "instrumented_untraced": [
+    {
+      "run_id": "r01",
+      "wall_us": 581.542,
+      "exit_code": 0,
+      "observation_bytes": 64,
+      "pointer_equal": true,
+      "raw_observation_sha256": "392c994c5750183bd5e5342578ca353d3ed684b2727b2893b7225435c6799e18"
+    },
+    {
+      "run_id": "r02",
+      "wall_us": 595.472,
+      "exit_code": 0,
+      "observation_bytes": 64,
+      "pointer_equal": false,
+      "raw_observation_sha256": "8f28c57f7f8080e94f18677d2592e16dd3ef4d65e4b174daeecf6547212921b4"
+    },
+    {
+      "run_id": "r03",
+      "wall_us": 587.635,
+      "exit_code": 0,
+      "observation_bytes": 64,
+      "pointer_equal": true,
+      "raw_observation_sha256": "7d6e8e44ecd82444663cba8cf29c46ccf4580465a07b3c5d5c7bed5b5c680181"
+    },
+    {
+      "run_id": "r04",
+      "wall_us": 565.207,
+      "exit_code": 0,
+      "observation_bytes": 64,
+      "pointer_equal": false,
+      "raw_observation_sha256": "df6618d2913ef2c7466854bb9ef47a1dd8d279563e38fd09a23c8124176c2c66"
+    },
+    {
+      "run_id": "r05",
+      "wall_us": 554.496,
+      "exit_code": 0,
+      "observation_bytes": 64,
+      "pointer_equal": true,
+      "raw_observation_sha256": "329954b8bda38d6e511f1ce577889fd02316f3797c30dda9787b61d90983a4ce"
+    },
+    {
+      "run_id": "r06",
+      "wall_us": 555.041,
+      "exit_code": 0,
+      "observation_bytes": 64,
+      "pointer_equal": false,
+      "raw_observation_sha256": "9bc4f5b80b533adf68a91b7942a8b4d3ee3d03b8745a04168d8e1ef730168fb7"
+    },
+    {
+      "run_id": "r07",
+      "wall_us": 551.92,
+      "exit_code": 0,
+      "observation_bytes": 64,
+      "pointer_equal": true,
+      "raw_observation_sha256": "5a72215cd17a17be2fcfa35e864e5c5878a795867a98594f4a603cd302e10883"
+    },
+    {
+      "run_id": "r08",
+      "wall_us": 554.553,
+      "exit_code": 0,
+      "observation_bytes": 64,
+      "pointer_equal": false,
+      "raw_observation_sha256": "1c2b0d79fb3d82286c2dd57016d6a24501e60c6657e37244365c2abecf07d3d2"
+    },
+    {
+      "run_id": "r09",
+      "wall_us": 541.973,
+      "exit_code": 0,
+      "observation_bytes": 64,
+      "pointer_equal": true,
+      "raw_observation_sha256": "1e5db64568836725bdf16c0a38a68ccfb6a844469385781432f696ded2715cdb"
+    },
+    {
+      "run_id": "r10",
+      "wall_us": 560.033,
+      "exit_code": 0,
+      "observation_bytes": 64,
+      "pointer_equal": false,
+      "raw_observation_sha256": "20c64ed0e9ef1abdb7de1ce3941786cf75615b47c5a7ed1f4c8f4c6ec2e7bd33"
+    },
+    {
+      "run_id": "r11",
+      "wall_us": 546.234,
+      "exit_code": 0,
+      "observation_bytes": 64,
+      "pointer_equal": true,
+      "raw_observation_sha256": "c8731c339cd6c23e9a76ed070fc2bc3d42cd51cd26a98f9bb3b2151ec26c417c"
+    },
+    {
+      "run_id": "r12",
+      "wall_us": 544.528,
+      "exit_code": 0,
+      "observation_bytes": 64,
+      "pointer_equal": false,
+      "raw_observation_sha256": "d2d9e6acf1a1004bd7d0f729c6df8f4bc44e7fc351f17c8221386e499bedde08"
+    }
+  ]
+}

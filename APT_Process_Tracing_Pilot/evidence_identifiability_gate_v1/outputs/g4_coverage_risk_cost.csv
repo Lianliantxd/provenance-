@@ -1,0 +1,8 @@
+strategy,Q,histories,correct_determinate,wrong_determinate,determinate_assertions,abstentions,correct_coverage,wrong_determinate_rate,measurement_bytes_total,deployment
+COARSE_REACHABILITY,F1_PAYLOAD_TO_OUTPUT_VALUE_DEPENDENCE,12,0,0,0,12,0/12,NA/0,0,existing metadata only
+ALWAYS_ABSTAIN,F1_PAYLOAD_TO_OUTPUT_VALUE_DEPENDENCE,12,0,0,0,12,0/12,NA/0,0,existing metadata only
+FIXED_RULE_VALUE_LINEAGE,F1_PAYLOAD_TO_OUTPUT_VALUE_DEPENDENCE,12,6,0,6,6,6/12,0/6,768,pre-instrumented application
+FIXED_LOW_COST,F1_PAYLOAD_TO_OUTPUT_VALUE_DEPENDENCE,12,6,0,6,6,6/12,0/6,768,pre-instrumented application
+COLLECT_ALL_VALIDATED_FEASIBLE,F1_PAYLOAD_TO_OUTPUT_VALUE_DEPENDENCE,12,6,0,6,6,6/12,0/6,768,pre-instrumented application
+RANDOM_SAME_BUDGET,F1_PAYLOAD_TO_OUTPUT_VALUE_DEPENDENCE,12,6,0,6,6,6/12,0/6,768,pre-instrumented application
+EXHAUSTIVE_SUBSET_REFERENCE,F1_PAYLOAD_TO_OUTPUT_VALUE_DEPENDENCE,12,6,0,6,6,6/12,0/6,768,pre-instrumented application

@@ -1,0 +1,10 @@
+{"gate": "G0", "action": "read five original papers via publisher/NDSS/DFRWS links", "exit_code": 0, "evidence": "01_CLOSEST_WORK_NOVELTY_MATRIX.md"}
+{"gate": "G1", "action": "inspect uname/id/python/cc/strace/disk and server pwd/realpath/git status", "exit_code": 0, "evidence": "03_SENSOR_AND_ORACLE_MANIFEST.md"}
+{"gate": "G1", "action": "strace -e trace=write own benign /usr/bin/printf child", "exit_code": 0, "evidence": "2 trace lines"}
+{"gate": "G2", "action": "cc -std=c11 -O0 -static -no-pie -o f1 src/f1.c", "exit_code": 0, "evidence": "executable sha256 5784814f2638f8c9b723622b3548fb8ac8e025314de670203e08eed4e9272d63"}
+{"gate": "G2", "action": "freeze 02_PRE_REGISTERED_TASK_AND_CASES.json before formal F1 runs", "exit_code": 0, "evidence": "source/executable hash and projection frozen"}
+{"gate": "G2", "action": "python3 src/run_f1.py on authorized Linux server", "exit_code": 0, "evidence": "12 runs, 1 projected signature, 12 distinct raw SHA256"}
+{"gate": "G3", "action": "cc -std=c11 -O0 -static -no-pie -o f1_pointer_probe src/f1_pointer_probe.c", "exit_code": 0, "evidence": "executable sha256 cdd88b983122a6976b53facb8518d2afb213a72024982af145d12ba492e36ea5"}
+{"gate": "G3", "action": "python3 src/measure_pointer.py on authorized Linux server", "exit_code": 0, "evidence": "12 baseline + 12 instrumented; 64 extra bytes per instrumented run"}
+{"gate": "G4", "action": "python3 src/evaluate_g4.py; oracle read after prediction", "exit_code": 0, "evidence": "outputs/g4_coverage_risk_cost.csv"}
+{"gate": "TEST", "action": "python3 -m unittest discover -s tests -v", "exit_code": 0, "evidence": "16 passed, outputs/engineering_tests.txt"}

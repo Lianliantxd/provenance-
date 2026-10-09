@@ -1,0 +1,13 @@
+# G0：近邻工作与新颖性否决
+
+以下只针对论文原文所支持的范围，不以“未见报道”证明世界范围的新颖性。两篇 2026 年论文是 **NDSS PRISM Workshop**，不是 NDSS 主会。
+
+| 工作、正式出处和原文位置 | 目标 Q／执行单位 | 传感器及在线／离线机制 | 输出事实与日志充分性 | 新观测选择、成本、GT、适用条件及局限 | 与本题真实差别 |
+|---|---|---|---|---|---|
+| [BEEP](https://www.ndss-symposium.org/wp-content/uploads/2017/09/03_1_0.pdf), Lee, Zhang, Xu, NDSS 2013，摘要、§I、§II Fig.1、§III–IV、实验 | 长寿命事件循环中哪个请求/执行单元关联攻击源与结果；程序二进制中的循环迭代为单位 | 事前分析二进制并运行期插桩单元边界、跨单元工作流；调查时融合 OS 与插桩日志 | 缩小虚假进程级依赖，构造更精确候选因果图；并非按任意指定 Q 证明日志充分性 | **不**根据每个 Q 在候选传感器中择取；论文报告低运行开销和额外日志成本，评估包含攻击案例；依赖可识别循环/工作流、预部署插桩，不能修复历史 CDM | 请求划分与长进程伪依赖已被覆盖；剩余可能仅是多 Q/成本约束下的观测组合选择与保守拒答，不是“首次执行单元” |
+| [ProTracer](https://www.ndss-symposium.org/wp-content/uploads/2017/09/protracer-towards-practical-provenance-tracing-alternating-logging-tainting.pdf), Ma, Zhang, Xu, NDSS 2016，摘要、§I Fig.1、方法和§V | APT 中输入源如何传播到结果，单位级 what/how provenance | 运行期内核模块、用户态守护进程，交替记录系统事件与单元级污点传播；非单纯事后补标 | 保留来源传播与调查图，缓解爆炸；覆盖值/状态来源但单位级污点仍粗于字节级 | **不**在给定 Q 后比较不同可部署测量集的最低成本；原文报告服务器平均 <7% 运行开销及日志量；真实工作负载与攻击案例；需事前部署且系统支持内核设施 | 值传播机制已有强先例，不能把固定 lineage 字段包装为新算法；问题条件化选择若无胜过固定规则的证据仍不成立 |
+| [When is logging sufficient?](https://dfrws.org/wp-content/uploads/2025/03/When-is-logging-sufficient-Tracking-event-c_2025_Forensic-Science-Interna.pdf), Olegård, Axelsson, Li, *Forensic Science International: Digital Investigation* 52 (2025), 301877，§3–7、Table 1、Figs.5–8 | 跨应用事件因果和日志可关联性，gretel number 为事件单位 | 应用改造 + 运行期 Nginx/eBPF；事件 ID、前驱 ID 跨消息和系统调用传播 | 可合并局部因果图；明确讨论日志应包含什么；不是任意 Q 的集合可判定性定理 | 不给出多种候选观测的 Q 条件化最小成本搜索；§7 有 10k 请求×两配置、各 10 重的性能测试；Nginx POC，日志大小/部署是约束，应用改造及事前采集必需 | 已非常贴近“充分性/补充因果观测”，所以仅靠请求关联 ID、UNKNOWN 或固定插桩不是剩余贡献；可能剩余的是异构 Q 和约束下的选择与可靠拒答 |
+| [Improv / Minding the Gap](https://www.ndss-symposium.org/wp-content/uploads/prism2026-23.pdf), Kimm, Mishra, Sekar, **NDSS PRISM 2026 Workshop**，摘要、§II、§III、§IV | provenance 身份缺失、伪边和乱序导致的图断裂 | eAudit/eBPF + 用户态在线后处理；向活跃 OS 查询内核上下文，稳定对象标识与排序 | 恢复实体/对象身份和图连通，非内部字节值依赖；不能事后向已经消失的历史进程查询 | 固定恢复机制而非按 Q 选多种测量；报告在 eAudit 上增加 2.4% agent 开销；GT 为受控 benchmark/已知图问题，依赖可信 OS 状态与运行期可达 | 身份/覆盖缺口诊断已被覆盖；不能把静态 CDM 解析等同其在线上下文恢复 |
+| [Windows EDR Provenance](https://www.ndss-symposium.org/wp-content/uploads/prism2026-12.pdf), Liu et al., **NDSS PRISM 2026 Workshop**，摘要、§III Fig.1/Table I、§IV–VI | 低保真 Windows EDR 上能否近似追溯根因/影响 | 已有 EDR 事件的离线保守图和四种降噪启发式；未获取未记录的 read/write 方向 | 保守可达和图降噪；不能把图边当真实值传播；论文使用 CARBANAKv2 仿真攻击场景 | 未按给定 Q 选择新增传感器；成本主要图规模/假依赖，依赖商业 EDR 字段，非本轮 Linux 真实传感器的 GT | 低保真图诊断也已有工作，剩余主张必须是可测的观测选择差距，而非粗图上加 UNKNOWN |
+
+**G0 决策：`G0_PASS_CONDITIONAL`。** 最窄待证伪任务是：给定不同的明确溯源命题 Q、既有审计投影和部署约束，从现实可采集的候选测量中选择能提高正确确定答案覆盖率、同时控制错误断言与采集成本的组合，并可靠拒答。以上五篇已覆盖单元划分、运行期污点、跨应用因果 ID、在线身份恢复和低保真保守图；从这些原文未发现完全相同的“多 Q + 多测量 + 成本约束”的评价，但这只是继续实验的**条件性空间**，不等于创新已证明。若后续只需固定一个廉价字段或固定规则，自动否决独立算法主张。

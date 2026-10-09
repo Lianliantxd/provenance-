@@ -1,0 +1,10 @@
+{
+  "A_event_uuid": "EBFB7595-F532-54F8-B51B-CE074AAAFE37",
+  "B_event_uuid": "58A15EC1-9BE9-5B97-9C54-1F5746A8AD2E",
+  "budgets": [
+    32,
+    128,
+    512
+  ],
+  "rule": "strict_prior_subject_timestamp_groups"
+}

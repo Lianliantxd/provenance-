@@ -1,0 +1,92 @@
+{
+  "freeze_timestamp_utc": "2026-10-09T08:57:11.468756+00:00",
+  "freeze_phase": "before T1/T2 graph search",
+  "report": {
+    "path": "/Users/tianxd/Documents/Transparent Computing E3/TC_Ground_Truth_Report_E3_Update.pdf",
+    "sha256": "021fc642e18544fdcc7bf0a79e2b5aae001f5717d3adbce16744b68934523599",
+    "section": "3.13 CADETS April 12",
+    "page_pdf": "26-28",
+    "page_printed": "23-25",
+    "timezone": "report clock inferred EDT from independent timestamp correspondence; report itself does not explicitly state zone"
+  },
+  "source_artifacts": {
+    "background_manifest_sha256": "cd5a5c3b9738e99228113ca41b997490bf2039a7d7d88464306c3ad6df671248",
+    "background_events_sha256": "7a14cef2726a8071a1987300ee0871bacafa75304ae9c33750f971def73c1ebf",
+    "entity_definitions_sha256": "cc9d1e17cbb7965839a99309fc702f74cf92202e7d67bceb003386ddb7c21d21",
+    "extractor_sha256": "c53bd192f0aa2a4c316235bda0dde0c382dbca2d577ebe5018e712aa895c1331"
+  },
+  "A_evaluation_only": {
+    "event_uuid": "EBFB7595-F532-54F8-B51B-CE074AAAFE37",
+    "timestamp_ns": "1523556023166196193",
+    "host_uuid": "83C8ED1F-5045-DBCD-B39F-918F0DF4F851",
+    "subject_uuid": "11C64B2C-3DC3-11E8-A5CA-3FA3753A265A",
+    "object_uuid": "5F12229C-3E7B-11E8-A5CB-3FA3753A265A",
+    "object2_uuid": "",
+    "operation": "EVENT_CONNECT",
+    "predicate_path": "",
+    "predicate2_path": "",
+    "analysis_src_uuid": "11C64B2C-3DC3-11E8-A5CA-3FA3753A265A",
+    "analysis_dst_uuid": "5F12229C-3E7B-11E8-A5CB-3FA3753A265A",
+    "direction_status": "DIRECT_OPERATION",
+    "sequence_raw": "{\"long\": 3312369}",
+    "raw_offset": "3089881394",
+    "raw_line": "3587345",
+    "raw_sha256": "1f1af48eaedd0b47bc1cb9ace3b8b5f816eace1c5ec4ba6d9e4dc980815b01cf"
+  },
+  "B_query_POI": {
+    "event_uuid": "58A15EC1-9BE9-5B97-9C54-1F5746A8AD2E",
+    "timestamp_ns": "1523556130376185722",
+    "host_uuid": "83C8ED1F-5045-DBCD-B39F-918F0DF4F851",
+    "subject_uuid": "11C64B2C-3DC3-11E8-A5CA-3FA3753A265A",
+    "object_uuid": "5453C813-1A0E-4359-8E1A-41B40943CDC5",
+    "object2_uuid": "",
+    "operation": "EVENT_WRITE",
+    "predicate_path": "tmux-1002",
+    "predicate2_path": "",
+    "analysis_src_uuid": "11C64B2C-3DC3-11E8-A5CA-3FA3753A265A",
+    "analysis_dst_uuid": "5453C813-1A0E-4359-8E1A-41B40943CDC5",
+    "direction_status": "DIRECT_OPERATION",
+    "sequence_raw": "{\"long\": 3321723}",
+    "raw_offset": "3098089940",
+    "raw_line": "3597001",
+    "raw_sha256": "d218e1970b58cc654abddf0d7c37fe50bd1e5f8272ee24ac2cd5d623dd7b9fa8"
+  },
+  "selection": {
+    "B_report_step": "14:02 putfile /tmp/tmux-1002, selected before search as uniquely time/path-matched write",
+    "A_report_step": "roughly 14:00 Drakon loader connection from webserver, earlier than B",
+    "B_time_utc": "2018-04-12T18:02:10.376185722Z",
+    "A_time_utc": "2018-04-12T18:00:23.166196193Z",
+    "candidate_rank": [
+      {
+        "rank": 1,
+        "candidate": "14:02 putfile tmux-1002",
+        "decision": "selected B",
+        "basis": "unique EVENT_WRITE with tmux-1002 path and report-aligned minute"
+      },
+      {
+        "rank": 2,
+        "candidate": "14:37 micro scan",
+        "decision": "excluded",
+        "basis": "no EVENT_CONNECT in report-aligned minute to listed target IPs on ports 22/6000"
+      },
+      {
+        "rank": 3,
+        "candidate": "execfile /tmp/test",
+        "decision": "excluded",
+        "basis": "four EVENT_EXECUTE records across 18:32-18:35 UTC; report gives no exact minute"
+      }
+    ]
+  },
+  "evaluation": {
+    "T1_inputs": "B only; A and report labels withheld from T1 process",
+    "T2_inputs": "A and B; diagnostic, no tuning of T1",
+    "budgets": [
+      32,
+      128,
+      512
+    ],
+    "boundary": "17:59:00 UTC left edge of one-member 40-minute graph",
+    "timeline_rule": "strictly earlier timestamp group of same observed subject; cross-event link is MODEL_POSSIBLE_DEPENDENCY, never direct flow",
+    "same_timestamp_rule": "no order inferred within a nanosecond timestamp group"
+  }
+}

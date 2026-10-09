@@ -1,0 +1,12 @@
+{
+  "event_rows": 178399,
+  "direct_edge_rows": 50757,
+  "indexes": [
+    "event_uuid primary key",
+    "subject_uuid,timestamp_ns",
+    "object_uuid,timestamp_ns",
+    "timestamp_ns"
+  ],
+  "derived_process_links": "queried only as adjacent strict timestamp groups; not materialized all-pairs",
+  "labels_used": false
+}

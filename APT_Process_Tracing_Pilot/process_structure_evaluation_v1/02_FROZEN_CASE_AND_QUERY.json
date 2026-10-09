@@ -1,0 +1,60 @@
+{
+  "case_id": "CADETS_E3_NGINX_BACKDOOR_12",
+  "case_role": "PREVIOUSLY_INSPECTED_DEVELOPMENT",
+  "attack_episode_id": "Nginx_Backdoor_12",
+  "host_id": "83C8ED1F-5045-DBCD-B39F-918F0DF4F851",
+  "sensor": "CDM18 FreeBSD",
+  "attack_window_utc": [
+    "2018-04-12T17:59:00Z",
+    "2018-04-12T18:39:00Z"
+  ],
+  "background_inventory_scope": "one preexisting archive member, all Event records in report/publisher time window",
+  "archive": "/Users/tianxd/Documents/Transparent Computing E3/CADETS/ta1-cadets-e3-official-2.json.tar.gz",
+  "archive_sha256": "8d2f090d372cfb0d21bfb72dba6824884ce7870b5c8d24df34e9081b9b09c793",
+  "archive_member": "ta1-cadets-e3-official-2.json",
+  "prior_graph_window_utc": [
+    "2018-04-12T18:00:20Z",
+    "2018-04-12T18:00:30Z"
+  ],
+  "prior_graph_event_csv": "APT_Process_Tracing_Pilot/results/cadets_20180412_q1/events.csv",
+  "prior_graph_event_csv_sha256": "100538fcff4cdf48664a7605078a07c1cd371c89c69b0f802b71f7c962b7efe7",
+  "prior_frozen_pool": "APT_Process_Tracing_Pilot/comparison_v1/outputs/frozen_pool.json",
+  "prior_frozen_pool_sha256": "310409a19814a1a06009f9da059a5cb872c8fb2644a373896463b84f3ecef2f1",
+  "parser_sha256": "7ec67c0816435c22c5586ec2e0c6117906e6fb424d2893aabdaf94c7a45251b9",
+  "graph_search_sha256": "d38765cdd0debc072390db00d84d17868c3cdaae8e760c10f594c0edc8a8ec04",
+  "selector_sha256": "71f141b7870c56ea1a3b0fe78673692b62128b43004bc83062901a77943a5c7d",
+  "poi_event_id": "EBFB7595-F532-54F8-B51B-CE074AAAFE37",
+  "poi_time_utc": "2018-04-12T18:00:23.166196+00:00",
+  "poi_source_report": "APT_Root_FirstCase_Audit/reports/cadets_20180412_report_excerpt.txt",
+  "poi_source_report_sha256": "af2bb2f552c99e5af1320c4283ead6e1c2e1d98edfe360836ab32f87e28f868e",
+  "candidate_scope": "preexisting 196-event supported-operation ten-second graph; POI backward search produced 162 candidate events without using labels",
+  "search_limits": {
+    "max_events": 500,
+    "max_states": 1000,
+    "max_depth": 4
+  },
+  "output_budget_events": 162,
+  "alternative_path_limit": 3,
+  "reference_sources": {
+    "repo": "https://github.com/ubc-provenance/PIDSMaker",
+    "commit": "438a05a7c55256f639e5b5945cf4828fe3ee078e",
+    "files": {
+      "reapr": {
+        "path": "research/sources/PIDSMaker/Ground_Truth/reapr/E3-CADETS/node_Nginx_Backdoor_12.csv",
+        "sha256": "03486125bc23c64a772b373f8a8358f204aa4af4930ec0c0879737eb710cc495"
+      },
+      "orthrus": {
+        "path": "research/sources/PIDSMaker/Ground_Truth/orthrus/E3-CADETS/node_Nginx_Backdoor_12.csv",
+        "sha256": "41b60345dcb551b5899b11fb116dc240493931a97ea3acd92c19d9a8a7730e88"
+      }
+    },
+    "reapr_method_repo_commit": "32babb5613f7d8c4c9f7ab0a0e602da64521f149",
+    "reapr_method_readme_sha256": "c61f01aa1dc8882f70a5cc650bad7dd17a668d702accce0bc1233d00a2dac616",
+    "orthrus_ground_truth_repo_commit": "59d2d1a99ca8a6f36a893d3795d4760e6da79150",
+    "orthrus_original_csv_byte_match": true,
+    "reapr_original_csv_byte_match": "UNVERIFIED"
+  },
+  "reference_usage": "post-search evaluation only; not POI selection, path search, scoring, or budget choice",
+  "structural_gt": "NONE_VERIFIED",
+  "independent_test": false
+}

@@ -1,0 +1,38 @@
+{
+  "reapr": {
+    "label_file": "/Users/tianxd/Documents/ChatGPT/4/research/sources/PIDSMaker/Ground_Truth/reapr/E3-CADETS/node_Nginx_Backdoor_12.csv",
+    "sha256": "03486125bc23c64a772b373f8a8358f204aa4af4930ec0c0879737eb710cc495",
+    "rows": 655,
+    "unique_uuids": 655,
+    "entity_types": {
+      "subject": 655
+    },
+    "raw_window_observed": 102,
+    "cdm_definitions_matched": 102,
+    "type_conflicts": 0,
+    "in_graph": 2,
+    "in_candidate_pool": 1,
+    "poi_anchors": 1,
+    "nonpoi_candidate": 0,
+    "unobserved_in_member_window": 553
+  },
+  "orthrus": {
+    "label_file": "/Users/tianxd/Documents/ChatGPT/4/research/sources/PIDSMaker/Ground_Truth/orthrus/E3-CADETS/node_Nginx_Backdoor_12.csv",
+    "sha256": "41b60345dcb551b5899b11fb116dc240493931a97ea3acd92c19d9a8a7730e88",
+    "rows": 43,
+    "unique_uuids": 43,
+    "entity_types": {
+      "file": 13,
+      "subject": 24,
+      "netflow": 6
+    },
+    "raw_window_observed": 43,
+    "cdm_definitions_matched": 43,
+    "type_conflicts": 0,
+    "in_graph": 5,
+    "in_candidate_pool": 5,
+    "poi_anchors": 2,
+    "nonpoi_candidate": 3,
+    "unobserved_in_member_window": 0
+  }
+}

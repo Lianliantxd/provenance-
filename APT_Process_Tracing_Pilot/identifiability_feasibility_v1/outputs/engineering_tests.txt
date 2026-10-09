@@ -1,0 +1,17 @@
+test_anomaly_only_not_background_recovery (test_semantics.FeasibilityGuards.test_anomaly_only_not_background_recovery) ... ok
+test_collection_gap_distinct_from_budget (test_semantics.FeasibilityGuards.test_collection_gap_distinct_from_budget) ... ok
+test_duplicate_event_counted_once (test_semantics.FeasibilityGuards.test_duplicate_event_counted_once) ... ok
+test_future_event_not_upstream (test_semantics.FeasibilityGuards.test_future_event_not_upstream) ... ok
+test_hash_not_causality (test_semantics.FeasibilityGuards.test_hash_not_causality) ... ok
+test_infeasible_budget_not_strategy_failure (test_semantics.FeasibilityGuards.test_infeasible_budget_not_strategy_failure) ... ok
+test_no_edge_precision_without_closed_world_gt (test_semantics.FeasibilityGuards.test_no_edge_precision_without_closed_world_gt) ... ok
+test_pid_and_process_key_reuse (test_semantics.FeasibilityGuards.test_pid_and_process_key_reuse) ... ok
+test_reference_excluded_from_selector (test_semantics.FeasibilityGuards.test_reference_excluded_from_selector) ... ok
+test_same_subject_not_internal_flow (test_semantics.FeasibilityGuards.test_same_subject_not_internal_flow) ... ok
+test_same_timestamp_unresolved (test_semantics.FeasibilityGuards.test_same_timestamp_unresolved) ... ok
+test_wrong_poi_not_credited (test_semantics.FeasibilityGuards.test_wrong_poi_not_credited) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.002s
+
+OK

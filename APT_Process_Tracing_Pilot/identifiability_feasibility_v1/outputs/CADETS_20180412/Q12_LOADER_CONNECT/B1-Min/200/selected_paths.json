@@ -1,0 +1,16 @@
+{
+  "paths": [
+    {
+      "poi": "EBFB7595-F532-54F8-B51B-CE074AAAFE37",
+      "event_ids": [
+        "EBFB7595-F532-54F8-B51B-CE074AAAFE37",
+        "21944BC3-1FFB-59C4-8B2E-18AC7F2020CE"
+      ]
+    }
+  ],
+  "event_ids": [
+    "21944BC3-1FFB-59C4-8B2E-18AC7F2020CE",
+    "EBFB7595-F532-54F8-B51B-CE074AAAFE37"
+  ],
+  "pool_hash": "81cc6b86d60b064a1822e9ae188ceff3e4275a06f88a83a7a185f8310008a4e3"
+}

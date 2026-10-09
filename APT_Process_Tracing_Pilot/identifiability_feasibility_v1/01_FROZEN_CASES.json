@@ -1,0 +1,98 @@
+{
+  "freeze_time_utc": "2026-10-09T03:17:57.724247+00:00",
+  "cases": [
+    {
+      "case_id": "CADETS_20180412",
+      "attack_episode_id": "E3_CADETS_APR12",
+      "campaign_relation": "04-13 same campaign, excluded as independent test",
+      "case_role": "DEVELOPMENT",
+      "host": "83C8ED1F-5045-DBCD-B39F-918F0DF4F851",
+      "sensor": "CADETS CDM18",
+      "source_files": [
+        "/Users/tianxd/Documents/Transparent Computing E3/CADETS/ta1-cadets-e3-official-2.json.tar.gz",
+        "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/results/cadets_20180412_q1/events.csv"
+      ],
+      "file_hashes": {
+        "/Users/tianxd/Documents/Transparent Computing E3/CADETS/ta1-cadets-e3-official-2.json.tar.gz": "8d2f090d372cfb0d21bfb72dba6824884ce7870b5c8d24df34e9081b9b09c793",
+        "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/results/cadets_20180412_q1/events.csv": "100538fcff4cdf48664a7605078a07c1cd371c89c69b0f802b71f7c962b7efe7",
+        "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/comparison_v1/outputs/frozen_pool.json": "310409a19814a1a06009f9da059a5cb872c8fb2644a373896463b84f3ecef2f1",
+        "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/comparison_v1/evaluation_refs/reference_events.csv": "9dc84afdc0314db7a3857d497ef1de6f49576769f48996d42ec4a9b3de1e89b1"
+      },
+      "time_window_utc": [
+        "2018-04-12T18:00:20+00:00",
+        "2018-04-12T18:00:30+00:00"
+      ],
+      "coverage_gaps": [
+        "10-second local extract, not full attack",
+        "equal timestamps lack a trusted ordering rule",
+        "process-internal information flow unobserved"
+      ],
+      "parser_version": "7ec67c0816435c22c5586ec2e0c6117906e6fb424d2893aabdaf94c7a45251b9",
+      "graph_version": "d38765cdd0debc072390db00d84d17868c3cdaae8e760c10f594c0edc8a8ec04",
+      "poi_ids": [
+        "EBFB7595-F532-54F8-B51B-CE074AAAFE37",
+        "E1EEC283-AA82-52C9-9677-498A5B9BE13B"
+      ],
+      "poi_anchor_events": [
+        "EBFB7595-F532-54F8-B51B-CE074AAAFE37",
+        "E1EEC283-AA82-52C9-9677-498A5B9BE13B"
+      ],
+      "reference_documents": [
+        "/Users/tianxd/Documents/ChatGPT/4/APT_Root_FirstCase_Audit/reports/cadets_20180412_report_excerpt.txt",
+        "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/comparison_v1/evaluation_refs/reference_events.csv"
+      ],
+      "selection_reason": "existing report-mapped development case; selected before this run",
+      "excluded_periods": [
+        "2018-04-13 as independent episode"
+      ]
+    },
+    {
+      "case_id": "NODLINK_WS12",
+      "attack_episode_id": "NODLINK_SIMULATED_WS12",
+      "campaign_relation": "independent simulated execution from CADETS",
+      "case_role": "DEVELOPMENT_PRIORLY_INSPECTED",
+      "host": "192.168.0.95",
+      "sensor": "Windows ETW-derived JSON anomaly channel",
+      "source_files": [
+        "/Users/tianxd/Downloads/SimulatedWS12/hw20/anomaly.json"
+      ],
+      "file_hashes": {
+        "/Users/tianxd/Downloads/SimulatedWS12/hw20/anomaly.json": "7664b3f8a4f8ba4b374f63b0dc8f23f39772ea52eda8ff0e6a5ebd7844f0edce",
+        "/Users/tianxd/Documents/ChatGPT/4/APT_Root_Phase3_5/CASE_NODLINK_WS12/official_annotation_excerpt.txt": "37068b9e3cf1694ad861c6f5a4bc2c036f853efa0b1ba7bf7ec31f5639bfd5c9",
+        "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/identifiability_feasibility_v1/outputs/ws12_scope.json": "2dc769b5360c08a4abcf2359a9851dc944ece1f8f9ecd1df2a4f264672a76ea2"
+      },
+      "time_window_utc": "NA:ETW MSec relative time; absolute clock origin inferred, not verified",
+      "time_window_msec": [
+        117000,
+        145000
+      ],
+      "coverage_gaps": [
+        "only anomaly.json present; no benign/background channel",
+        "initial intrusion precedes selected interval",
+        "file contents and versions unavailable",
+        "UniqueProcessKey alone reused across different PIDs"
+      ],
+      "parser_version": "238d78828633de982a15a472efd24db8fb1165ce76af22b15ef7508303a8e521",
+      "graph_version": "238d78828633de982a15a472efd24db8fb1165ce76af22b15ef7508303a8e521",
+      "poi_ids": [
+        "ws12@15375641",
+        "ws12@1809315"
+      ],
+      "poi_anchor_events": [
+        "ws12@15375641",
+        "ws12@1809315"
+      ],
+      "reference_documents": [
+        "/Users/tianxd/Documents/ChatGPT/4/APT_Root_Phase3_5/CASE_NODLINK_WS12/official_annotation_excerpt.txt"
+      ],
+      "selection_reason": "independent published execution with raw Process/Start and file operations; selected by data/reference availability, not method outcome",
+      "excluded_periods": [
+        "outside bounded A1-A2 interval",
+        "other attack episodes"
+      ]
+    }
+  ],
+  "ws12_scope_count": 34,
+  "no_method_output_inspected_this_run_before_freeze": true,
+  "case_b_prior_output_exposure": "Root_Phase3_5 mappings already inspected; not a held-out test"
+}

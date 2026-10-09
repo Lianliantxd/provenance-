@@ -1,0 +1,20 @@
+[
+  {
+    "poi": "E1EEC283-AA82-52C9-9677-498A5B9BE13B",
+    "fresh_events": 11,
+    "frozen_events": 11,
+    "exact_event_set_match": true,
+    "fresh_states": 10,
+    "fresh_truncated": false,
+    "fresh_paths": 9
+  },
+  {
+    "poi": "EBFB7595-F532-54F8-B51B-CE074AAAFE37",
+    "fresh_events": 162,
+    "frozen_events": 162,
+    "exact_event_set_match": true,
+    "fresh_states": 160,
+    "fresh_truncated": false,
+    "fresh_paths": 315
+  }
+]

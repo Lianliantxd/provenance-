@@ -1,0 +1,14 @@
+{
+  "result_rows": 54,
+  "failure_rows": 6,
+  "targeted_raw_verification": {
+    "raw_refs_checked": 9,
+    "raw_refs_matched": 9,
+    "write_events": 1,
+    "read_events": 1
+  },
+  "output_unique_raw_refs_checked": 166,
+  "output_unique_raw_refs_matched": 166,
+  "ws_candidate_edges": 29,
+  "run_time_utc": "2026-10-09T03:26:51.554465+00:00"
+}

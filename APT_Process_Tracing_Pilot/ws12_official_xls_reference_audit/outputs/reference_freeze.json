@@ -1,0 +1,72 @@
+{
+  "frozen_utc": "2026-10-09T03:53:01.882737+00:00",
+  "official_repo": "https://github.com/PKU-ASAL/Simulated-Data",
+  "official_branch": "main",
+  "official_commit": "434dbe2d0be88bd034c4af0c819aed641d2b3758",
+  "official_files": {
+    "attack_analysis.xls": {
+      "local_file": "/Users/tianxd/Documents/ChatGPT/4/research/repos/nodlink/doc/SimulatedWS12-attack/attack_analysis.xls",
+      "sha256": "394e31cd95f7ff1ab1ea4cae32d1f235169d955cb5f2a14cd63294f3a307850b",
+      "bytes": 22528,
+      "official_same_commit_match": true
+    },
+    "attack_annotation/A1.txt": {
+      "local_file": "/Users/tianxd/Documents/ChatGPT/4/research/repos/nodlink/doc/SimulatedWS12-attack/attack_annotation/A1.txt",
+      "sha256": "75af4b52d76c7baacf8aeaed106191d7b29913b3fc9c189596d0bb8ce7b09936",
+      "bytes": 139,
+      "official_same_commit_match": true
+    },
+    "attack_annotation/A2.txt": {
+      "local_file": "/Users/tianxd/Documents/ChatGPT/4/research/repos/nodlink/doc/SimulatedWS12-attack/attack_annotation/A2.txt",
+      "sha256": "730e040bba1de43ab895bb5c699c3adcb1123a7c4bac68d84a76b6b59f555f7e",
+      "bytes": 345,
+      "official_same_commit_match": true
+    },
+    "attack_annotation/A3.txt": {
+      "local_file": "/Users/tianxd/Documents/ChatGPT/4/research/repos/nodlink/doc/SimulatedWS12-attack/attack_annotation/A3.txt",
+      "sha256": "5b5db45ab9ff9380f2ae4e3c84378cea0ddd82af677a997b74ac139caeb88742",
+      "bytes": 183,
+      "official_same_commit_match": true
+    },
+    "attack_annotation/A4.txt": {
+      "local_file": "/Users/tianxd/Documents/ChatGPT/4/research/repos/nodlink/doc/SimulatedWS12-attack/attack_annotation/A4.txt",
+      "sha256": "bec0bc533a9712bd0e94a5c7bd98dd9534d9c166506833b8b4ddf2601b0fdb35",
+      "bytes": 680,
+      "official_same_commit_match": true
+    },
+    "attack_annotation/A5.txt": {
+      "local_file": "/Users/tianxd/Documents/ChatGPT/4/research/repos/nodlink/doc/SimulatedWS12-attack/attack_annotation/A5.txt",
+      "sha256": "e3baaac69efda0c6a65119147b4d09802306b107ea446f158203daa83c8f3ce7",
+      "bytes": 163,
+      "official_same_commit_match": true
+    },
+    "attack_annotation/A6.txt": {
+      "local_file": "/Users/tianxd/Documents/ChatGPT/4/research/repos/nodlink/doc/SimulatedWS12-attack/attack_annotation/A6.txt",
+      "sha256": "463c93656dd30f5023d43490d473cb9e1411c84c7f6b21638c5cf404a46a5010",
+      "bytes": 199,
+      "official_same_commit_match": true
+    },
+    "attack_annotation/A_alltime.txt": {
+      "local_file": "/Users/tianxd/Documents/ChatGPT/4/research/repos/nodlink/doc/SimulatedWS12-attack/attack_annotation/A_alltime.txt",
+      "sha256": "7e221709caafe7243bcda51381137c7c9d0bdc46de2ec7532f73599ad4edc15e",
+      "bytes": 104,
+      "official_same_commit_match": true
+    }
+  },
+  "raw_log_sha256": "7664b3f8a4f8ba4b374f63b0dc8f23f39772ea52eda8ff0e6a5ebd7844f0edce",
+  "previous_graph_version_sha256": "71f141b7870c56ea1a3b0fe78673692b62128b43004bc83062901a77943a5c7d",
+  "previous_candidate_scope_sha256": "2dc769b5360c08a4abcf2359a9851dc944ece1f8f9ecd1df2a4f264672a76ea2",
+  "poi_ids": [
+    "ws12@1809315",
+    "ws12@15375641"
+  ],
+  "poi_anchor_msec": [
+    "127919.3304",
+    "143906.2601"
+  ],
+  "candidate_scope": "previous anomaly-only Process/Start and agent.exe operations, 117000-145000 MSec",
+  "case_role": "DEVELOPMENT_PRIORLY_INSPECTED",
+  "reference_file_sha256": "1f6132251abdf0593e445db78bacf81df532e84a2d3884051be8188f724e8b57",
+  "candidate_rows": 12,
+  "qualifying_published_event_pairs": 0
+}

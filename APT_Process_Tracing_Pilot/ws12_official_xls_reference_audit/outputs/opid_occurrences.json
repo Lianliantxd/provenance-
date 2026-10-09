@@ -1,0 +1,116 @@
+{
+  "published": [
+    {
+      "raw_offset": 1807171,
+      "raw_line": 5195,
+      "raw_sha256": "7d2b4f52a52da403382f1ef2c5cfbe19acc38a6023ae7a1d1343d87442fcd96c",
+      "msec": "127916.8913",
+      "event": "Process/Stop",
+      "pid": "4612",
+      "parent_pid": "4,016",
+      "process_name": "",
+      "image_name": "agent.exe"
+    }
+  ],
+  "later_raw": [
+    {
+      "raw_offset": 1590222,
+      "raw_line": 4575,
+      "raw_sha256": "f623d106563629ab0c2ed53580bdd72cdafa3b44001513cb4b7d4d2094a07687",
+      "msec": "127854.1959",
+      "event": "Process/Start",
+      "pid": "1996",
+      "parent_pid": "4452",
+      "process_name": "cmd",
+      "image_name": "cmd.exe"
+    },
+    {
+      "raw_offset": 15345869,
+      "raw_line": 47294,
+      "raw_sha256": "32d2bc6e43220ab09e2ba5d44d0893560c5b698cbbb8141f4c564421cd588226",
+      "msec": "143891.0271",
+      "event": "Process/Start",
+      "pid": "4360",
+      "parent_pid": "1996",
+      "process_name": "cmd",
+      "image_name": "cmd.exe"
+    },
+    {
+      "raw_offset": 15375641,
+      "raw_line": 47386,
+      "raw_sha256": "471ce450f87742a8eeb4999439b6fd73aa5ca1adc95c2357bf5a12350e029b5d",
+      "msec": "143906.2601",
+      "event": "Process/Start",
+      "pid": "4128",
+      "parent_pid": "4360",
+      "process_name": "agent",
+      "image_name": "agent.exe"
+    },
+    {
+      "raw_offset": 15391438,
+      "raw_line": 47434,
+      "raw_sha256": "6ce7dfcc7a54c297a1c6e373ae679d43c3b74fd3ddfdf5ca605b58b40b498355",
+      "msec": "143907.8340",
+      "event": "Process/Stop",
+      "pid": "4360",
+      "parent_pid": "1,996",
+      "process_name": "",
+      "image_name": "cmd.exe"
+    },
+    {
+      "raw_offset": 15393399,
+      "raw_line": 47439,
+      "raw_sha256": "192ebe911a3dc6063963cada5275a5984d18c3d2c78eb30cdd35107abf72f3bc",
+      "msec": "143909.0293",
+      "event": "Process/Stop",
+      "pid": "1996",
+      "parent_pid": "4,452",
+      "process_name": "",
+      "image_name": "cmd.exe"
+    },
+    {
+      "raw_offset": 21160075,
+      "raw_line": 64244,
+      "raw_sha256": "0f5cf2461846f2fb84bcf4b8192e5625255ce0e644793ab02056a781d6789b54",
+      "msec": "173953.4470",
+      "event": "Process/Start",
+      "pid": "3740",
+      "parent_pid": "4128",
+      "process_name": "powershell",
+      "image_name": "powershell.exe"
+    },
+    {
+      "raw_offset": 21904673,
+      "raw_line": 66316,
+      "raw_sha256": "14b4a52bcc9a2eaf260094757a57e06013e56ef42cf017713c74432821038b5a",
+      "msec": "174081.8782",
+      "event": "Process/Start",
+      "pid": "4572",
+      "parent_pid": "3740",
+      "process_name": "cmd",
+      "image_name": "cmd.exe"
+    },
+    {
+      "raw_offset": 21910714,
+      "raw_line": 66332,
+      "raw_sha256": "71462eaf94c4ba330a09b51b88e26190eeaa5904d3cd472bc8c75a2c0157d476",
+      "msec": "174084.9427",
+      "event": "Process/Stop",
+      "pid": "4572",
+      "parent_pid": "3,740",
+      "process_name": "",
+      "image_name": "cmd.exe"
+    },
+    {
+      "raw_offset": 21937073,
+      "raw_line": 66405,
+      "raw_sha256": "1ea829578d28667c43f7a61ae6d48b19a7d47e876c2d1a05237f3c58700b7bed",
+      "msec": "174091.2168",
+      "event": "Process/Stop",
+      "pid": "3740",
+      "parent_pid": "4,128",
+      "process_name": "",
+      "image_name": "powershell.exe"
+    }
+  ]
+}

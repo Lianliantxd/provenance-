@@ -1,0 +1,7 @@
+{"step": "previous_decisions_read", "exit_code": 0, "result": "B2/WS12/CADETS/G0-G4 retained; no rerun"}
+{"step": "official_atlas_commit_and_tree", "exit_code": 0, "result": "commit e46096d1947e4f059e73a0ac2b9a9707812fd4bc; four ZIP Git blobs inspected"}
+{"step": "atlas_zip_download_and_central_directory", "exit_code": 0, "result": "M1 raw/experiment and S1 raw/experiment read only in temporary storage; no full extraction"}
+{"step": "atlas_author_labels_read", "exit_code": 0, "result": "M1 h1 4 strings; M1 h2 3 strings; S1 3 strings; no execution-specific timed step record"}
+{"step": "d0_audit_zip_script", "exit_code": 0, "result": "outputs/package_audit.json; M1 literal line scan is not event mapping"}
+{"step": "local_and_server_E5_search", "exit_code": 0, "result": "No E5 raw CDM or ATLAS ZIP in stated search scope; E5 report exists locally"}
+{"step": "D0_gate", "exit_code": 0, "result": "all three rejected; T1/T2 not run"}

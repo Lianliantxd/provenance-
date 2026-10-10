@@ -1,0 +1,215 @@
+{
+  "M1_raw_literal_scan": {
+    "M1/h1/logs/dns": {
+      "first_literal_line_ref": {
+        "0xalsaheel.com": {
+          "byte_offset": 952024,
+          "line": 3191,
+          "line_sha256": "8fdb0ab2df103045b569f94541b98bd299c178e96d0a6a07e90518334a60d7e6"
+        },
+        "192.168.223.3": {
+          "byte_offset": 952138,
+          "line": 3192,
+          "line_sha256": "47776f841aa9f021203e8dbba7fca188d607a8b5b18c0069d4778520bf21ef08"
+        },
+        "aalsahee/index.html": null,
+        "payload.exe": null
+      },
+      "literal_line_match_counts": {
+        "0xalsaheel.com": 14,
+        "192.168.223.3": 8,
+        "aalsahee/index.html": 0,
+        "payload.exe": 0
+      },
+      "physical_lines": 3546,
+      "uncompressed_bytes": 1072236
+    },
+    "M1/h1/logs/firefox.txt": {
+      "first_literal_line_ref": {
+        "0xalsaheel.com": {
+          "byte_offset": 617896104,
+          "line": 5461800,
+          "line_sha256": "6373e4890cc702629720a8e7f6dc5574a4fff8736882b6bbbfb4ec502f114ffb"
+        },
+        "192.168.223.3": {
+          "byte_offset": 618459234,
+          "line": 5466729,
+          "line_sha256": "1a2cbf9e8ccbf44fe8d88030796585a54a62a99e52949a4c6b10ce1eb1b83d4e"
+        },
+        "aalsahee/index.html": null,
+        "payload.exe": null
+      },
+      "literal_line_match_counts": {
+        "0xalsaheel.com": 886,
+        "192.168.223.3": 8,
+        "aalsahee/index.html": 0,
+        "payload.exe": 0
+      },
+      "physical_lines": 5817684,
+      "uncompressed_bytes": 661211095
+    },
+    "M1/h1/logs/security_events.txt": {
+      "first_literal_line_ref": {
+        "0xalsaheel.com": null,
+        "192.168.223.3": {
+          "byte_offset": 12108107,
+          "line": 419636,
+          "line_sha256": "d93e0b5ea930c234708e2a57d76dc0fe35256e1aacc5023ca0042a692320d4b7"
+        },
+        "aalsahee/index.html": null,
+        "payload.exe": {
+          "byte_offset": 12107932,
+          "line": 419630,
+          "line_sha256": "87c0cbe3c4658ded0bf559ed01c8b539e66b904454199866102f7b8fc3116af7"
+        }
+      },
+      "literal_line_match_counts": {
+        "0xalsaheel.com": 0,
+        "192.168.223.3": 202,
+        "aalsahee/index.html": 0,
+        "payload.exe": 4293
+      },
+      "physical_lines": 2797259,
+      "uncompressed_bytes": 82380020
+    },
+    "M1/h2/logs/dns": {
+      "first_literal_line_ref": {
+        "0xalsaheel.com": {
+          "byte_offset": 1028990,
+          "line": 3355,
+          "line_sha256": "23cfcc76a90fa7bacd6addf9c60436114b4c7f7d1729fb309be65f22927a43df"
+        },
+        "192.168.223.3": {
+          "byte_offset": 0,
+          "line": 1,
+          "line_sha256": "41a2460f5cc1ebfb46941db6ce5f3129ee45d8d5384b6ed589d9a8775b91faee"
+        },
+        "aalsahee/index.html": null,
+        "payload.exe": null
+      },
+      "literal_line_match_counts": {
+        "0xalsaheel.com": 14,
+        "192.168.223.3": 28,
+        "aalsahee/index.html": 0,
+        "payload.exe": 0
+      },
+      "physical_lines": 3688,
+      "uncompressed_bytes": 1142486
+    },
+    "M1/h2/logs/firefox.txt": {
+      "first_literal_line_ref": {
+        "0xalsaheel.com": null,
+        "192.168.223.3": {
+          "byte_offset": 7049110,
+          "line": 60574,
+          "line_sha256": "0de036685c330b9d4e4b89ce97b4d290a3ae3839f1b175daab564c5615c70855"
+        },
+        "aalsahee/index.html": null,
+        "payload.exe": {
+          "byte_offset": 7098579,
+          "line": 60974,
+          "line_sha256": "f23c8fb24dd973db72ead97c8ec06b1fef611b0e4d1d5367584379da105cbd46"
+        }
+      },
+      "literal_line_match_counts": {
+        "0xalsaheel.com": 0,
+        "192.168.223.3": 16,
+        "aalsahee/index.html": 0,
+        "payload.exe": 7
+      },
+      "physical_lines": 69490,
+      "uncompressed_bytes": 8098742
+    },
+    "M1/h2/logs/security_events.txt": {
+      "first_literal_line_ref": {
+        "0xalsaheel.com": null,
+        "192.168.223.3": {
+          "byte_offset": 12104520,
+          "line": 421371,
+          "line_sha256": "d93e0b5ea930c234708e2a57d76dc0fe35256e1aacc5023ca0042a692320d4b7"
+        },
+        "aalsahee/index.html": null,
+        "payload.exe": {
+          "byte_offset": 9651076,
+          "line": 338411,
+          "line_sha256": "41ea25814ba4651bbae2fd26a110cfdc8aa765359bbe502550dd68e76a42e86d"
+        }
+      },
+      "literal_line_match_counts": {
+        "0xalsaheel.com": 0,
+        "192.168.223.3": 116,
+        "aalsahee/index.html": 0,
+        "payload.exe": 4641
+      },
+      "physical_lines": 3359985,
+      "uncompressed_bytes": 97361365
+    }
+  },
+  "archives": {
+    "M1_experiment": {
+      "archive_sha256": "dc23ac3fecca7e505f68ad7132ae5c9e75cd7d28328be3479ea885a4c04acd79",
+      "compressed_file_bytes": 61929024,
+      "malicious_label_members": [
+        {
+          "bytes": 63,
+          "member": "M1/h1/testing_logs/M1-CVE-2015-5122_windows_h1/malicious_labels.txt",
+          "sha256": "00bfd83fdf403639393114070dbd032f9d4eed876fa4e8a947f0ce8b83dfd5f2"
+        },
+        {
+          "bytes": 42,
+          "member": "M1/h1/testing_logs/M1-CVE-2015-5122_windows_h2/malicious_labels.txt",
+          "sha256": "4a503df785dab84f61a7b2650534bf6d7c7e1ba295d963ab8acfcadf02d4d499"
+        },
+        {
+          "bytes": 63,
+          "member": "M1/h2/testing_logs/M1-CVE-2015-5122_windows_h1/malicious_labels.txt",
+          "sha256": "00bfd83fdf403639393114070dbd032f9d4eed876fa4e8a947f0ce8b83dfd5f2"
+        },
+        {
+          "bytes": 42,
+          "member": "M1/h2/testing_logs/M1-CVE-2015-5122_windows_h2/malicious_labels.txt",
+          "sha256": "4a503df785dab84f61a7b2650534bf6d7c7e1ba295d963ab8acfcadf02d4d499"
+        }
+      ],
+      "members": 247,
+      "security_log_members": [],
+      "uncompressed_member_bytes": 861822607
+    },
+    "M1_raw": {
+      "archive_sha256": "c804d393e49f170caeeff58ca0d6b5e9b43f8c14e2890ff779696761ed8add59",
+      "compressed_file_bytes": 67946790,
+      "malicious_label_members": [],
+      "members": 11,
+      "security_log_members": [
+        "M1/h1/logs/security_events.txt",
+        "M1/h2/logs/security_events.txt"
+      ],
+      "uncompressed_member_bytes": 851265944
+    },
+    "S1_experiment": {
+      "archive_sha256": "edd16ee4eca5e4c7634a286d5d9b4b4df4c6865cf014019262f8aeb46e2fad67",
+      "compressed_file_bytes": 13735107,
+      "malicious_label_members": [
+        {
+          "bytes": 40,
+          "member": "S1/testing_logs/S1-CVE-2015-5122_windows/malicious_labels.txt",
+          "sha256": "ebec78a40be006d1a7bb684b5bb16d503ee5e6a85720ced90cb7b537eeab2f1e"
+        }
+      ],
+      "members": 54,
+      "security_log_members": [],
+      "uncompressed_member_bytes": 180650787
+    },
+    "S1_raw": {
+      "archive_sha256": "4af22286497d2ee85ff0a0518796cc67e73659307ff3b8e020e4eb4dedc1a6f4",
+      "compressed_file_bytes": 33563971,
+      "malicious_label_members": [],
+      "members": 5,
+      "security_log_members": [
+        "S1/logs/security_events.txt"
+      ],
+      "uncompressed_member_bytes": 400352529
+    }
+  },
+  "note": "Literal line hits are not event IDs, process instances, attack steps, or causal edges."
+}

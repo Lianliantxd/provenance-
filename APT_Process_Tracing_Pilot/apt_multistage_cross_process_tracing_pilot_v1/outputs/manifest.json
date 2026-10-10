@@ -1,0 +1,28 @@
+{
+  "status": "D0_REJECTED_ALL",
+  "task_qualification": "NO_TRACING_BENCHMARK_READY",
+  "method_gap": "METHOD_GAP_NOT_ESTABLISHED",
+  "research_decision": "HOLD_FOR_REAL_TRACING_DATA",
+  "candidate_count": 3,
+  "official_source_commits": {
+    "ATLAS": "e46096d1947e4f059e73a0ac2b9a9707812fd4bc",
+    "DARPA_TC": "244ae2401032ce92ac3b72f49b8039cae67d60d6"
+  },
+  "outputs_excluded_because_not_run": [
+    "PRESEARCH_CONTRACT.json",
+    "REFERENCE_ATTACK_STEPS.csv",
+    "background_graph",
+    "B-only tracing",
+    "baselines",
+    "T2",
+    "traced_paths.json",
+    "raw_evidence_checks.json"
+  ],
+  "causal_edge_precision": null,
+  "causal_edge_recall": null,
+  "causal_edge_f1": null,
+  "full_attack_chain_accuracy": null,
+  "raw_zip_files_not_copied_or_synced": true,
+  "audit_script": "src/audit_zip.py",
+  "package_audit": "outputs/package_audit.json"
+}

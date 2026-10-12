@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "project": "diagchain_l2_repro",
+  "run_id": "20261012T085941Z",
+  "host": "[private-server]",
+  "user": "[redacted-user]",
+  "project_root": "[private-project-workspace]/APT_Process_Tracing_Pilot/diagchain_l2_repro",
+  "root_is_symlink": false,
+  "venv_path": "[private-project-workspace]/APT_Process_Tracing_Pilot/diagchain_l2_repro/.venv",
+  "venv_is_symlink": false,
+  "sys_executable": "[private-project-workspace]/APT_Process_Tracing_Pilot/diagchain_l2_repro/.venv/bin/python",
+  "sys_prefix": "[private-project-workspace]/APT_Process_Tracing_Pilot/diagchain_l2_repro/.venv",
+  "sys_base_prefix": "[preinstalled-python-base]",
+  "prefix_differs_from_base": true,
+  "include_system_site_packages_false": true,
+  "site_packages_from_base": [],
+  "all_installed_distribution_locations_inside_venv": true,
+  "installed_distributions": [
+    {
+      "name": "pip",
+      "version": "24.0",
+      "location": "[private-project-workspace]/APT_Process_Tracing_Pilot/diagchain_l2_repro/.venv/lib/python3.12/site-packages",
+      "within_project_venv": true
+    }
+  ],
+  "pip_freeze": [],
+  "no_packages_installed_during_stage": true,
+  "failed_system_python312_venv_attempt_preserved": "[private-project-workspace]/APT_Process_Tracing_Pilot/diagchain_l2_repro/.venv.failed-system-python3.12-bootstrap"
+}

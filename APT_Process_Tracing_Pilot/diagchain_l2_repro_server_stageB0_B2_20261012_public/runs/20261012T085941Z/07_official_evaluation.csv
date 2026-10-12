@@ -1,0 +1,3 @@
+case_alias,status,metrics_path,reason
+case_A,NOT_RUN,NA,no frozen prediction exists; evaluator must run only after prediction freeze
+case_B,NOT_RUN,NA,no frozen prediction exists; evaluator must run only after prediction freeze

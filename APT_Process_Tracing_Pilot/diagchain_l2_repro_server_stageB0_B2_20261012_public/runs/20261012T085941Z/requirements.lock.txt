@@ -1,0 +1,2 @@
+# pip freeze: empty; no third-party project packages installed.
+# Current transformation/evaluator imports use Python standard library; SciPy optional and absent.

@@ -1,0 +1,3 @@
+case_alias,baseline,status,exit_code,duration_seconds,prediction_sha256,reason
+case_A,DETERMINISTIC_PLANNER,NOT_RUN,NA,NA,NA,BASELINE_BLOCKED_UNSAFE_OR_MISSING: no existing deterministic planner implementation found in frozen release or available pilot sources
+case_B,DETERMINISTIC_PLANNER,NOT_RUN,NA,NA,NA,BASELINE_BLOCKED_UNSAFE_OR_MISSING: no existing deterministic planner implementation found in frozen release or available pilot sources

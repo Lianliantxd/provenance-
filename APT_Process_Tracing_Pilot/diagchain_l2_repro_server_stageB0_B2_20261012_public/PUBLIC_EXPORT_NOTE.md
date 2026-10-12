@@ -1,0 +1,3 @@
+# Public export note
+
+This is a redacted export of the server-side Stage B0-B2 run. It includes the frozen anonymous runner inputs, non-sensitive environment/gate reports, schemas, and evaluator source. It excludes raw source packages, evaluator-only Gold, true-case/origin mapping, and the source transform script that embeds that mapping. Those files remain in the server project directory with restricted evaluator-only permissions. The complete server-side SHA256SUMS.txt verifies the canonical server package; this export has a separate checksum list for the files published here. Server account, hostname, address, and absolute paths were redacted in the public copies of environment reports.

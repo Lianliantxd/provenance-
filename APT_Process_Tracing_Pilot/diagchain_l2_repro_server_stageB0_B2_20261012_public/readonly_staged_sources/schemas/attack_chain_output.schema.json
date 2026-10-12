@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AttackChainReconstructionOutput",
+  "type": "object",
+  "required": ["incident_summary", "attack_chain", "causal_edges"],
+  "properties": {
+    "incident_summary": {"type": "string"},
+    "attack_chain": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "step_id",
+          "order",
+          "attack_step",
+          "step_description",
+          "tactic",
+          "technique_id",
+          "technique_name",
+          "entities",
+          "supporting_evidence",
+          "confidence"
+        ],
+        "properties": {
+          "step_id": {"type": "string"},
+          "order": {"type": "integer"},
+          "attack_step": {"type": "string"},
+          "step_description": {"type": "string"},
+          "tactic": {"type": "string"},
+          "technique_id": {"type": "string"},
+          "technique_name": {"type": "string"},
+          "entities": {"type": "object"},
+          "supporting_evidence": {"type": "array", "items": {"type": "string"}},
+          "confidence": {"type": "string", "enum": ["low", "medium", "high"]}
+        }
+      }
+    },
+    "causal_edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "target", "relation", "supporting_evidence"],
+        "properties": {
+          "source": {"type": "string"},
+          "target": {"type": "string"},
+          "relation": {"type": "string"},
+          "supporting_evidence": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "run_id": "20261012T085941Z",
+  "host": "[private-server]",
+  "user": "[redacted-user]",
+  "project_root": "[private-project-workspace]/APT_Process_Tracing_Pilot/diagchain_l2_repro",
+  "venv": {
+    "python": "[private-project-workspace]/APT_Process_Tracing_Pilot/diagchain_l2_repro/.venv/bin/python",
+    "prefix": "[private-project-workspace]/APT_Process_Tracing_Pilot/diagchain_l2_repro/.venv",
+    "base_prefix": "[preinstalled-python-base]",
+    "python_version": "3.12.4",
+    "pip_version": "pip 24.0 from [private-project-workspace]/APT_Process_Tracing_Pilot/diagchain_l2_repro/.venv/lib/python3.12/site-packages/pip (python 3.12)",
+    "pip_freeze": [],
+    "installed_distributions": [
+      {
+        "name": "pip",
+        "version": "24.0",
+        "location": "[private-project-workspace]/APT_Process_Tracing_Pilot/diagchain_l2_repro/.venv/lib/python3.12/site-packages",
+        "within_project_venv": true
+      }
+    ],
+    "include_system_site_packages": false,
+    "site_packages_from_base": []
+  },
+  "dependencies_installed_this_stage": [],
+  "python_path_usage": "All project Python commands use the absolute .venv/bin/python path."
+}

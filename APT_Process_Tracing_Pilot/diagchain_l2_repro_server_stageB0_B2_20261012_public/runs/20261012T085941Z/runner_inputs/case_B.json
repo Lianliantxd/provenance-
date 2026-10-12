@@ -1,0 +1,2650 @@
+{
+  "incident_id": "case_B",
+  "task_type": "evidence_grounded_attack_chain_reconstruction",
+  "task_instruction": "Reconstruct a structured, temporally ordered, evidence-supported attack chain. Select supporting evidence IDs from evidence_cards. Do not invent facts that are not supported.",
+  "incident_brief": "A web application incident contains repeated admin activity and unusual application, network, and system-call observations. Use only the provided log observation cards to reconstruct what the attacker did, in order, and cite evidence for each step.",
+  "required_output": {
+    "incident_summary": "short free-text summary",
+    "attack_chain": [
+      {
+        "step_id": "S1",
+        "order": 1,
+        "attack_step": "short step title",
+        "step_description": "what happened and why it matters",
+        "tactic": "MITRE ATT&CK tactic",
+        "technique_id": "MITRE ATT&CK technique ID",
+        "technique_name": "MITRE ATT&CK technique name",
+        "entities": {
+          "files": [],
+          "processes": [],
+          "hosts": [],
+          "urls": [],
+          "accounts": []
+        },
+        "supporting_evidence": [
+          "EVIDENCE_ID"
+        ],
+        "confidence": "low|medium|high"
+      }
+    ],
+    "causal_edges": [
+      {
+        "source": "S1",
+        "target": "S2",
+        "relation": "temporal_after|enables|uses_output_of|same_session_sequence",
+        "supporting_evidence": [
+          "EVIDENCE_ID"
+        ]
+      }
+    ]
+  },
+  "evidence_cards": [
+    {
+      "evidence_id": "E0001",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.562331699\", \"evt.rawres\": -2, \"evt.time\": \"05:43:15.562331699\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10194798,
+      "timestamp": "2025-01-16 05:43:15.562331699",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0002",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \" </link>. </menu-item>. </menu>. <menu name=\\\"OrganizationAccou\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.568434919\", \"evt.rawres\": 8192, \"evt.time\": \"05:43:15.568434919\", \"evt.type\": \"read\", \"fd.name\": \"/usr/src/apache-ofbiz/applications/accounting/widget/AccountingMenus.xml\", \"fd.type\": \"file\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10194834,
+      "timestamp": "2025-01-16 05:43:15.568434919",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/link",
+          "/menu",
+          "/menu-item",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/applications/accounting/widget/AccountingMenus.xml",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/link",
+          "/menu",
+          "/menu-item",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/applications/accounting/widget/AccountingMenus.xml",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0003",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.571117662\", \"evt.rawres\": -2, \"evt.time\": \"05:43:15.571117662\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10194860,
+      "timestamp": "2025-01-16 05:43:15.571117662",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0004",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.571124602\", \"evt.rawres\": -2, \"evt.time\": \"05:43:15.571124602\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10194861,
+      "timestamp": "2025-01-16 05:43:15.571124602",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0005",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.571155074\", \"evt.rawres\": -2, \"evt.time\": \"05:43:15.571155074\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10194863,
+      "timestamp": "2025-01-16 05:43:15.571155074",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0006",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.571341796\", \"evt.rawres\": -2, \"evt.time\": \"05:43:15.571341796\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10194891,
+      "timestamp": "2025-01-16 05:43:15.571341796",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0007",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.576176125\", \"evt.rawres\": -2, \"evt.time\": \"05:43:15.576176125\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10194963,
+      "timestamp": "2025-01-16 05:43:15.576176125",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0008",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.576194105\", \"evt.rawres\": -2, \"evt.time\": \"05:43:15.576194105\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10194966,
+      "timestamp": "2025-01-16 05:43:15.576194105",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0009",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.577307423\", \"evt.rawres\": -2, \"evt.time\": \"05:43:15.577307423\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10194995,
+      "timestamp": "2025-01-16 05:43:15.577307423",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0010",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.581866136\", \"evt.rawres\": 0, \"evt.time\": \"05:43:15.581866136\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195016,
+      "timestamp": "2025-01-16 05:43:15.581866136",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0011",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.590049474\", \"evt.rawres\": 0, \"evt.time\": \"05:43:15.590049474\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195023,
+      "timestamp": "2025-01-16 05:43:15.590049474",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0012",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"2025-01-15 21:43:15,614 |jsse-nio-8443-exec-1 |JWTManager |I|\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.614423893\", \"evt.rawres\": 118, \"evt.time\": \"05:43:15.614423893\", \"evt.type\": \"write\", \"fd.name\": \"/usr/src/apache-ofbiz/runtime/logs/ofbiz.log\", \"fd.type\": \"file\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195051,
+      "timestamp": "2025-01-16 05:43:15.614423893",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml",
+          "/usr/src/apache-ofbiz/runtime/logs/ofbiz.log"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml",
+          "/usr/src/apache-ofbiz/runtime/logs/ofbiz.log"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [
+          "ofbiz.log"
+        ],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "write"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0013",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.616831964\", \"evt.rawres\": -2, \"evt.time\": \"05:43:15.616831964\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195066,
+      "timestamp": "2025-01-16 05:43:15.616831964",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0014",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.616847047\", \"evt.rawres\": -2, \"evt.time\": \"05:43:15.616847047\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195068,
+      "timestamp": "2025-01-16 05:43:15.616847047",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0015",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.616870358\", \"evt.rawres\": -2, \"evt.time\": \"05:43:15.616870358\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195071,
+      "timestamp": "2025-01-16 05:43:15.616870358",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0016",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.616947621\", \"evt.rawres\": -2, \"evt.time\": \"05:43:15.616947621\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195081,
+      "timestamp": "2025-01-16 05:43:15.616947621",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0017",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.618014281\", \"evt.rawres\": -2, \"evt.time\": \"05:43:15.618014281\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195111,
+      "timestamp": "2025-01-16 05:43:15.618014281",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0018",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:15.619029047\", \"evt.rawres\": -2, \"evt.time\": \"05:43:15.619029047\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195155,
+      "timestamp": "2025-01-16 05:43:15.619029047",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0019",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"....5.........../.U.S.....f....s)....\\\\....*.,.z!....I.....\", \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-16 05:43:15.672883852\", \"evt.rawres\": 58, \"evt.time\": \"05:43:15.672883852\", \"evt.type\": \"write\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:54046->192.168.123.3:8443\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 8443, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195183,
+      "timestamp": "2025-01-16 05:43:15.672883852",
+      "extracted_clues": {
+        "paths": [
+          "/.U.S.....f....s",
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/.U.S.....f....s",
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [
+          "8443"
+        ],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "write"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0020",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:17.681783461\", \"evt.rawres\": -2, \"evt.time\": \"05:43:17.681783461\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195231,
+      "timestamp": "2025-01-16 05:43:17.681783461",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0021",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:17.681822950\", \"evt.rawres\": -2, \"evt.time\": \"05:43:17.681822950\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195238,
+      "timestamp": "2025-01-16 05:43:17.681822950",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0022",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:17.681896702\", \"evt.rawres\": -2, \"evt.time\": \"05:43:17.681896702\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195251,
+      "timestamp": "2025-01-16 05:43:17.681896702",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0023",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:17.681932546\", \"evt.rawres\": -2, \"evt.time\": \"05:43:17.681932546\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195258,
+      "timestamp": "2025-01-16 05:43:17.681932546",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0024",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:17.682901946\", \"evt.rawres\": -2, \"evt.time\": \"05:43:17.682901946\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195266,
+      "timestamp": "2025-01-16 05:43:17.682901946",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0025",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:17.683062365\", \"evt.rawres\": -2, \"evt.time\": \"05:43:17.683062365\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195296,
+      "timestamp": "2025-01-16 05:43:17.683062365",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0026",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:17.683123722\", \"evt.rawres\": -2, \"evt.time\": \"05:43:17.683123722\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195310,
+      "timestamp": "2025-01-16 05:43:17.683123722",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0027",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:17.684208270\", \"evt.rawres\": 0, \"evt.time\": \"05:43:17.684208270\", \"evt.type\": \"close\", \"fd.name\": \"/usr/src/apache-ofbiz/framework/base/config/AutoImportTemplate.ftl\", \"fd.type\": \"file\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195324,
+      "timestamp": "2025-01-16 05:43:17.684208270",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/AutoImportTemplate.ftl",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/AutoImportTemplate.ftl",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "close"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0028",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:17.684350825\", \"evt.rawres\": 0, \"evt.time\": \"05:43:17.684350825\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195337,
+      "timestamp": "2025-01-16 05:43:17.684350825",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0029",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:17.694256995\", \"evt.rawres\": 0, \"evt.time\": \"05:43:17.694256995\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195344,
+      "timestamp": "2025-01-16 05:43:17.694256995",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0030",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"....\\\\k.....Wd...s..&..0d;..sB...b..K...t...E.0..].....k;.~........MSu....E6.r...\", \"evt.category\": \"net\", \"evt.datetime\": \"2025-01-16 05:43:17.700444716\", \"evt.rawres\": 97, \"evt.time\": \"05:43:17.700444716\", \"evt.type\": \"write\", \"fd.cip\": \"192.168.123.2\", \"fd.name\": \"192.168.123.2:54046->192.168.123.3:8443\", \"fd.rip\": \"192.168.123.2\", \"fd.sip\": \"192.168.123.3\", \"fd.sport\": 8443, \"fd.type\": \"ipv4\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195381,
+      "timestamp": "2025-01-16 05:43:17.700444716",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [
+          "8443"
+        ],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "write"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0031",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:19.706890272\", \"evt.rawres\": -2, \"evt.time\": \"05:43:19.706890272\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195393,
+      "timestamp": "2025-01-16 05:43:19.706890272",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0032",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:19.706959546\", \"evt.rawres\": -2, \"evt.time\": \"05:43:19.706959546\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195394,
+      "timestamp": "2025-01-16 05:43:19.706959546",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0033",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:19.707930435\", \"evt.rawres\": -2, \"evt.time\": \"05:43:19.707930435\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195401,
+      "timestamp": "2025-01-16 05:43:19.707930435",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0034",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:19.708144632\", \"evt.rawres\": -2, \"evt.time\": \"05:43:19.708144632\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195436,
+      "timestamp": "2025-01-16 05:43:19.708144632",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0035",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:19.708172753\", \"evt.rawres\": -2, \"evt.time\": \"05:43:19.708172753\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195441,
+      "timestamp": "2025-01-16 05:43:19.708172753",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0036",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"2025-01-15 21:43:19,711 |jsse-nio-8443-exec-5 |PrimaryKeyFinder |I|\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:19.711317409\", \"evt.rawres\": 188, \"evt.time\": \"05:43:19.711317409\", \"evt.type\": \"write\", \"fd.name\": \"/usr/src/apache-ofbiz/runtime/logs/ofbiz.log\", \"fd.type\": \"file\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195451,
+      "timestamp": "2025-01-16 05:43:19.711317409",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml",
+          "/usr/src/apache-ofbiz/runtime/logs/ofbiz.log"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml",
+          "/usr/src/apache-ofbiz/runtime/logs/ofbiz.log"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [
+          "ofbiz.log"
+        ],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "write"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0037",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:19.718785922\", \"evt.rawres\": 0, \"evt.time\": \"05:43:19.718785922\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195457,
+      "timestamp": "2025-01-16 05:43:19.718785922",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0038",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:19.718792443\", \"evt.rawres\": 0, \"evt.time\": \"05:43:19.718792443\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195458,
+      "timestamp": "2025-01-16 05:43:19.718792443",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0039",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:19.847199494\", \"evt.num\": 29630424, \"evt.time\": \"05:43:19.847199494\", \"evt.type\": \"accept\", \"fd.name\": \"192.168.123.2:58652->192.168.123.3:8443\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195498,
+      "timestamp": "2025-01-16 05:43:19.847199494",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "accept"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0040",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:19.847299855\", \"evt.num\": 29630426, \"evt.time\": \"05:43:19.847299855\", \"evt.type\": \"fcntl\", \"fd.name\": \"192.168.123.2:58652->192.168.123.3:8443\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195499,
+      "timestamp": "2025-01-16 05:43:19.847299855",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "fcntl"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0041",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:19.847321347\", \"evt.num\": 29630428, \"evt.time\": \"05:43:19.847321347\", \"evt.type\": \"getsockname\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195500,
+      "timestamp": "2025-01-16 05:43:19.847321347",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "getsockname"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0042",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:19.847325444\", \"evt.num\": 29630430, \"evt.time\": \"05:43:19.847325444\", \"evt.type\": \"getsockname\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195501,
+      "timestamp": "2025-01-16 05:43:19.847325444",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "getsockname"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0043",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:19.847438598\", \"evt.num\": 29630434, \"evt.time\": \"05:43:19.847438598\", \"evt.type\": \"fcntl\", \"fd.name\": \"192.168.123.2:58652->192.168.123.3:8443\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195502,
+      "timestamp": "2025-01-16 05:43:19.847438598",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "fcntl"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0044",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:19.847439640\", \"evt.num\": 29630436, \"evt.time\": \"05:43:19.847439640\", \"evt.type\": \"fcntl\", \"fd.name\": \"192.168.123.2:58652->192.168.123.3:8443\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195503,
+      "timestamp": "2025-01-16 05:43:19.847439640",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "fcntl"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0045",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.089612847\", \"evt.num\": 29980222, \"evt.time\": \"05:43:20.089612847\", \"evt.type\": \"read\", \"fd.name\": \"192.168.123.2:58652->192.168.123.3:8443\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195504,
+      "timestamp": "2025-01-16 05:43:20.089612847",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0046",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.091491646\", \"evt.num\": 29980224, \"evt.time\": \"05:43:20.091491646\", \"evt.type\": \"read\", \"fd.name\": \"192.168.123.2:58652->192.168.123.3:8443\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195505,
+      "timestamp": "2025-01-16 05:43:20.091491646",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0047",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.091903468\", \"evt.num\": 29980226, \"evt.time\": \"05:43:20.091903468\", \"evt.type\": \"write\", \"fd.name\": \"192.168.123.2:58652->192.168.123.3:8443\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195506,
+      "timestamp": "2025-01-16 05:43:20.091903468",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "write"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0048",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.091909555\", \"evt.num\": 29980228, \"evt.time\": \"05:43:20.091909555\", \"evt.type\": \"read\", \"fd.name\": \"192.168.123.2:58652->192.168.123.3:8443\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195507,
+      "timestamp": "2025-01-16 05:43:20.091909555",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0049",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.092559434\", \"evt.num\": 29980234, \"evt.time\": \"05:43:20.092559434\", \"evt.type\": \"read\", \"fd.name\": \"192.168.123.2:58652->192.168.123.3:8443\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195508,
+      "timestamp": "2025-01-16 05:43:20.092559434",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [
+          "192.168.123.2",
+          "192.168.123.3"
+        ],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0050",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.095957909\", \"evt.num\": 29980236, \"evt.time\": \"05:43:20.095957909\", \"evt.type\": \"read\", \"fd.name\": \"/dev/urandom\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10195509,
+      "timestamp": "2025-01-16 05:43:20.095957909",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/dev/urandom",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/dev/urandom",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0051",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.650790825\", \"evt.num\": 29998469, \"evt.time\": \"05:43:20.650790825\", \"evt.type\": \"openat\", \"fd.name\": \"/hook_glibc_applog.so\", \"proc.cmdline\": \"id\", \"proc.name\": \"id\"}",
+      "line": 10204573,
+      "timestamp": "2025-01-16 05:43:20.650790825",
+      "extracted_clues": {
+        "paths": [
+          "/hook_glibc_applog.so"
+        ],
+        "endpoints": [
+          "/hook_glibc_applog.so"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "openat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0052",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.650793725\", \"evt.num\": 29998471, \"evt.time\": \"05:43:20.650793725\", \"evt.type\": \"read\", \"fd.name\": \"/hook_glibc_applog.so\", \"proc.cmdline\": \"id\", \"proc.name\": \"id\"}",
+      "line": 10204574,
+      "timestamp": "2025-01-16 05:43:20.650793725",
+      "extracted_clues": {
+        "paths": [
+          "/hook_glibc_applog.so"
+        ],
+        "endpoints": [
+          "/hook_glibc_applog.so"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0053",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.650797328\", \"evt.num\": 29998473, \"evt.time\": \"05:43:20.650797328\", \"evt.type\": \"fstat\", \"fd.name\": \"/hook_glibc_applog.so\", \"proc.cmdline\": \"id\", \"proc.name\": \"id\"}",
+      "line": 10204575,
+      "timestamp": "2025-01-16 05:43:20.650797328",
+      "extracted_clues": {
+        "paths": [
+          "/hook_glibc_applog.so"
+        ],
+        "endpoints": [
+          "/hook_glibc_applog.so"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "fstat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0054",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.650813890\", \"evt.num\": 29998475, \"evt.time\": \"05:43:20.650813890\", \"evt.type\": \"close\", \"fd.name\": \"/hook_glibc_applog.so\", \"proc.cmdline\": \"id\", \"proc.name\": \"id\"}",
+      "line": 10204576,
+      "timestamp": "2025-01-16 05:43:20.650813890",
+      "extracted_clues": {
+        "paths": [
+          "/hook_glibc_applog.so"
+        ],
+        "endpoints": [
+          "/hook_glibc_applog.so"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "close"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0055",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.650821388\", \"evt.num\": 29998477, \"evt.time\": \"05:43:20.650821388\", \"evt.type\": \"openat\", \"fd.name\": \"/hook_glibc_trace.so\", \"proc.cmdline\": \"id\", \"proc.name\": \"id\"}",
+      "line": 10204577,
+      "timestamp": "2025-01-16 05:43:20.650821388",
+      "extracted_clues": {
+        "paths": [
+          "/hook_glibc_trace.so"
+        ],
+        "endpoints": [
+          "/hook_glibc_trace.so"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "openat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0056",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.650823197\", \"evt.num\": 29998479, \"evt.time\": \"05:43:20.650823197\", \"evt.type\": \"read\", \"fd.name\": \"/hook_glibc_trace.so\", \"proc.cmdline\": \"id\", \"proc.name\": \"id\"}",
+      "line": 10204578,
+      "timestamp": "2025-01-16 05:43:20.650823197",
+      "extracted_clues": {
+        "paths": [
+          "/hook_glibc_trace.so"
+        ],
+        "endpoints": [
+          "/hook_glibc_trace.so"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0057",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.650824478\", \"evt.num\": 29998481, \"evt.time\": \"05:43:20.650824478\", \"evt.type\": \"fstat\", \"fd.name\": \"/hook_glibc_trace.so\", \"proc.cmdline\": \"id\", \"proc.name\": \"id\"}",
+      "line": 10204579,
+      "timestamp": "2025-01-16 05:43:20.650824478",
+      "extracted_clues": {
+        "paths": [
+          "/hook_glibc_trace.so"
+        ],
+        "endpoints": [
+          "/hook_glibc_trace.so"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "fstat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0058",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.650834651\", \"evt.num\": 29998483, \"evt.time\": \"05:43:20.650834651\", \"evt.type\": \"close\", \"fd.name\": \"/hook_glibc_trace.so\", \"proc.cmdline\": \"id\", \"proc.name\": \"id\"}",
+      "line": 10204580,
+      "timestamp": "2025-01-16 05:43:20.650834651",
+      "extracted_clues": {
+        "paths": [
+          "/hook_glibc_trace.so"
+        ],
+        "endpoints": [
+          "/hook_glibc_trace.so"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "close"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0059",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.650843295\", \"evt.num\": 29998485, \"evt.time\": \"05:43:20.650843295\", \"evt.type\": \"access\", \"proc.cmdline\": \"id\", \"proc.name\": \"id\"}",
+      "line": 10204581,
+      "timestamp": "2025-01-16 05:43:20.650843295",
+      "extracted_clues": {
+        "paths": [],
+        "endpoints": [],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "access"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0060",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.650848571\", \"evt.num\": 29998487, \"evt.time\": \"05:43:20.650848571\", \"evt.type\": \"openat\", \"fd.name\": \"/quicklog/tls/haswell/avx512_1/x86_64/libselinux.so.1\", \"proc.cmdline\": \"id\", \"proc.name\": \"id\"}",
+      "line": 10204582,
+      "timestamp": "2025-01-16 05:43:20.650848571",
+      "extracted_clues": {
+        "paths": [
+          "/quicklog/tls/haswell/avx512_1/x86_64/libselinux.so.1"
+        ],
+        "endpoints": [
+          "/quicklog/tls/haswell/avx512_1/x86_64/libselinux.so.1"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "openat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0061",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.650850765\", \"evt.num\": 29998489, \"evt.time\": \"05:43:20.650850765\", \"evt.type\": \"stat\", \"proc.cmdline\": \"id\", \"proc.name\": \"id\"}",
+      "line": 10204583,
+      "timestamp": "2025-01-16 05:43:20.650850765",
+      "extracted_clues": {
+        "paths": [],
+        "endpoints": [],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0062",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"container.id\": \"56d387127458\", \"evt.datetime\": \"2025-01-16 05:43:20.650853067\", \"evt.num\": 29998491, \"evt.time\": \"05:43:20.650853067\", \"evt.type\": \"openat\", \"fd.name\": \"/quicklog/tls/haswell/avx512_1/libselinux.so.1\", \"proc.cmdline\": \"id\", \"proc.name\": \"id\"}",
+      "line": 10204584,
+      "timestamp": "2025-01-16 05:43:20.650853067",
+      "extracted_clues": {
+        "paths": [
+          "/quicklog/tls/haswell/avx512_1/libselinux.so.1"
+        ],
+        "endpoints": [
+          "/quicklog/tls/haswell/avx512_1/libselinux.so.1"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "openat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0063",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"y\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653340642\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653340642\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204654,
+      "timestamp": "2025-01-16 05:43:20.653340642",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0064",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"e\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653401627\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653401627\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204709,
+      "timestamp": "2025-01-16 05:43:20.653401627",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0065",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"c\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653415816\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653415816\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204726,
+      "timestamp": "2025-01-16 05:43:20.653415816",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0066",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"s\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653434671\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653434671\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204746,
+      "timestamp": "2025-01-16 05:43:20.653434671",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0067",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \".\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653454540\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653454540\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204768,
+      "timestamp": "2025-01-16 05:43:20.653454540",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0068",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"d\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653455389\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653455389\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204769,
+      "timestamp": "2025-01-16 05:43:20.653455389",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0069",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"e\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653465813\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653465813\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204780,
+      "timestamp": "2025-01-16 05:43:20.653465813",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0070",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"c\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653499969\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653499969\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204816,
+      "timestamp": "2025-01-16 05:43:20.653499969",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0071",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \".\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653503775\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653503775\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204820,
+      "timestamp": "2025-01-16 05:43:20.653503775",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0072",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"e\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653507726\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653507726\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204824,
+      "timestamp": "2025-01-16 05:43:20.653507726",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0073",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \".\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653536620\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653536620\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204855,
+      "timestamp": "2025-01-16 05:43:20.653536620",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0074",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"e\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653555095\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653555095\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204875,
+      "timestamp": "2025-01-16 05:43:20.653555095",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0075",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"e\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653565464\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653565464\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204886,
+      "timestamp": "2025-01-16 05:43:20.653565464",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0076",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"o\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653619680\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653619680\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204944,
+      "timestamp": "2025-01-16 05:43:20.653619680",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0077",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"e\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653637104\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653637104\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204963,
+      "timestamp": "2025-01-16 05:43:20.653637104",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0078",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"d\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653655380\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653655380\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204970,
+      "timestamp": "2025-01-16 05:43:20.653655380",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0079",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"d\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653666284\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653666284\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10204983,
+      "timestamp": "2025-01-16 05:43:20.653666284",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0080",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"i\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653698688\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653698688\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10205021,
+      "timestamp": "2025-01-16 05:43:20.653698688",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0081",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"r\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653714416\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.653714416\", \"evt.type\": \"read\", \"fd.name\": \"/proc/filesystems\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10205041,
+      "timestamp": "2025-01-16 05:43:20.653714416",
+      "extracted_clues": {
+        "paths": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/proc/filesystems",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0082",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653774153\", \"evt.rawres\": -2, \"evt.time\": \"05:43:20.653774153\", \"evt.type\": \"access\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10205048,
+      "timestamp": "2025-01-16 05:43:20.653774153",
+      "extracted_clues": {
+        "paths": [
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "access"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0083",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.653989558\", \"evt.rawres\": 0, \"evt.time\": \"05:43:20.653989558\", \"evt.type\": \"fstat\", \"fd.name\": \"/usr/lib/locale/C.UTF-8/LC_MESSAGES/SYS_LC_MESSAGES\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10205076,
+      "timestamp": "2025-01-16 05:43:20.653989558",
+      "extracted_clues": {
+        "paths": [
+          "/usr/bin/id",
+          "/usr/lib/locale/C.UTF-8/LC_MESSAGES/SYS_LC_MESSAGES"
+        ],
+        "endpoints": [
+          "/usr/bin/id",
+          "/usr/lib/locale/C.UTF-8/LC_MESSAGES/SYS_LC_MESSAGES"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "fstat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0084",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.654001085\", \"evt.rawres\": 3, \"evt.time\": \"05:43:20.654001085\", \"evt.type\": \"openat\", \"fd.name\": \"/usr/lib/locale/C.UTF-8/LC_MONETARY\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10205078,
+      "timestamp": "2025-01-16 05:43:20.654001085",
+      "extracted_clues": {
+        "paths": [
+          "/usr/bin/id",
+          "/usr/lib/locale/C.UTF-8/LC_MONETARY"
+        ],
+        "endpoints": [
+          "/usr/bin/id",
+          "/usr/lib/locale/C.UTF-8/LC_MONETARY"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "openat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0085",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.654086887\", \"evt.rawres\": 0, \"evt.time\": \"05:43:20.654086887\", \"evt.type\": \"fstat\", \"fd.name\": \"/usr/lib/locale/C.UTF-8/LC_CTYPE\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10205091,
+      "timestamp": "2025-01-16 05:43:20.654086887",
+      "extracted_clues": {
+        "paths": [
+          "/usr/bin/id",
+          "/usr/lib/locale/C.UTF-8/LC_CTYPE"
+        ],
+        "endpoints": [
+          "/usr/bin/id",
+          "/usr/lib/locale/C.UTF-8/LC_CTYPE"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "fstat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0086",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.654411256\", \"evt.rawres\": 0, \"evt.time\": \"05:43:20.654411256\", \"evt.type\": \"lseek\", \"fd.name\": \"/etc/passwd\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10205115,
+      "timestamp": "2025-01-16 05:43:20.654411256",
+      "extracted_clues": {
+        "paths": [
+          "/etc/passwd",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/etc/passwd",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "lseek"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0087",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"r\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.654413997\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.654413997\", \"evt.type\": \"read\", \"fd.name\": \"/etc/passwd\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10205116,
+      "timestamp": "2025-01-16 05:43:20.654413997",
+      "extracted_clues": {
+        "paths": [
+          "/etc/passwd",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/etc/passwd",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0088",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"o\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.654430982\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.654430982\", \"evt.type\": \"read\", \"fd.name\": \"/etc/passwd\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10205135,
+      "timestamp": "2025-01-16 05:43:20.654430982",
+      "extracted_clues": {
+        "paths": [
+          "/etc/passwd",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/etc/passwd",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0089",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"/\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.654433541\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.654433541\", \"evt.type\": \"read\", \"fd.name\": \"/etc/passwd\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10205138,
+      "timestamp": "2025-01-16 05:43:20.654433541",
+      "extracted_clues": {
+        "paths": [
+          "/etc/passwd",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/etc/passwd",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0090",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"b\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.654438312\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.654438312\", \"evt.type\": \"read\", \"fd.name\": \"/etc/passwd\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10205143,
+      "timestamp": "2025-01-16 05:43:20.654438312",
+      "extracted_clues": {
+        "paths": [
+          "/etc/passwd",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/etc/passwd",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0091",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.arg.data\": \"o\", \"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.654590662\", \"evt.rawres\": 1, \"evt.time\": \"05:43:20.654590662\", \"evt.type\": \"read\", \"fd.name\": \"/etc/group\", \"fd.type\": \"file\", \"proc.cmdline\": \"id\", \"proc.exepath\": \"/usr/bin/id\", \"proc.name\": \"id\"}",
+      "line": 10205176,
+      "timestamp": "2025-01-16 05:43:20.654590662",
+      "extracted_clues": {
+        "paths": [
+          "/etc/group",
+          "/usr/bin/id"
+        ],
+        "endpoints": [
+          "/etc/group",
+          "/usr/bin/id"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "read"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0092",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.661575218\", \"evt.rawres\": -2, \"evt.time\": \"05:43:20.661575218\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10205211,
+      "timestamp": "2025-01-16 05:43:20.661575218",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0093",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.661691596\", \"evt.rawres\": -2, \"evt.time\": \"05:43:20.661691596\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10205232,
+      "timestamp": "2025-01-16 05:43:20.661691596",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0094",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.661793341\", \"evt.rawres\": -2, \"evt.time\": \"05:43:20.661793341\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10205251,
+      "timestamp": "2025-01-16 05:43:20.661793341",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0095",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.662619360\", \"evt.rawres\": -2, \"evt.time\": \"05:43:20.662619360\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10205266,
+      "timestamp": "2025-01-16 05:43:20.662619360",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E0096",
+      "card_type": "log_observation",
+      "source_type": "log_observation",
+      "content": "{\"evt.category\": \"file\", \"evt.datetime\": \"2025-01-16 05:43:20.662655512\", \"evt.rawres\": -2, \"evt.time\": \"05:43:20.662655512\", \"evt.type\": \"stat\", \"proc.cmdline\": \"https-jsse-nio- -Dlog4j.configurationFile=/usr/src/apache-ofbiz/framework/base/config/log4j2.xml -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./build/libs/ofbiz.jar\", \"proc.exepath\": \"/usr/local/openjdk-8/bin/java\", \"proc.name\": \"https-jsse-nio-\"}",
+      "line": 10205274,
+      "timestamp": "2025-01-16 05:43:20.662655512",
+      "extracted_clues": {
+        "paths": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "endpoints": [
+          "/build/libs/ofbiz.jar",
+          "/usr/local/openjdk-8/bin/java",
+          "/usr/src/apache-ofbiz/framework/base/config/log4j2.xml"
+        ],
+        "ips": [],
+        "ports": [],
+        "files": [],
+        "processes": [],
+        "accounts": [],
+        "syscalls": [
+          "stat"
+        ]
+      }
+    }
+  ]
+}

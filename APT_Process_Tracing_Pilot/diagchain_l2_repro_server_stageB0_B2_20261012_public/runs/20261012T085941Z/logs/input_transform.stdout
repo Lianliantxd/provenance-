@@ -1,0 +1,11 @@
+{
+  "run_id": "20261012T085941Z",
+  "case_counts": {
+    "case_A": 104,
+    "case_B": 96
+  },
+  "output_sha256": {
+    "case_A": "c428651d8f701b819eb4387d854bd089fa2bef5855c558d0ac9975dc060eca83",
+    "case_B": "7c67e347ffc81c7242116592bfe6e6476ee3e6aba6ac8cf1a249c220964f7262"
+  }
+}

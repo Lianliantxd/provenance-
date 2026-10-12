@@ -1,0 +1,428 @@
+{
+  "stage": "DiagChain Stage A matched-budget blind preregistration",
+  "created_at_utc": "2026-10-12T05:22:16.943084+00:00",
+  "host": {
+    "os": "macOS-14.5-arm64-arm-64bit-Mach-O",
+    "cwd": "/Users/tianxd/Documents/ChatGPT/4"
+  },
+  "repository": {
+    "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain",
+    "commit": "60e04064f9b3cf59505ee159379cf851956b8394",
+    "git_status": "## main...origin/main",
+    "clean": true
+  },
+  "output_location": {
+    "root": "/Users/tianxd/Documents/DiagChain_Audits",
+    "directory": "/Users/tianxd/Documents/DiagChain_Audits/20261012T051607Z_matched_budget_blind_prereg_v1",
+    "realpath": "/Users/tianxd/Documents/DiagChain_Audits/20261012T051607Z_matched_budget_blind_prereg_v1",
+    "filesystem": "local APFS /dev/disk3s5",
+    "symlink_observed": false,
+    "git_worktree": false,
+    "sandbox_os_access_w": false,
+    "created_by_reviewed_escalated_write": true,
+    "enforced_runner_isolation": false
+  },
+  "prior_audit": {
+    "manifest_sha256": "0a8de4361e2de71ff9b76531a6ed31c0d0b7dc2a150f0432bc0531af9041f27a",
+    "outputs": {
+      "01_dataset_contract_and_inventory.md": {
+        "expected": "ce9c59c8b486227af0c777e8bad1b6f3878f3e8583c489f27f82322b38400b9d",
+        "actual": "ce9c59c8b486227af0c777e8bad1b6f3878f3e8583c489f27f82322b38400b9d",
+        "match": true
+      },
+      "02_gold_claim_provenance.csv": {
+        "expected": "8bc99bda00b8c60e7cceaa681421e2e1b797ddbfb29e8f801e428e09aed0b08c",
+        "actual": "8bc99bda00b8c60e7cceaa681421e2e1b797ddbfb29e8f801e428e09aed0b08c",
+        "match": true
+      },
+      "03_observability_matrix.csv": {
+        "expected": "a64cb7a89a85e26982b6b928170e8f25a8be6d0506b256ebe29b5dbb8024352d",
+        "actual": "a64cb7a89a85e26982b6b928170e8f25a8be6d0506b256ebe29b5dbb8024352d",
+        "match": true
+      },
+      "04_evidence_identity_and_duplication.csv": {
+        "expected": "b83eb795943172069c9de269e745f7c2e1c781f7583de8ef3dac894d7b4d279a",
+        "actual": "b83eb795943172069c9de269e745f7c2e1c781f7583de8ef3dac894d7b4d279a",
+        "match": true
+      },
+      "05_evaluator_semantics_and_validity.md": {
+        "expected": "bb678c0f35934b26f92d0e4e8c9b7765ebf865008473529ca7a2b51366362f20",
+        "actual": "bb678c0f35934b26f92d0e4e8c9b7765ebf865008473529ca7a2b51366362f20",
+        "match": true
+      },
+      "06_case_level_audit.md": {
+        "expected": "c45274e0aabe1c3bb0c675cc2c82a40ca692a64339afe4b57ecf2b10f1955c51",
+        "actual": "c45274e0aabe1c3bb0c675cc2c82a40ca692a64339afe4b57ecf2b10f1955c51",
+        "match": true
+      },
+      "07_synthesis_and_decision.md": {
+        "expected": "1c6568e83b187b64797258c42505fea16bfe4fee69ca66c4a0fcb70317070387",
+        "actual": "1c6568e83b187b64797258c42505fea16bfe4fee69ca66c4a0fcb70317070387",
+        "match": true
+      },
+      "08_next_controlled_experiment_protocol.md": {
+        "expected": "2d603e4b7b085b7ade51aabb385551be5dab38c48e23c6bababcc6e7e319035b",
+        "actual": "2d603e4b7b085b7ade51aabb385551be5dab38c48e23c6bababcc6e7e319035b",
+        "match": true
+      },
+      "09_source_trace_index.csv": {
+        "expected": "ad1bcef68cd65d9bc572d77da0d9c484fccc8e9844381512565cb8089f6bdb6d",
+        "actual": "ad1bcef68cd65d9bc572d77da0d9c484fccc8e9844381512565cb8089f6bdb6d",
+        "match": true
+      },
+      "retrieval_audit.csv": {
+        "expected": "f97f5a2e01ea73e2422e6924fd3d2bbe395b6b3ee52e13ed6c94566eac2ba59c",
+        "actual": "f97f5a2e01ea73e2422e6924fd3d2bbe395b6b3ee52e13ed6c94566eac2ba59c",
+        "match": true
+      }
+    },
+    "all_match": true
+  },
+  "package": {
+    "manifest_path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/PACKAGE_MANIFEST.json",
+    "manifest_sha256": "6c3c67b623979329b62c724a8b2439cf1ac93ad047562984864f7ba61d91c158",
+    "file_count": 1657,
+    "case_artifacts": {
+      "CVE-2017-12629-RCE.mixed-log": {
+        "L2_INPUT": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/incidents/CVE-2017-12629-RCE.mixed-log.input.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/incidents/CVE-2017-12629-RCE.mixed-log.input.json",
+          "exists": true,
+          "bytes": 55893,
+          "sha256": "a3de6d579583625afbc1395999bcf56b716e4675cc020f52bbafa73d906e43dd",
+          "package_sha256": "a3de6d579583625afbc1395999bcf56b716e4675cc020f52bbafa73d906e43dd",
+          "package_match": true
+        },
+        "L2_RETRIEVAL_DOCS": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_docs/CVE-2017-12629-RCE.mixed-log.docs.jsonl",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_docs/CVE-2017-12629-RCE.mixed-log.docs.jsonl",
+          "exists": true,
+          "bytes": 35429,
+          "sha256": "b93df8b13194b2140a49876bd73416957d0966866f09b9f45406117820ccc96b",
+          "package_sha256": "b93df8b13194b2140a49876bd73416957d0966866f09b9f45406117820ccc96b",
+          "package_match": true
+        },
+        "L2_INPUT_GRAPH": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_graphs/CVE-2017-12629-RCE.mixed-log.input_graph.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_graphs/CVE-2017-12629-RCE.mixed-log.input_graph.json",
+          "exists": true,
+          "bytes": 83356,
+          "sha256": "9a2d9f3e38935bf6bf01a97da588915fd4d63b83932b9d63b548e2160dc86195",
+          "package_sha256": "9a2d9f3e38935bf6bf01a97da588915fd4d63b83932b9d63b548e2160dc86195",
+          "package_match": true
+        },
+        "G_GROUND_TRUTH": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/ground_truth/CVE-2017-12629-RCE.mixed-log.gt.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/ground_truth/CVE-2017-12629-RCE.mixed-log.gt.json",
+          "exists": true,
+          "bytes": 6019,
+          "sha256": "603cf6596c70a69e621647bbf93d840d8e61fbf7e6d776bc3e2d352c6342d114",
+          "package_sha256": "603cf6596c70a69e621647bbf93d840d8e61fbf7e6d776bc3e2d352c6342d114",
+          "package_match": true
+        },
+        "ORACLE_PREDICTION": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/example_predictions/CVE-2017-12629-RCE.mixed-log.oracle_prediction.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/example_predictions/CVE-2017-12629-RCE.mixed-log.oracle_prediction.json",
+          "exists": true,
+          "bytes": 4672,
+          "sha256": "06201514691e3c7f1d6d01561a44bed83f03b88cb1c948cc0e2f1817e62ae7ae",
+          "package_sha256": "06201514691e3c7f1d6d01561a44bed83f03b88cb1c948cc0e2f1817e62ae7ae",
+          "package_match": true
+        }
+      },
+      "CVE-2021-26120-lab.mixed-log": {
+        "L2_INPUT": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/incidents/CVE-2021-26120-lab.mixed-log.input.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/incidents/CVE-2021-26120-lab.mixed-log.input.json",
+          "exists": true,
+          "bytes": 123129,
+          "sha256": "088670cf62b70548a3166bfa5b5fe1cb7334fb093d71091a20bb76907eccbe01",
+          "package_sha256": "088670cf62b70548a3166bfa5b5fe1cb7334fb093d71091a20bb76907eccbe01",
+          "package_match": true
+        },
+        "L2_RETRIEVAL_DOCS": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_docs/CVE-2021-26120-lab.mixed-log.docs.jsonl",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_docs/CVE-2021-26120-lab.mixed-log.docs.jsonl",
+          "exists": true,
+          "bytes": 78447,
+          "sha256": "3c801d49cb80d22339571b3d351fa934738a206c92cc5c63f4c28add3c0f9553",
+          "package_sha256": "3c801d49cb80d22339571b3d351fa934738a206c92cc5c63f4c28add3c0f9553",
+          "package_match": true
+        },
+        "L2_INPUT_GRAPH": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_graphs/CVE-2021-26120-lab.mixed-log.input_graph.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_graphs/CVE-2021-26120-lab.mixed-log.input_graph.json",
+          "exists": true,
+          "bytes": 190640,
+          "sha256": "b8b46df857d428327ab1848761209d56763af28a47e1d7cb7215bdee54381ec2",
+          "package_sha256": "b8b46df857d428327ab1848761209d56763af28a47e1d7cb7215bdee54381ec2",
+          "package_match": true
+        },
+        "G_GROUND_TRUTH": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/ground_truth/CVE-2021-26120-lab.mixed-log.gt.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/ground_truth/CVE-2021-26120-lab.mixed-log.gt.json",
+          "exists": true,
+          "bytes": 18192,
+          "sha256": "dde7506c0e37586b1e5c1a0a86dc6016c917571c771c7ff7947a0fa9340fda13",
+          "package_sha256": "dde7506c0e37586b1e5c1a0a86dc6016c917571c771c7ff7947a0fa9340fda13",
+          "package_match": true
+        },
+        "ORACLE_PREDICTION": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/example_predictions/CVE-2021-26120-lab.mixed-log.oracle_prediction.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/example_predictions/CVE-2021-26120-lab.mixed-log.oracle_prediction.json",
+          "exists": true,
+          "bytes": 14903,
+          "sha256": "6a15443d96e0ec7052322118f930bde241f08af8c9e8f8490c832513f2d34663",
+          "package_sha256": "6a15443d96e0ec7052322118f930bde241f08af8c9e8f8490c832513f2d34663",
+          "package_match": true
+        }
+      },
+      "CVE-2023-51467.mixed-log": {
+        "L2_INPUT": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/incidents/CVE-2023-51467.mixed-log.input.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/incidents/CVE-2023-51467.mixed-log.input.json",
+          "exists": true,
+          "bytes": 119250,
+          "sha256": "17c37c6462ae7b2ccafa464d90cad8dec9f1341525dbbf72ca3fc31dd2f31f2d",
+          "package_sha256": "17c37c6462ae7b2ccafa464d90cad8dec9f1341525dbbf72ca3fc31dd2f31f2d",
+          "package_match": true
+        },
+        "L2_RETRIEVAL_DOCS": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_docs/CVE-2023-51467.mixed-log.docs.jsonl",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_docs/CVE-2023-51467.mixed-log.docs.jsonl",
+          "exists": true,
+          "bytes": 84144,
+          "sha256": "12c0de669b658857906cb47d29bea9ddce9da9a903833659c59336a8619ee52d",
+          "package_sha256": "12c0de669b658857906cb47d29bea9ddce9da9a903833659c59336a8619ee52d",
+          "package_match": true
+        },
+        "L2_INPUT_GRAPH": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_graphs/CVE-2023-51467.mixed-log.input_graph.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_graphs/CVE-2023-51467.mixed-log.input_graph.json",
+          "exists": true,
+          "bytes": 130144,
+          "sha256": "62d1710c4ccf546d917cd2adcaeb2ca67d78888c8d0ef7d93c84caa4680a1990",
+          "package_sha256": "62d1710c4ccf546d917cd2adcaeb2ca67d78888c8d0ef7d93c84caa4680a1990",
+          "package_match": true
+        },
+        "G_GROUND_TRUTH": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/ground_truth/CVE-2023-51467.mixed-log.gt.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/ground_truth/CVE-2023-51467.mixed-log.gt.json",
+          "exists": true,
+          "bytes": 6499,
+          "sha256": "cbea0dd79149d3fd1a7636e3a21943e182479f32ea8bbc50c4b5034db4c5f0d2",
+          "package_sha256": "cbea0dd79149d3fd1a7636e3a21943e182479f32ea8bbc50c4b5034db4c5f0d2",
+          "package_match": true
+        },
+        "ORACLE_PREDICTION": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/example_predictions/CVE-2023-51467.mixed-log.oracle_prediction.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/example_predictions/CVE-2023-51467.mixed-log.oracle_prediction.json",
+          "exists": true,
+          "bytes": 4647,
+          "sha256": "c286991b28ac42f7b8a4ae347a10f8bc0e862c27fd15a1650c95f262434cf636",
+          "package_sha256": "c286991b28ac42f7b8a4ae347a10f8bc0e862c27fd15a1650c95f262434cf636",
+          "package_match": true
+        }
+      },
+      "excytin-incident-38.alert-evidence": {
+        "L2_INPUT": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/incidents/excytin-incident-38.alert-evidence.input.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/incidents/excytin-incident-38.alert-evidence.input.json",
+          "exists": true,
+          "bytes": 136287,
+          "sha256": "c70d25d08d7e3ab60073624397b932feb09462740f80340edc9abdea99d638d3",
+          "package_sha256": "c70d25d08d7e3ab60073624397b932feb09462740f80340edc9abdea99d638d3",
+          "package_match": true
+        },
+        "L2_RETRIEVAL_DOCS": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_docs/excytin-incident-38.alert-evidence.docs.jsonl",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_docs/excytin-incident-38.alert-evidence.docs.jsonl",
+          "exists": true,
+          "bytes": 106935,
+          "sha256": "2cfc74041333bafb421af4a0a42e139e592747bac815a4d57c78aecb6f73fd26",
+          "package_sha256": "2cfc74041333bafb421af4a0a42e139e592747bac815a4d57c78aecb6f73fd26",
+          "package_match": true
+        },
+        "L2_INPUT_GRAPH": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_graphs/excytin-incident-38.alert-evidence.input_graph.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_graphs/excytin-incident-38.alert-evidence.input_graph.json",
+          "exists": true,
+          "bytes": 79516,
+          "sha256": "ebe63813cde9d683374230fc0a82505063b989121c1b27d72ceb50cd7933d50c",
+          "package_sha256": "ebe63813cde9d683374230fc0a82505063b989121c1b27d72ceb50cd7933d50c",
+          "package_match": true
+        },
+        "G_GROUND_TRUTH": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/ground_truth/excytin-incident-38.alert-evidence.gt.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/ground_truth/excytin-incident-38.alert-evidence.gt.json",
+          "exists": true,
+          "bytes": 12135,
+          "sha256": "59cbf22ab233d1c28f99387d2b4ab0f46ab6883cd8d80e29a34b653d755749b7",
+          "package_sha256": "59cbf22ab233d1c28f99387d2b4ab0f46ab6883cd8d80e29a34b653d755749b7",
+          "package_match": true
+        },
+        "ORACLE_PREDICTION": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/example_predictions/excytin-incident-38.alert-evidence.oracle_prediction.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/example_predictions/excytin-incident-38.alert-evidence.oracle_prediction.json",
+          "exists": true,
+          "bytes": 7688,
+          "sha256": "5fdce757a7f31fc0c839a59dc51b608edbc1d8cfba3a363a39e1fef092960d52",
+          "package_sha256": "5fdce757a7f31fc0c839a59dc51b608edbc1d8cfba3a363a39e1fef092960d52",
+          "package_match": true
+        }
+      },
+      "mordor-apt29-day2.L-noisy": {
+        "L2_INPUT": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/incidents/mordor-apt29-day2.L-noisy.input.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/incidents/mordor-apt29-day2.L-noisy.input.json",
+          "exists": true,
+          "bytes": 178925,
+          "sha256": "8e5dc37c544b452a7fdece37b9288d7058002b10fe1c53403cc14414a09b9ee6",
+          "package_sha256": "8e5dc37c544b452a7fdece37b9288d7058002b10fe1c53403cc14414a09b9ee6",
+          "package_match": true
+        },
+        "L2_RETRIEVAL_DOCS": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_docs/mordor-apt29-day2.L-noisy.docs.jsonl",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_docs/mordor-apt29-day2.L-noisy.docs.jsonl",
+          "exists": true,
+          "bytes": 130500,
+          "sha256": "210679b8fd1f18357298a0adc966bef1e35146c52f5031505232c057186b043d",
+          "package_sha256": "210679b8fd1f18357298a0adc966bef1e35146c52f5031505232c057186b043d",
+          "package_match": true
+        },
+        "L2_INPUT_GRAPH": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_graphs/mordor-apt29-day2.L-noisy.input_graph.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/retrieval_graphs/mordor-apt29-day2.L-noisy.input_graph.json",
+          "exists": true,
+          "bytes": 105219,
+          "sha256": "94b09b36a96acd31c49266f41756894dc427a0d884474e29ba8c03f34820a676",
+          "package_sha256": "94b09b36a96acd31c49266f41756894dc427a0d884474e29ba8c03f34820a676",
+          "package_match": true
+        },
+        "G_GROUND_TRUTH": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/ground_truth/mordor-apt29-day2.L-noisy.gt.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/ground_truth/mordor-apt29-day2.L-noisy.gt.json",
+          "exists": true,
+          "bytes": 67732,
+          "sha256": "34f0c1db74370099c4976fce9d20ca4eaacfa6ca88dfa67125b1a86c48f36b61",
+          "package_sha256": "34f0c1db74370099c4976fce9d20ca4eaacfa6ca88dfa67125b1a86c48f36b61",
+          "package_match": true
+        },
+        "ORACLE_PREDICTION": {
+          "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/data/example_predictions/mordor-apt29-day2.L-noisy.oracle_prediction.json",
+          "relative": "attack_chain_generation/chain_reconstruction_benchmark/data/example_predictions/mordor-apt29-day2.L-noisy.oracle_prediction.json",
+          "exists": true,
+          "bytes": 30891,
+          "sha256": "d4711caf99d69bdb6b47d7be3ebce362beceb2cd4a43362a06c335dc41a523fa",
+          "package_sha256": "d4711caf99d69bdb6b47d7be3ebce362beceb2cd4a43362a06c335dc41a523fa",
+          "package_match": true
+        }
+      }
+    }
+  },
+  "historical_frozen_artifacts": {
+    "PACKAGE_MANIFEST": {
+      "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/PACKAGE_MANIFEST.json",
+      "expected": "6c3c67b623979329b62c724a8b2439cf1ac93ad047562984864f7ba61d91c158",
+      "actual": "6c3c67b623979329b62c724a8b2439cf1ac93ad047562984864f7ba61d91c158",
+      "match": true
+    },
+    "FROZEN_CONTRACT": {
+      "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_direct_codex_gpt56_luna_pilot_v1/00_FROZEN_CONTRACT.json",
+      "expected": "e593faa72ade78a4770a80151c8b513afc2f24fe155d4110403c535a91bf62d3",
+      "actual": "e593faa72ade78a4770a80151c8b513afc2f24fe155d4110403c535a91bf62d3",
+      "match": true
+    },
+    "FROZEN_PREDICTION": {
+      "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_direct_codex_gpt56_luna_pilot_v1/outputs/prediction_frozen.json",
+      "expected": "bff078c3e4388b678b1644f0f69ffd0409f224be4c53d664d20e6209ab071305",
+      "actual": "bff078c3e4388b678b1644f0f69ffd0409f224be4c53d664d20e6209ab071305",
+      "match": true
+    },
+    "FREEZE_RECEIPT": {
+      "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_direct_codex_gpt56_luna_pilot_v1/outputs/prediction_freeze_receipt.json",
+      "expected": "f7831b4c0ea4678624652e64858bd9c2b19fcdead96ca62fc11d68512b3620cc",
+      "actual": "f7831b4c0ea4678624652e64858bd9c2b19fcdead96ca62fc11d68512b3620cc",
+      "match": true
+    },
+    "FROZEN_METRICS": {
+      "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_direct_codex_gpt56_luna_pilot_v1/outputs/official_metrics.json",
+      "expected": "0a949d41511ce57dfc21ee616b237bd4a0e689501cecec9ae8a8cebbab421cd9",
+      "actual": "0a949d41511ce57dfc21ee616b237bd4a0e689501cecec9ae8a8cebbab421cd9",
+      "match": true
+    },
+    "RETRIEVAL_LEDGER": {
+      "path": "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_direct_codex_gpt56_luna_pilot_v1/outputs/retrieval_ledger.jsonl",
+      "expected": "8c5ecef0f15a77ca0a18c6972161df0637f304b014dc3f4b5f59c93706943768",
+      "actual": "8c5ecef0f15a77ca0a18c6972161df0637f304b014dc3f4b5f59c93706943768",
+      "match": true
+    }
+  },
+  "source_file_hashes": {
+    "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/prompts/chain_reconstruction_prompt.md": "369f4451c238c186238b7fd6f62f9bdac552537a46aa1e6e9a203a8b5b1b1f0c",
+    "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/schemas/incident_input.schema.json": "6216cbe56ec76c2580b6273b9241d86ea1f9409eaca6be1b3f582cf33ed2f295",
+    "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/schemas/attack_chain_output.schema.json": "099623b6a7bf650b85fb735366f5ee06c2296a68cf1d49d584d7615ebcd99b95",
+    "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/evidence_centric_rag.py": "cb5aabd123405ca3a55fda5c88b0f4015cacbd0e4eb4d6315a31ca4ab98c2649",
+    "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/agentic_reconstruction.py": "fad2116f71d739ba847a41cb8fb556cd801f884bb56c0c446df9fab782ef9e2b",
+    "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/run_agentic_reconstruction.py": "010347cb0f574a30208a68396a951b03f9c8f012de2106f2b034decff2412eb4",
+    "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/evaluate_chain_reconstruction.py": "8543ca870b64f6cbc36727df32f5b6e9bdc51dca6b111545b33c50d31bfaaf09",
+    "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/cluster_metrics.py": "eabcb12c30b2dfc19c25ae36aadaa63358a5ce9f77e767a4fc3c37a79850744b",
+    "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/paper_metric_schema.py": "c689355bc7b8d089597c933225215278079219f08143a5d5bca17c8296f87313",
+    "/Users/tianxd/Documents/ChatGPT/4/APT_Process_Tracing_Pilot/diagchain_paper_replication_v1/DiagChain/attack_chain_generation/chain_reconstruction_benchmark/retrieve_attack_candidates.py": "22af08d6d4cf1ed15b146683b8f33ae8ca7398767bffdfa0bc535a1e49c05d0f"
+  },
+  "activity": {
+    "model_calls": 0,
+    "active_retrieval_runs": 0,
+    "evaluator_runs": 0,
+    "builder_runs": 0,
+    "network_or_api_calls": 0,
+    "attack_executions": 0,
+    "source_or_historical_modifications": 0
+  },
+  "gates": {
+    "G0": "PASS",
+    "G1": "PASS",
+    "G2": "UNKNOWN",
+    "G3": "UNKNOWN_BLOCKING",
+    "G4": "UNKNOWN",
+    "G5": "UNKNOWN",
+    "G6": "PASS",
+    "G7": "PASS"
+  },
+  "primary_status": "BLOCKED_BLIND_ISOLATION",
+  "stageB_authorized": false,
+  "stageA_deliverable_hashes": {
+    "01_preregistered_research_questions.md": "e7809aef07d58bc0ee596e3b6daf875d9611e48011f23c187699773d8377ea0a",
+    "02_case_split_and_contamination_register.csv": "ded02c18f4bce1fb4c3f11b30c68fb444b1a916e7e12be9f5fe9447067d9a765",
+    "03_controller_and_model_identity_audit.md": "6f47e1471438568ca925bc0b4813e153778ffcc80548c7ee5c0ee015f42814ac",
+    "04_blind_isolation_and_leakage_test.md": "664bfb8f9e30189bb73a9cd6d24a42cbb7977486f655254373b0c8bd99336758",
+    "05_experiment_matrix_and_budgets.md": "104d99c523a975d4ac44dc92bc16e294096a1220ef6c67cdd3f32b66b66b17eb",
+    "06_metric_contract_and_adjudication.md": "444ee40705ea450f914a215b74365fcdb5e16ca54400b7e2fe3d3e26b67a74a5",
+    "07_next_runbook_GO_RUN_only.md": "7500f68f4aa4a7d1cf98b352864eafe346e217da5804f9b965f9dcd1252617a2",
+    "08_stageA_gate_report.md": "db03a305d04428fa4ba24ddde08d6b2b12b32f8053b30026559e8d77f697efe7",
+    "09_runner_allowlist.csv": "5b01f957f95a10032527a96bb5706c757687c05406284fd5464db558b3befa93"
+  },
+  "verified_case_counts": {
+    "CVE-2017-12629-RCE.mixed-log": {
+      "L2_input_cards": 48,
+      "ground_truth_steps": 3
+    },
+    "CVE-2021-26120-lab.mixed-log": {
+      "L2_input_cards": 104,
+      "ground_truth_steps": 13
+    },
+    "CVE-2023-51467.mixed-log": {
+      "L2_input_cards": 96,
+      "ground_truth_steps": 2
+    },
+    "excytin-incident-38.alert-evidence": {
+      "L2_input_cards": 112,
+      "ground_truth_steps": 4
+    },
+    "mordor-apt29-day2.L-noisy": {
+      "L2_input_cards": 164,
+      "ground_truth_steps": 24
+    }
+  },
+  "stageA_deliverable_hashes_note": "Hashes cover 01-09 deliverables; manifest and checksum-file hashes are reported externally to avoid self-reference."
+}

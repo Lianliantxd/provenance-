@@ -1,0 +1,93 @@
+{
+  "task_id": "DIAGCHAIN_STAGE_C1_AUTHOR_AGENT_ECRAG_REPRO_20261013",
+  "author_commit": "60e04064f9b3cf59505ee159379cf851956b8394",
+  "labels": [
+    "C1_AUTHOR_CONTROLLER_CONFIRMED",
+    "C1_OFFLINE_AUTHOR_SMOKE_PASS_INHERITED",
+    "C1_RUNTIME_FAILED"
+  ],
+  "classification": "AUTHOR_CONTROLLER_DIFFERENT_MODEL; INSTRUMENTED_OR_PATCHED_AUTHOR_CODE",
+  "provider": "ollama",
+  "model": "deepseek-r1:1.5b",
+  "model_digest": "a42b25d8c10a841bd24724309898ae851466696a7d7f3a0a408b895538ccbc96",
+  "model_attempts_total": 2,
+  "completed_model_responses_total": 1,
+  "synthetic_probe_calls": 1,
+  "real_case_model_attempts": 1,
+  "real_case_completed_model_responses": 0,
+  "actual_real_case_tokens": null,
+  "known_probe_tokens": 35,
+  "external_api_cost_usd": 0,
+  "predictions": 0,
+  "evaluations": 0,
+  "second_case": "NOT_RUN",
+  "reflection_calls": 0,
+  "typed_actions_completed": 0,
+  "ecrag_queries_real_run": 0,
+  "first_prompt_memory_and_audit_sections_constructed": true,
+  "grounding_finalization_executed": false,
+  "author_repo_changed": false,
+  "server_model_jobs_started": 0,
+  "limits": [
+    "180 second first request timed out",
+    "No model-quality inference from transport timeout",
+    "Backend returned tag/digest on probe; real case returned no model output",
+    "Request logs complete for one attempted real request; no official completed trace",
+    "Potential Gold-derived length_bucket retained",
+    "Exploratory, not blind or strict numerical reproduction"
+  ],
+  "created_utc": "2026-10-13T04:14:07.855343+00:00",
+  "probe_budget": {
+    "max_calls": 1,
+    "max_total_tokens": 4224,
+    "context_tokens": 4096,
+    "output_tokens": 128,
+    "request_timeout_seconds": 90,
+    "max_wall_seconds": 120
+  },
+  "case_budget": {
+    "max_calls": 46,
+    "max_total_tokens": 524288,
+    "context_tokens": 40960,
+    "output_tokens": 4096,
+    "request_timeout_seconds": 180,
+    "max_wall_seconds": 1200
+  },
+  "runtime_options": {
+    "num_gpu": 0,
+    "num_thread": 2,
+    "num_batch": 64
+  },
+  "author_source_unchanged": true,
+  "runner_sha256": "2e188827fd4fce49c3b3871dc6787e175eba5f4d3113c891e953d457e3a0ca5f",
+  "real_case_outcome": "First request timed out; no prediction generated. Not evaluated, not zero score.",
+  "server_gpu_precheck": {
+    "gpu_type": "4 x NVIDIA A40",
+    "utilization_samples_percent": [
+      [
+        96,
+        96,
+        100,
+        97
+      ],
+      [
+        97,
+        96,
+        28,
+        99
+      ]
+    ],
+    "other_active_compute_processes_on_all_cards": true,
+    "exclusive_gpu_availability": "NOT_CONFIRMED",
+    "project_model_service_found_at_checked_default_ports": false
+  },
+  "dependencies": {
+    "python": "3.12.14",
+    "requests": "2.34.2",
+    "scikit-learn": "1.9.1",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1"
+  },
+  "gold_read_by_runner": false,
+  "published_case_mapping": false
+}

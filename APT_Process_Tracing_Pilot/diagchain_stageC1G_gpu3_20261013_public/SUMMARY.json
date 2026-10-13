@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-13",
+  "stage": "C1 GPU3",
+  "physical_gpu_index": 3,
+  "source_commit": "60e04064f9b3cf59505ee159379cf851956b8394",
+  "model": "deepseek-r1:1.5b",
+  "official_runtime_version": "0.35.1",
+  "official_archive_sha256": "9fcd79ac4575b2bd31b992eee18b1000c8ad126b451627c8f8cd091714cfbb10",
+  "first_attempt": {
+    "status": "FAILED_AT_SYNTHETIC_PROBE",
+    "model_calls": 1,
+    "reported_tokens": 45,
+    "full_gpu_layer_offload": "29/29",
+    "peak_own_gpu_memory_mib": 1356,
+    "case_calls": 0,
+    "prediction": false,
+    "evaluation": false,
+    "cleanup": "PASS"
+  },
+  "second_attempt": {
+    "status": "RUNNING_CASE",
+    "revision": "Probe verifies required ok/value fields and allows extra properties; prompt, author source, model, budgets and GPU unchanged.",
+    "synthetic_probe": "PASS",
+    "case_model_calls_completed_at_export": 1,
+    "official_evaluation": "PENDING_PREDICTION_FREEZE"
+  },
+  "case_budget": {
+    "max_calls": 46,
+    "max_total_tokens": 524288,
+    "max_wall_seconds": 3600,
+    "request_timeout_seconds": 900,
+    "context_tokens": 40960,
+    "output_tokens": 4096
+  },
+  "exploratory_not_blind": true,
+  "gold_access_first_attempt": false,
+  "raw_case_or_gold_published": false
+}

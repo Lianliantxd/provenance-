@@ -24,10 +24,14 @@
   "utc": "2026-10-15T11:55:23.303357+00:00",
   "verified_replay_envelopes": 2,
   "confirmed_controller_consumed_replays": 1,
-  "second_replay_acceptance": "UNKNOWN_AFTER_SSH_PUT_ACK_TIMEOUT",
+  "second_replay_acceptance": "NOT_CONSUMED_BEFORE_CONTROLLER_ABORT",
   "failure_layer": "SSH_PUT_ACK_TIMEOUT_30_SECONDS",
   "subsequent_ssh_error": "BANNER_EXCHANGE_CONNECTION_TIMEOUT",
   "candidate_v2_tests_passed": 67,
   "candidate_v2_state": "AWAIT_PROTOCOL_AMENDMENT_APPROVAL",
-  "funding_basis": "Standing user confirmation of included quota only and auto-recharge off; not a new machine observation"
+  "funding_basis": "Standing user confirmation of included quota only and auto-recharge off; not a new machine observation",
+  "server_controller_exit_confirmed": true,
+  "server_controller_alive": false,
+  "second_replay_consumed": false,
+  "server_runtime_result_files_verified": 58
 }

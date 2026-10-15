@@ -1,16 +1,22 @@
 {
-  "utc": "2026-10-15T11:55:23.347678+00:00",
+  "utc": "2026-10-15T12:00:47.893246+00:00",
   "files": [
     {
       "path": "README.md",
-      "sha256": "e652075a4f3e7cf8c5cf077ab28eb15a2b01b16ca48e8de26e11e4fc523de15f",
-      "bytes": 2537,
+      "sha256": "fe95dc49c0285e7b727f746fa01fe9d76dff60bef532f75c2f4e8ff262792b4b",
+      "bytes": 2567,
+      "classification": "NEW_CODE_OR_SYNTHETIC_OR_PUBLIC_STATUS"
+    },
+    {
+      "path": "SERVER_RUNTIME_SYNC.json",
+      "sha256": "0b32e6326c7e527aa0b4a036d73893e509d1dd4789619dd5892fe0e00733b2e3",
+      "bytes": 563,
       "classification": "NEW_CODE_OR_SYNTHETIC_OR_PUBLIC_STATUS"
     },
     {
       "path": "STATUS.json",
-      "sha256": "83355041fcfbea05f72352c9dc8846092e9113a6fbe812754b07390fbcca3ba8",
-      "bytes": 1542,
+      "sha256": "5ef294ffd20bb8edec047cde44af80a502117d4b0ff10e8c7d3f08fc0af9dd76",
+      "bytes": 1706,
       "classification": "NEW_CODE_OR_SYNTHETIC_OR_PUBLIC_STATUS"
     },
     {
@@ -224,6 +230,6 @@
       "classification": "NEW_CODE_OR_SYNTHETIC_OR_PUBLIC_STATUS"
     }
   ],
-  "raw_real_prompt_reply_or_Gold_included": false,
-  "production_frozen_sources_changed": false
+  "raw_real_evidence_or_credentials_included": false,
+  "frozen_production_sources_changed": false
 }

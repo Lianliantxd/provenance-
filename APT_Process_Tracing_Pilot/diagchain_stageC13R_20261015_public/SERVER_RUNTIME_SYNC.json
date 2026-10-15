@@ -1,0 +1,14 @@
+{
+  "state": "C13R_REAL_RETRY_FAILED_WITH_FROZEN_DIAGNOSTICS",
+  "new_actual_luna_cli_starts": 0,
+  "verified_replay_envelopes": 2,
+  "server_consumed_replays": 1,
+  "second_replay_consumed": false,
+  "server_controller_alive": false,
+  "predictions_or_official_evaluations_generated": false,
+  "server_result_files_verified": 58,
+  "original_frozen_files_verified": 34,
+  "server_runtime_manifest_sha256": "5cbf5784c7ddae84c3791cae4fd053d386ed0ad475af34615831ba51dedd1872",
+  "candidate_v2_tests": 67,
+  "candidate_v2_real_execution": "NOT_AUTHORIZED_NOT_RUN"
+}

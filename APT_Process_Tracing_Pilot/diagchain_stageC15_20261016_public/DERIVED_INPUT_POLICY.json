@@ -1,0 +1,25 @@
+{
+  "policy": "KNOWN_LENGTH_METADATA_REMOVED_V1",
+  "removed_paths": [
+    "$.length_bucket",
+    "$.length_bucket_label"
+  ],
+  "cards_values_and_order_unchanged": true,
+  "Docs_Graph_read_only_unchanged": true,
+  "same_hash_both_arms": true,
+  "not_a_complete_leakage_cleaning_claim": true,
+  "cases": [
+    {
+      "case_alias": "C1",
+      "derived_input_sha256": "f757223a42906d605e0765d5db9ad5e62a6b79cd3a55f0eecabbbbd82c604f50"
+    },
+    {
+      "case_alias": "C2",
+      "derived_input_sha256": "42445995236320c12bf0d46f6d4c5762231401b7d222ba3f102aa042f28998ae"
+    },
+    {
+      "case_alias": "C3",
+      "derived_input_sha256": "c8a514eb88a0cd8dda17c31014c71634cd8374d005a94dcfcb69c1b11edcfae6"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# C15 preparation release — NOT EXECUTED
+
+This release preregisters 18 end-to-end runs: three fixed public benchmark cases, Reflection ON/OFF, three repeats. Every row is PENDING_NOT_STARTED; NA is not a measured zero. No new real model calls, real predictions or C15 scores exist at this stage. One explicit batch authorization is still required.
+
+The only planned method difference is native agent_method=reflection/plain. Both arms use KNOWN_LENGTH_METADATA_REMOVED_V1. The schedule has five ON-first and four OFF-first blocks; schedule seed is not a model noise seed. See the protocol for fixed budgets, completion/NA rules, assigned-arm analysis, quality/cost decision rules and limitations. Reused author/V2 sources are pinned privately; the new adapters depend on those existing modules. Private configs, data, prompt/replies, authorization, quota and machine paths are deliberately absent, so these generic adapters are not a standalone payload release.
+
+Read PREPARATION_STATUS.json before interpreting tests or tables. Fake checks validate code and native control paths; they are not model results or evidence of 18 completed experiments. Full private results will remain in the authorized project directories; later public results must preserve failed/NA rows and must not mix old C13/C14 scores into this batch. There is no human semantic truth or novelty claim. No automatic new algorithm or nineteenth run is authorized.

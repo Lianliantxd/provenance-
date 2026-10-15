@@ -1,0 +1,33 @@
+{
+  "state": "C15_PREPARED_AWAITING_BATCH_AUTHORIZATION",
+  "planned": 18,
+  "started": 0,
+  "running": 0,
+  "frozen_real_predictions": 0,
+  "evaluated": 0,
+  "new_real_model_cli_starts": 0,
+  "input_policy": "KNOWN_LENGTH_METADATA_REMOVED_V1",
+  "known_metadata_deletions_per_case": 2,
+  "model_requested": "gpt-6-luna",
+  "client_version": "codex-cli 0.160.0",
+  "client_binary_sha256": "6b582e8813ce7e8ed4c52814ee5cf230dba647bf2292df747a4003f2657ef201",
+  "native_method_diff_only": true,
+  "counterbalance_ON_first_blocks": 5,
+  "counterbalance_OFF_first_blocks": 4,
+  "fake_checks": "PASS_NOT_MODEL_PERFORMANCE",
+  "server_snapshot": "UNVERIFIED",
+  "backend_temperature_adoption": "UNVERIFIED_NOT_FORWARDED_BY_TEXT_BRIDGE",
+  "research_classification": "DEVELOPMENT_EXPOSED_EXPLORATORY_COMPONENT_ABLATION",
+  "protocol_sha256": "189dc7df6fb271e97a47e6765032896bc0025de52ee23b984f0361fef1123c3e",
+  "private_preregistration_receipt_sha256": "d14c791df342d379bef9676e76355611ddffed393c7bad3a22097e802cba9782",
+  "SEMANTIC_TRUTH_NOT_INDEPENDENTLY_VALIDATED": true,
+  "NOVELTY_UNVERIFIED": true,
+  "worker_configuration_source_sha256": "e4805191aa51861ddf1751b15527d109bee3860d501a9b56a52405c2493ad2e0",
+  "runtime_versions": {
+    "controller": "3.9.24",
+    "evaluator": "3.10.20"
+  },
+  "mac_orchestrator_python": "3.12.14",
+  "local_fake_checks": 92,
+  "server_fake_checks": 25
+}

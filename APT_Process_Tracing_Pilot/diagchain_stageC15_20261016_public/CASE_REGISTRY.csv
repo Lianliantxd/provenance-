@@ -1,0 +1,4 @@
+case_alias,case_id
+C1,CVE-2023-25157.mixed-log
+C2,excytin-incident-34.alert-evidence
+C3,mordor-apt29-day1.L-noisy

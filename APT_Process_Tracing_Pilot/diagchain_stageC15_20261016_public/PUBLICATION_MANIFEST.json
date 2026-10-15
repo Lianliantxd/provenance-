@@ -1,0 +1,83 @@
+{
+  "scope": "PREPARATION_ONLY_AGGREGATE_POLICY_AND_GENERIC_CODE",
+  "new_real_model_calls": 0,
+  "files": [
+    {
+      "path": "01_study_protocol.md",
+      "sha256": "189dc7df6fb271e97a47e6765032896bc0025de52ee23b984f0361fef1123c3e",
+      "bytes": 9450
+    },
+    {
+      "path": "02_config_diff_on_off.json",
+      "sha256": "e12b369116e6c3294df60f858b6765d397db0cf017ea666a7fe6f03a414f60ec",
+      "bytes": 1078
+    },
+    {
+      "path": "05_run_schedule.csv",
+      "sha256": "7ca1fe9e02d06a0348eda3077b97286275d67415d596bfb8ed414f99aa29a197",
+      "bytes": 657
+    },
+    {
+      "path": "10_all_18_runs.csv",
+      "sha256": "48e96a4e04571b2efee81ab5285353f9e5e1094d18dcc9392cbe6800ba19373a",
+      "bytes": 1077
+    },
+    {
+      "path": "CASE_REGISTRY.csv",
+      "sha256": "5f80094eff14ce8625e2183af08fc07ed6e7653cf42e608f30c814cf848be501",
+      "bytes": 114
+    },
+    {
+      "path": "DERIVED_INPUT_POLICY.json",
+      "sha256": "f935e36de7038e596a5be9566e45ba66fc1c935289818733ef9cd6d403484ed0",
+      "bytes": 719
+    },
+    {
+      "path": "PREPARATION_STATUS.json",
+      "sha256": "74bd1ee14ffd1809f7f45b120f7a0f4ea425e69cb47c6c9bc5c089e1b6e488d0",
+      "bytes": 1386
+    },
+    {
+      "path": "README.md",
+      "sha256": "2abd6b6309ef51c1c355fcf37bc3ab5da4a082b96dc4c90b90574cf337808163",
+      "bytes": 1437
+    },
+    {
+      "path": "scripts/c15_common.py",
+      "sha256": "b35c65ca2fcbcc10734e82d4bd80af60d1f59ee1730b04e5150c0e646786c2e1",
+      "bytes": 10462
+    },
+    {
+      "path": "scripts/c15_evaluate_and_report.py",
+      "sha256": "fd163726b9fe119973891bf99d6006364c2c5ba4183338ab2586137db4367963",
+      "bytes": 9054
+    },
+    {
+      "path": "scripts/c15_run_batch.py",
+      "sha256": "a4bdcf5145b387204f2247105ec34bea11b9db8d55a087cd7ed83b922ca676c6",
+      "bytes": 11328
+    },
+    {
+      "path": "scripts/prepare_design.py",
+      "sha256": "47134c306303efbbc8e48a500a89f781b335dc1638bbd436eea3b388509eeaca",
+      "bytes": 3554
+    },
+    {
+      "path": "src/c15_server_native_controller.py",
+      "sha256": "b88a8b21a7d17aa5d2c2e61de9c38c67b42265ca3d09f4b37ec9b735eb69b041",
+      "bytes": 730
+    },
+    {
+      "path": "src/c15_server_protocol.py",
+      "sha256": "fc917f1f0af87b7841ee744ca20a9a45096154f8c42eeff4c768e933397ea520",
+      "bytes": 7884
+    },
+    {
+      "path": "tests/test_c15_offline.py",
+      "sha256": "062cbb9352e98008edfc4edf2fe93181226bd5ae6dd0079d3100dd0b1dee211c",
+      "bytes": 15732
+    }
+  ],
+  "private_payloads_published": false,
+  "self_excluded_to_avoid_recursive_hash": true
+}

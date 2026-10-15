@@ -1,0 +1,28 @@
+{
+  "planned_method_differences": {
+    "agent_method": {
+      "ON": "reflection",
+      "OFF": "plain"
+    }
+  },
+  "source_agent_method_control_branches": [
+    660,
+    688,
+    766
+  ],
+  "earlier_prompt_path_difference": "NONE_IN_NATIVE_FIXED_FAKE_RESPONSE_TEST",
+  "final_metadata_difference_expected": true,
+  "backend_output_context_limits": {
+    "num_predict": null,
+    "max_tokens": null,
+    "num_ctx": null,
+    "reasoning_effort": null,
+    "temperature_request": 0,
+    "backend_temperature_honored": "UNVERIFIED",
+    "backend_snapshot": "UNVERIFIED",
+    "temperature_forwarded_by_Codex_bridge": false
+  },
+  "ignored_old_non_dataclass_field": "json_mode=native Ollama format=json was not applied by the Codex text bridge; not a C15 schema change",
+  "actual_parameter_binding": "AgenticRunConfig.agent_method passed by existing native wrapper, equivalent to author CLI --agent-method",
+  "common_scope_adapter": "Only fixed three-case allowlist, batch budgets, namespaces and evaluation schedule; original V2 transport/worker/parser source bytes retained"
+}

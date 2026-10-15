@@ -1,6 +1,6 @@
 {
   "task": "DIAGCHAIN_STAGE_C13R_LUNA_TRANSPORT_RECOVERY_TWO_CASES_V1",
-  "state": "C13R_OFFLINE_REPAIR_READY_AWAIT_AUTHORIZATION",
+  "state": "C13R_REAL_RETRY_FAILED_WITH_FROZEN_DIAGNOSTICS",
   "historical_actual_cli_starts": 17,
   "historical_controller_consumed_replies": 13,
   "new_actual_cli_starts": 0,
@@ -11,8 +11,8 @@
   "native_synthetic_assertions_passed": 15,
   "AutoLabel_step_f1": 0.5,
   "AutoLabel_evidence_f1": 0.5,
-  "ExCyTIn_real_recovery": "NOT_RUN",
-  "Mordor_real_recovery": "NOT_RUN",
+  "ExCyTIn_real_recovery": "FAILED_BEFORE_NEW_MODEL_CALL",
+  "Mordor_real_recovery": "NOT_STARTED_AFTER_FAIL_CLOSED_STOP",
   "source_freeze_sha256": "a2a3d73cfe0d0a71e43ca0f6bc65bd2a1c193a1c46a4a194b50a27e4288efd12",
   "server_manifest_files_verified": 582,
   "source_data_or_gold_modified": false,
@@ -20,5 +20,14 @@
   "confirmatory_holdout_established": false,
   "new_method_superiority": "NOT_RUN",
   "scientific_novelty": "UNVERIFIED",
-  "research_profile": "PAPER_NATIVE_EXPLORATORY_WITH_LABEL_DERIVED_METADATA"
+  "research_profile": "PAPER_NATIVE_EXPLORATORY_WITH_LABEL_DERIVED_METADATA",
+  "utc": "2026-10-15T11:55:23.303357+00:00",
+  "verified_replay_envelopes": 2,
+  "confirmed_controller_consumed_replays": 1,
+  "second_replay_acceptance": "UNKNOWN_AFTER_SSH_PUT_ACK_TIMEOUT",
+  "failure_layer": "SSH_PUT_ACK_TIMEOUT_30_SECONDS",
+  "subsequent_ssh_error": "BANNER_EXCHANGE_CONNECTION_TIMEOUT",
+  "candidate_v2_tests_passed": 67,
+  "candidate_v2_state": "AWAIT_PROTOCOL_AMENDMENT_APPROVAL",
+  "funding_basis": "Standing user confirmation of included quota only and auto-recharge off; not a new machine observation"
 }

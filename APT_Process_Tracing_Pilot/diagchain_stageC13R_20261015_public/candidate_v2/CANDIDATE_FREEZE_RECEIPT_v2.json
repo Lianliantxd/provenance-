@@ -1,0 +1,111 @@
+{
+  "utc": "2026-10-15T11:52:56.447612+00:00",
+  "state": "OFFLINE_CANDIDATE_FROZEN_AWAIT_PROTOCOL_AMENDMENT_APPROVAL",
+  "files": [
+    {
+      "path": "src/bridge_state_machine.py",
+      "sha256": "84ab6e39ae0acb823a2e554ad87cbbf7922b6c81d1ab04b38a11a007c2be3a06",
+      "bytes": 4714
+    },
+    {
+      "path": "src/codex_worker_config.py",
+      "sha256": "e4805191aa51861ddf1751b15527d109bee3860d501a9b56a52405c2493ad2e0",
+      "bytes": 3880
+    },
+    {
+      "path": "src/jsonl_final_message_parser.py",
+      "sha256": "214e51bf83fda58c9efcee6bc6ce0cee65f26223c293313d904a0cd4fadf5248",
+      "bytes": 8499
+    },
+    {
+      "path": "src/native_recovery_orchestrator.py",
+      "sha256": "c686d4d69962add9c59950a39e9f39c692bbcdcf587755feaba98d4ed1f1d475",
+      "bytes": 8476
+    },
+    {
+      "path": "src/recovery_runner.py",
+      "sha256": "077903fc79937c018bdf7b62658fee95fb3491c583b6ffc0c111ca9321558d53",
+      "bytes": 9946
+    },
+    {
+      "path": "src/replay_and_resume.py",
+      "sha256": "5f07ac9b8fd318f62b52e787a459a99dccba3fd72cb7b3da63e3bcb3eaac75e9",
+      "bytes": 3497
+    },
+    {
+      "path": "src/safe_paths.py",
+      "sha256": "2afe444d8d3c8e6f1e7c703ebb5a53b5768e905e28004889bde793855bfe3e9d",
+      "bytes": 3339
+    },
+    {
+      "path": "src/server_native_controller.py",
+      "sha256": "d031d90d6495bee37edd63f7599fe7d6ed050f056cdcfc301f2e67cd8a24bd0a",
+      "bytes": 6888
+    },
+    {
+      "path": "src/server_protocol.py",
+      "sha256": "12f34a4c765f3ee0d8bae058af09955d342cee59c0c6ff4a556adb37b8d61d50",
+      "bytes": 8240
+    },
+    {
+      "path": "src/ssh_ack_transport.py",
+      "sha256": "dbe73fd5e3473e71930a3df7d00aeed4fab2685965c4cf9404d2200addbb3a92",
+      "bytes": 2716
+    },
+    {
+      "path": "src/strict_exchange_validator.py",
+      "sha256": "0fe867ad88824db2fa85a10fe63ed19156c1048fbf78a545255f71a8c2e25e55",
+      "bytes": 3829
+    },
+    {
+      "path": "tests/fake_worker.py",
+      "sha256": "8e78435e60b6669ba09d489b28b99fa1f9837f1482d9bfcd4b65ab65818880ca",
+      "bytes": 597
+    },
+    {
+      "path": "tests/test_ack_transport.py",
+      "sha256": "b34c9c5ae5adb80dc4ce9fe4374ce0b9af3f838502116c07bddbe7a0af690127",
+      "bytes": 4245
+    },
+    {
+      "path": "tests/test_rpc_integration.py",
+      "sha256": "672748b45b8ace4284ec1139ed2a2477e0b9473455a79acb85053d028725c44a",
+      "bytes": 1680
+    },
+    {
+      "path": "tests/test_transport.py",
+      "sha256": "427606f37d9cdde10f06256af6adc55832b25bc39b62cfce5e61414feaa36730",
+      "bytes": 11421
+    },
+    {
+      "path": "logs/tests_01.txt",
+      "sha256": "ac6e9da8bd627c0143d4f0935a2191f667799eff6766b01790f29565bc679b61",
+      "bytes": 113
+    },
+    {
+      "path": "logs/tests_02.txt",
+      "sha256": "df43dbb58cec19ee07d1b02f2654cac53bce1380a7b8983f595a2372cec4b9e6",
+      "bytes": 166
+    },
+    {
+      "path": "V1_TO_V2.patch",
+      "sha256": "77d0d42cc904fc5e05405816cc21cf716ae3968163e83413f8f41824a855849a",
+      "bytes": 2566
+    },
+    {
+      "path": "README.md",
+      "sha256": "e042ebe29d76fff7926f7cda2fb095f24ae703aab0e32d33fc9485fe234401bc",
+      "bytes": 1658
+    },
+    {
+      "path": "README_v2.md",
+      "sha256": "92ffc5af1612bbcc459620806d6903d95894c6a489a96789cef225523b22e160",
+      "bytes": 875
+    }
+  ],
+  "tests": 67,
+  "passed": 67,
+  "new_real_cli_calls": 0,
+  "original_production_source_changed": false,
+  "logical_algorithm_or_prompt_changed": false
+}

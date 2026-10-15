@@ -1,0 +1,33 @@
+--- frozen_v1/native_recovery_orchestrator.py
++++ candidate_v2/native_recovery_orchestrator.py
+@@ -8,12 +8,17 @@
+ from strict_exchange_validator import validate_request,validate_response
+ from replay_and_resume import verified_replay
+ 
+-def rpc(plan,attempt,mode,payload,*,evaluator=False,timeout=30):
++def rpc(plan,attempt,mode,payload,*,evaluator=False,timeout=60):
++ from ssh_ack_transport import exchange
+  py=plan['evaluator_python' if evaluator else 'controller_python'];server=Path(plan['server_root'])
+- argv=['ssh','-i',plan['ssh_identity_file'],'-o','BatchMode=yes','-o','ConnectTimeout=10',plan['server'],shlex.join([py,'-B',str(server/'src/server_protocol.py'),str(server/'private_recovery_attempts'/attempt),mode])]
+- p=subprocess.run(argv,input=json.dumps(payload,ensure_ascii=False),text=True,capture_output=True,timeout=timeout,shell=False)
+- if p.returncode!=0:raise SafetyError('SERVER_IPC_FAILED:'+mode+':'+sha(p.stderr))
+- return strict_json(p.stdout)
++ if '_transport_deadline_epoch' not in plan:raise SafetyError('SHARED_TRANSPORT_DEADLINE_REQUIRED')
++ def send(selected_mode,selected_payload,remaining_seconds):
++  argv=['ssh','-i',plan['ssh_identity_file'],'-o','BatchMode=yes','-o','ConnectTimeout=30',plan['server'],shlex.join([py,'-B',str(server/'src/server_protocol.py'),str(server/'private_recovery_attempts'/attempt),selected_mode])]
++  p=subprocess.run(argv,input=json.dumps(selected_payload,ensure_ascii=False),text=True,capture_output=True,timeout=remaining_seconds,shell=False)
++  if p.returncode==255:raise ConnectionError('SSH_TRANSPORT_FAILURE:'+sha(p.stderr))
++  if p.returncode!=0:raise SafetyError('SERVER_IPC_LOGIC_REJECTED:'+selected_mode+':'+sha(p.stderr))
++  return strict_json(p.stdout)
++ return exchange(mode,payload,send,deadline=plan['_transport_deadline_epoch'],rpc_limit=timeout)
+ 
+ def verify_frozen_package(root):
+  receipt=strict_json((root/'11_frozen_bridge_version_receipt.json').read_text())
+@@ -40,6 +45,7 @@
+    budget.begin_case(case['case_id']);attempt='C13R_'+str(index)+'_'+uuid.uuid4().hex
+    local=private_dir(root/'private_recovery_attempts',attempt);private_dir(local,'server_artifacts');worker=private_dir(local,'worker')
+    deadline=time.time()+min(b['case_wall_seconds'],b['total_wall_seconds']-(time.monotonic()-budget.started))
++   plan['_transport_deadline_epoch']=deadline
+    c={**case,'attempt_id':attempt,'model':'gpt-6-luna','source_files':plan['source_files'],'budgets':b,'case_deadline_epoch':deadline}
+    atomic_create(local,'contract.json',c);states=[];seq=1;started=False
+    try:

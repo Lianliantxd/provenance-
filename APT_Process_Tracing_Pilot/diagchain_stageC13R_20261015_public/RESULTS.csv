@@ -1,0 +1,4 @@
+case_id,result_scope,bestmatch_step_f1,ceaf_step_f1,evidence_precision,evidence_recall,evidence_f1,attack_bcubed_f1,edge_f1,n_pred_steps,n_gold_steps,observed_evidence,unique_cited_evidence,ordering_accuracy,ordering_comparable_pairs,native_controller_messages,native_repair_messages,native_synthesis_messages,native_reflection_messages,new_actual_cli_starts,verified_replays,server_elapsed_seconds
+CVE-2023-25157.mixed-log,historical_completed_attempt_read_only,0.5,0.5,0.5,0.5,0.5,0.8,0,2,2,14,2,1,0,4,0,0,1,0,0,HISTORICAL_NOT_REMEASURED
+excytin-incident-34.alert-evidence,current_v2_completed_attempt,0.33333333333333337,0.33333333333333337,0.12903225806451613,0.36363636363636365,0.19047619047619047,0.500474361870341,0.0,13,11,85,31,1.0,6,8,0,0,1,7,2,361.214028
+mordor-apt29-day1.L-noisy,current_v2_completed_attempt,0.3428571428571429,0.4571428571428572,1.0,0.25,0.4,0.43198011599005787,0.0,9,26,80,15,0.8666666666666667,15,9,3,0,1,13,0,597.901756

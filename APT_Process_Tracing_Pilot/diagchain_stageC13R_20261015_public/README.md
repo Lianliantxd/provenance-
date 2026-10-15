@@ -1,21 +1,21 @@
-# DiagChain C13-R：通信修复与有界恢复结果
+# DiagChain C13-R：V2真实双案例复现完成
 
-本轮已获执行授权并实际启动作者原生 Controller 恢复 ExCyTIn；在服务器 SSH put 交接等待30秒后失败封存。没有启动新的 Luna 请求，不能将该失败解释为模型能力差。后续只读SSH查询又出现banner exchange超时，随后服务器独立复核确认Controller已因等待回复超时退出。
+当前权威状态：**C13R_TWO_CASES_FROZEN_EVALUATED**。两例均通过原生Controller/Reflection、先冻结Prediction/Trace/交互后官方评价及独立哈希复核。
 
-| 案例 | 历史结果 | 本轮 |
-|---|---|---|
-| AutoLabel | Step/Evidence F1均0.50，完成 | 原结果不变，不重跑 |
-| ExCyTIn | 5次历史CLI/3次消费，无最终预测 | 2条哈希验证回放，1条已确认消费；第二条未被消费；新增CLI0，无最终预测或评价 |
-| Mordor | 1次历史CLI/0次消费，无最终预测 | 遵循冻结失败停止规则，未启动 |
+| 案例 | Best-match Step F1 | CEAF Step F1 | Evidence F1 | 状态 |
+|---|---:|---:|---:|---|
+| AutoLabel | 0.5000 | 0.5000 | 0.5000 | 历史结果只读保留 |
+| ExCyTIn | 0.3333 | 0.3333 | 0.1905 | 本轮完成 |
+| Mordor APT29 | 0.3429 | 0.4571 | 0.4000 | 本轮完成 |
 
-历史17次实际CLI启动、13次服务器消费全部保留；本轮实际新增CLI0。CLI进程、服务器消费和供应商内部生成/账单次数不可混为一谈。
+本轮20次新增gpt-6-luna模型CLI调用全部成功，另有2条严格历史回放，22次原生消息全部消费；未超46次总限额或各例23次限额。ExCyTIn使用7次新调用，Mordor13次（Controller9、Repair3、Reflection1）。历史17次CLI与V1 SSH失败保留；历史加本轮共37次模型CLI启动。
 
-原冻结修复：Mac、服务器现有Python3.9各61项测试通过；原生Controller三模式13次Fake交接及15项断言通过。本公开包独立50项传输测试通过。TLS验证、作者源码、数据、Gold及历史预测均未修改。
+完整结果见[RESULTS_zh.md](RESULTS_zh.md)、[RESULTS.csv](RESULTS.csv)、[CURRENT_RESULT.json](CURRENT_RESULT.json)。模型输入/回复、原始日志、Gold和凭据保留私有，不在本目录。公开报告隐去个人账户额度信息。服务器评价后25项冻结源码/配置、8项输入/Gold哈希、两例全部交互及AutoLabel原结果复核通过，见[CURRENT_SERVER_INTEGRITY.json](CURRENT_SERVER_INTEGRITY.json)。
 
-候选V2仅修复SSH等待及回复接纳核验，67/67项离线测试通过，未用于真实案例，见candidate_v2/README_v2.md和patch。协议更改需依原合同重新批准；累计新增CLI仍上限46（本轮已用0），每例23、模型单次360秒、每例1800秒、总3600秒、顺序执行。不重发模型来补交接，不回填退出进程。
+V2激活绑定见[ACTIVE_V2_CONTEXT.json](ACTIVE_V2_CONTEXT.json)及冻结回执。candidate_v2目录保留原67项离线测试及已获准使用的源码；其中早期AWAIT_APPROVAL回执是历史快照。src目录和SERVER_RUNTIME_SYNC.json保留更早的V1状态，不作为当前完成状态。
 
-多消息解析以Codex0.160的最终消息文件与最后完成消息字节严格匹配；不同消息ID不拼接。未知格式、工具、哈希错配、异常退出和重试计数回绕封存停止；原始JSON不修改，由作者JSON Repair处理。历史ExCyTIn180秒只证明CLI等待超时；Mordor完整候选缺少直接退出码收据，未冒充严格成功回放。
+本轮真实覆盖5次双文本回复，均以CLI最终消息文件精确匹配最后完成消息，不拼接不同消息ID。原始回复未被桥接器改写。两例最终schema有效、未知证据ID均0；两例Edge F1均0，攻击链语义和关键依赖质量仍需人工复核。
 
-公开包仅含新增代码、合成测试和研究状态，不含真实Prompt/回复、Gold、原始日志或凭据。完整原生集成需项目私有的配套作者源码与配置；不冒充完整数据复现。原输入含Gold派生长度桶，全部仅为MAIN-69探索性基线；无独立holdout、新方法优越性或创新性结论。
+三来源评价单元不同，不平均绝对Step F1。原生输入含Gold派生长度桶，结果限定为MAIN-69探索性基线；HUMAN_REVIEW_PENDING，独立holdout未建立，新方法优越性未测试，创新性未验证。CLI后台模型快照、temperature/reasoning和内部计费请求数不能独立证明。没有新H2/H3/H4、GPU、额外API、安装、代理修改或TLS关闭。
 
-纯传输测试：`python3 -B -m unittest discover -s tests -p test_transport.py`。候选测试：在candidate_v2中运行`python3 -B -m unittest discover -s tests`。模型Runner默认拒绝未批准闸门；不得手动填true代替用户授权。
+候选回归测试（不调用模型）：在candidate_v2目录执行`python3 -B -m unittest discover -s tests`。完整原生复现需配套作者源码/数据和正式授权；不能手动填true替代授权。

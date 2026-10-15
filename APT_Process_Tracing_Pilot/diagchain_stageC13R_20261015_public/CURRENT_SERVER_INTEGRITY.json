@@ -1,0 +1,118 @@
+{
+  "state": "BOTH_CASES_POST_EVALUATION_INTEGRITY_PASS",
+  "frozen_source_files_verified": 25,
+  "input_hash_checks": [
+    {
+      "case_id": "excytin-incident-34.alert-evidence",
+      "kind": "input",
+      "hash_matches": true,
+      "semantic_read": false
+    },
+    {
+      "case_id": "excytin-incident-34.alert-evidence",
+      "kind": "retrieval_docs",
+      "hash_matches": true,
+      "semantic_read": false
+    },
+    {
+      "case_id": "excytin-incident-34.alert-evidence",
+      "kind": "input_graph",
+      "hash_matches": true,
+      "semantic_read": false
+    },
+    {
+      "case_id": "excytin-incident-34.alert-evidence",
+      "kind": "ground_truth",
+      "hash_matches": true,
+      "semantic_read": false
+    },
+    {
+      "case_id": "mordor-apt29-day1.L-noisy",
+      "kind": "input",
+      "hash_matches": true,
+      "semantic_read": false
+    },
+    {
+      "case_id": "mordor-apt29-day1.L-noisy",
+      "kind": "retrieval_docs",
+      "hash_matches": true,
+      "semantic_read": false
+    },
+    {
+      "case_id": "mordor-apt29-day1.L-noisy",
+      "kind": "input_graph",
+      "hash_matches": true,
+      "semantic_read": false
+    },
+    {
+      "case_id": "mordor-apt29-day1.L-noisy",
+      "kind": "ground_truth",
+      "hash_matches": true,
+      "semantic_read": false
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "excytin-incident-34.alert-evidence",
+      "attempt_id": "C13R_1_d85999976b814942902a0cc404b90515",
+      "state": "OFFICIAL_EVALUATED",
+      "prediction_sha256": "a1d4aa148b88087718f99574a088dd486ed4279e02f732021282997a78f66db7",
+      "trace_sha256": "972345b64243c9670522fb8e220389256e20a0fe9c2460ae0de087b2a3225e19",
+      "model_messages": 9,
+      "phase_counts": {
+        "controller": 8,
+        "repair": 0,
+        "synthesis": 0,
+        "reflection": 1
+      },
+      "consumed_replays": 2,
+      "consumed_new_real_responses": 7,
+      "server_controller_alive": false,
+      "source_and_interactions_unchanged": true,
+      "mac_and_server_freezes_verified_before_Gold": true,
+      "server_controller_started_utc": "2026-10-15T12:19:48.782210+00:00",
+      "server_prediction_frozen_utc": "2026-10-15T12:25:41.221246+00:00",
+      "server_evaluation_started_utc": "2026-10-15T12:25:47.852362+00:00",
+      "server_evaluation_complete_utc": "2026-10-15T12:25:49.996238+00:00",
+      "server_case_elapsed_seconds": 361.214028,
+      "evaluation_complete_file_sha256": "2a5ebba1aca88117709016e257e6f15adb6a22933ed52ec9c5725a4cf203f5ae"
+    },
+    {
+      "case_id": "mordor-apt29-day1.L-noisy",
+      "attempt_id": "C13R_2_2e7eab7c020a486587b6fcbfa36f9360",
+      "state": "OFFICIAL_EVALUATED",
+      "prediction_sha256": "3169d14b684bf463f7f901a10519557f8353ff0dfd36c06bcd95dace9f626c73",
+      "trace_sha256": "ce4e72f809713859b8533fd8af7ae4a99b41e7926a6e4bd53c29cd4d3e626052",
+      "model_messages": 13,
+      "phase_counts": {
+        "controller": 9,
+        "repair": 3,
+        "synthesis": 0,
+        "reflection": 1
+      },
+      "consumed_replays": 0,
+      "consumed_new_real_responses": 13,
+      "server_controller_alive": false,
+      "source_and_interactions_unchanged": true,
+      "mac_and_server_freezes_verified_before_Gold": true,
+      "server_controller_started_utc": "2026-10-15T12:25:51.377617+00:00",
+      "server_prediction_frozen_utc": "2026-10-15T12:35:37.190513+00:00",
+      "server_evaluation_started_utc": "2026-10-15T12:35:46.842351+00:00",
+      "server_evaluation_complete_utc": "2026-10-15T12:35:49.279373+00:00",
+      "server_case_elapsed_seconds": 597.901756,
+      "evaluation_complete_file_sha256": "e1bc53b1c60b1f16afb60af439a892a73ce7b0e1afc7f8cadcf8e1dd19931023"
+    }
+  ],
+  "historical_autolabel": {
+    "prediction.json": {
+      "sha256": "20094feb4053397d7cc452e1eb6e2053d1731bf91361886b7ef651ca35526f28",
+      "matches": true
+    },
+    "trace.json": {
+      "sha256": "88668be4f0598f0f91919410c8b78e3f77d1effe662e6bbbc36abc95a50a163c",
+      "matches": true
+    }
+  },
+  "Gold_semantics_read_by_auditor": false,
+  "no_model_calls_by_auditor": true
+}

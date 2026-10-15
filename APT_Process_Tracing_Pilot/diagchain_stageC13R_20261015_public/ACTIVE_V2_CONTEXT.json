@@ -1,0 +1,18 @@
+{
+  "state": "APPROVED_AND_COMPLETED",
+  "candidate_v2_receipt_sha256": "012aed31a38154938f0583def538ebe16afc31f02df475f2b1f8f8ebcda1bd0d",
+  "activated_freeze_sha256": "1c5ac2ad17477e420cf610b62c344bd29c64159d4e5041462624134f62445eef",
+  "protocol": "SSH connect30s; RPC60s within shared case deadline; bounded reads and exact reply acknowledgement reconciliation; no automatic model reissue",
+  "budgets": {
+    "total_new_cli_calls": 46,
+    "per_case_new_cli_calls": 23,
+    "worker_timeout_seconds": 360,
+    "case_wall_seconds": 1800,
+    "total_wall_seconds": 3600,
+    "concurrency": 1
+  },
+  "author_algorithm_prompt_and_Gold_unchanged": true,
+  "Gold_derived_length_metadata_disclosed": true,
+  "current_result": "CURRENT_RESULT.json",
+  "earlier_candidate_receipts_preserved_as_historical_snapshots": true
+}

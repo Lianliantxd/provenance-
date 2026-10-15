@@ -1,0 +1,46 @@
+{
+  "scope": "AGGREGATES_AND_GENERIC_CODE_ONLY",
+  "private_payloads_included": false,
+  "files": [
+    {
+      "path": "NEXT_STEP.md",
+      "sha256": "c8677f6d4a13d4d6364b6c1a45d5511e8f96644af69ae58370d2498cb56f39e0",
+      "bytes": 758
+    },
+    {
+      "path": "README.md",
+      "sha256": "98b4429edbef1cc0f4331fd8a8baf7a4de9c04c5c45115049b4a4835fc3b570f",
+      "bytes": 1920
+    },
+    {
+      "path": "RESULTS_zh.md",
+      "sha256": "922afffd77b9d0518099a9a0672fa098e89ccd733235b78ac2b5188a108a644e",
+      "bytes": 3143
+    },
+    {
+      "path": "SNAPSHOT_METRICS.csv",
+      "sha256": "889b6d06251787bb23937db0f7b06e15d863693d32183b0266865cf33d5cdbb3",
+      "bytes": 6776
+    },
+    {
+      "path": "SUMMARY.json",
+      "sha256": "64ba3e8945ef3ddfb4f70474ef852dc53fef8ab9c5ad2352b90911db4b1d0ee2",
+      "bytes": 2402
+    },
+    {
+      "path": "scripts/analyze_frozen_runs.py",
+      "sha256": "442dabf005581ff309e973e251b2f1dd7daf89eec964b58fa6f708f0b9ca6c82",
+      "bytes": 33284
+    },
+    {
+      "path": "scripts/prompt_card_span_index_v2.py",
+      "sha256": "6cf56cb4676d7a31a31006560d8b6366282620db90d2cc11903aa29eaf3c7499",
+      "bytes": 3726
+    },
+    {
+      "path": "tests/test_analysis_boundaries.py",
+      "sha256": "39f2cbb7c27e18542ddf7e6e589ff7d9ff51052b10fcea8a36f2e2d8d6710be5",
+      "bytes": 3637
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "stage": "C14",
+  "research_status": "C14_DIAGNOSIS_COMPLETE_REVIEW_REQUIRED_NO_EXPERIMENT",
+  "mode": "POSTHOC_FROZEN_ARTIFACT_DIAGNOSIS",
+  "new_model_calls": 0,
+  "references": 71,
+  "focus_references": 36,
+  "cases": [
+    {
+      "case_id": "excytin-incident-34.alert-evidence",
+      "G": 11,
+      "O": 85,
+      "G_intersect_O": 11,
+      "C_step": 31,
+      "C_edge": 5,
+      "C_official": 32,
+      "D": 7,
+      "G_minus_O": 0,
+      "nonreference_step_citations": 27,
+      "fates": {
+        "NEVER_USED_WITH_COMPLETE_FIELD_EXPOSURE": 6,
+        "USED_THEN_REMOVED_BY_OTHER_UPDATE": 1
+      },
+      "necessary_exposure_counts": {
+        "ANY_NECESSARY_COMPLETE": 7
+      },
+      "source_incomplete_content_D_count": 5,
+      "source_header_only_D_count": 0,
+      "final_step_count": 13,
+      "gold_step_count": 11,
+      "best_matches": 4,
+      "ceaf_matches": 4,
+      "unmatched_pred_steps": 9,
+      "unmatched_gold_steps": 7,
+      "reference_support_reuse_extra": 0
+    },
+    {
+      "case_id": "mordor-apt29-day1.L-noisy",
+      "G": 60,
+      "O": 80,
+      "G_intersect_O": 44,
+      "C_step": 15,
+      "C_edge": 6,
+      "C_official": 15,
+      "D": 29,
+      "G_minus_O": 16,
+      "nonreference_step_citations": 0,
+      "fates": {
+        "NEVER_USED_WITH_PARTIAL_OR_UNVERIFIED_EXPOSURE": 25,
+        "NEVER_USED_WITH_COMPLETE_FIELD_EXPOSURE": 3,
+        "MODEL_PROPOSED_BUT_CONTROLLER_NOT_RETAINED": 1
+      },
+      "necessary_exposure_counts": {
+        "NO_CONFIRMED_NECESSARY_COMPLETE": 25,
+        "ANY_NECESSARY_COMPLETE": 4
+      },
+      "source_incomplete_content_D_count": 0,
+      "source_header_only_D_count": 25,
+      "final_step_count": 9,
+      "gold_step_count": 26,
+      "best_matches": 6,
+      "ceaf_matches": 8,
+      "unmatched_pred_steps": 3,
+      "unmatched_gold_steps": 20,
+      "reference_support_reuse_extra": 38
+    }
+  ],
+  "semantic_effect": "NOT_IDENTIFIABLE_FOR_ALL_36",
+  "reference_citations_removed_by_reflection": 0,
+  "human_review": "PENDING",
+  "independent_holdout": "NOT_CLAIMED",
+  "new_experiment": "NONE_SELECTED_OPTION_D",
+  "source_copy_commit": "SOURCE_COMMIT_UNVERIFIABLE_COPY",
+  "evaluator_sha256": "8543ca870b64f6cbc36727df32f5b6e9bdc51dca6b111545b33c50d31bfaaf09",
+  "saved_metric_fields_reconciled": 354,
+  "inferential_tests": "NONE: IDs are not independent events",
+  "private_payload_published": false
+}

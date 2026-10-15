@@ -1,0 +1,9 @@
+# C14 offline diagnostic release
+
+Read RESULTS_zh.md and SUMMARY.json first. This directory contains aggregate posthoc results and generic analysis code only; it cannot reconstruct private case payloads. No new model requests, controller executions, models or algorithms were introduced.
+
+The analysis entry requires an explicitly supplied private configuration with case_id, frozen attempt_id, expected prediction/trace/input/Gold and author source SHA, source_dir, server_root, source_files and case_paths; plus separately verified logical_transport_metadata_private.json in a fresh output directory. Use the existing validated project Python and original pinned evaluator/dependencies; install nothing. Run `python -B scripts/analyze_frozen_runs.py --config CONFIG --out NEW_OUTPUT` with bytecode disabled and caches directed to the new private directory. Input/Gold stay in place. Config, source case payloads and transport provenance are intentionally not published. The entry reproduces numeric/index artifacts; narrative judgments are recorded separately and not automatic semantic truth.
+
+Synthetic checks: `python -B -m unittest discover -s tests -v`. Tests exercise ID scope, replay dedup/ordering, actual field ownership, missing fields, work-chain-only mentions, Unicode/numeric/JSON escapes and exact spans, source-prefix truncation, step renumbering, step-vs-edge citation sets and missing snapshots. These are code checks, not model performance experiments.
+
+Evaluator SHA: 8543ca870b64f6cbc36727df32f5b6e9bdc51dca6b111545b33c50d31bfaaf09. The copied author tree has no verified Git commit: SOURCE_COMMIT_UNVERIFIABLE_COPY. Do not claim holdout, human consensus, semantic correctness from citation presence, or causal effects from two snapshots. Final publication receipt is immutable per commit; private synchronization receipts are held separately from the sealed private manifest to avoid hash cycles.

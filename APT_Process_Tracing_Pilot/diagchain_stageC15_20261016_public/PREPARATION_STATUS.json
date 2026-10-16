@@ -1,11 +1,11 @@
 {
-  "state": "C15_PAUSED_CURRENT_QUOTA_UNAVAILABLE",
+  "state": "C15_PAUSED_REPEATED_TRANSPORT_EVENT_PARSER_INCOMPATIBILITY",
   "planned": 18,
-  "started": 4,
+  "started": 5,
   "running": 0,
   "frozen_real_predictions": 2,
   "evaluated": 0,
-  "new_real_model_cli_starts": 13,
+  "new_real_model_cli_starts": 16,
   "input_policy": "KNOWN_LENGTH_METADATA_REMOVED_V1",
   "known_metadata_deletions_per_case": 2,
   "model_requested": "gpt-6-luna",
@@ -32,10 +32,12 @@
   "server_fake_checks": 25,
   "prepared_inputs_and_code_frozen": true,
   "batch_authorization_status": "APPROVED_AFTER_PREPARATION",
-  "failed": 2,
-  "pending": 14,
+  "failed": 3,
+  "pending": 13,
   "evaluation_locked": true,
   "remote_controller_current_state": "ALL_STARTED_ATTEMPTS_FROZEN_OR_ABORT_CONFIRMED",
-  "failure_scope": "FIRST_PAIR_EXTERNAL_SSH_AND_TLS_TRANSPORT_FAILURES_PRESERVED",
-  "preparation_release_commit": "d7861f49e5fa7f7acd078def22326bf94e12da4a"
+  "failure_scope": "SSH_FAILURE_PLUS_TWO_FROZEN_PARSER_RECONNECT_VARIANT_FAILURES",
+  "preparation_release_commit": "d7861f49e5fa7f7acd078def22326bf94e12da4a",
+  "internal_model_request_count": "NOT_IDENTIFIABLE",
+  "source_or_method_changed_after_start": false
 }

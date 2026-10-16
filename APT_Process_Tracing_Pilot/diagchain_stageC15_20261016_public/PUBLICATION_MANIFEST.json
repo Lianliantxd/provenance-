@@ -1,6 +1,6 @@
 {
-  "scope": "EXECUTION_PROGRESS_GENERIC_CODE_AND_FROZEN_PROTOCOL",
   "state": "C15_PROTOCOL_OR_SAFETY_BLOCKED",
+  "scope": "EXECUTION_STATUS_AND_VERSIONED_TRANSPORT_COMPAT; NO_PRIVATE_PAYLOADS",
   "new_real_model_cli_starts": 16,
   "internal_model_request_count": "NOT_IDENTIFIABLE",
   "files": [
@@ -21,8 +21,13 @@
     },
     {
       "path": "10_all_18_runs.csv",
-      "sha256": "8bc954404304c57cb6c5046c887b5b35429984d56f9ca3cc19441d57f5b018d8",
-      "bytes": 1326
+      "sha256": "d7f8242ada5dc92f5df6b8e475d63c6ca3a3074a3f200f91b6d2623985ea5e31",
+      "bytes": 1570
+    },
+    {
+      "path": "18_transport_compat_amendment.md",
+      "sha256": "a3b8da932b8690069b84d0b330b41cd89a8288f6d4feefcf5fd3abf6f9cba674",
+      "bytes": 2385
     },
     {
       "path": "CASE_REGISTRY.csv",
@@ -36,13 +41,13 @@
     },
     {
       "path": "PREPARATION_STATUS.json",
-      "sha256": "3d0c3a7f6a37a8f9ac9ac3e0b190354692b4e9488603268c589755528b7e5493",
-      "bytes": 2127
+      "sha256": "bb7520b0be4593774f74332391d7aa8fb8706647e68ec9616214dbbfbece8719",
+      "bytes": 2553
     },
     {
       "path": "README.md",
-      "sha256": "20084ff3bf9652603f005df3a1f6d73ee8781634d972eeec3ce18cc94fbd75ce",
-      "bytes": 2319
+      "sha256": "bc8d5e40aae0b98ad23c3511fa79898ec195b840a82e96c058b0e98b533b0540",
+      "bytes": 2120
     },
     {
       "path": "scripts/c15_common.py",
@@ -53,6 +58,11 @@
       "path": "scripts/c15_evaluate_and_report.py",
       "sha256": "fd163726b9fe119973891bf99d6006364c2c5ba4183338ab2586137db4367963",
       "bytes": 9054
+    },
+    {
+      "path": "scripts/c15_resume_compat.py",
+      "sha256": "70a5a60c9a3f7564acfada6be6e04f7cef4285ead51bb0ba5498ce4bafcd716c",
+      "bytes": 2874
     },
     {
       "path": "scripts/c15_run_batch.py",
@@ -75,11 +85,20 @@
       "bytes": 7884
     },
     {
+      "path": "src/c15_transport_compat.py",
+      "sha256": "c886655ef1bdfc8e7eebc12acc49f31299d403a4ec160fb2cdc641dab02f497e",
+      "bytes": 2238
+    },
+    {
       "path": "tests/test_c15_offline.py",
       "sha256": "062cbb9352e98008edfc4edf2fe93181226bd5ae6dd0079d3100dd0b1dee211c",
       "bytes": 15732
+    },
+    {
+      "path": "tests/test_c15_transport_compat.py",
+      "sha256": "c066926fff45b8c3c2b513cb744c7eb6de17d921f7750df047a9e502662d3768",
+      "bytes": 3360
     }
   ],
-  "private_payloads_published": false,
   "self_excluded_to_avoid_recursive_hash": true
 }

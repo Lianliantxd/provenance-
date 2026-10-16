@@ -1,6 +1,7 @@
 {
-  "scope": "PREPARATION_ONLY_AGGREGATE_POLICY_AND_GENERIC_CODE",
-  "new_real_model_calls": 0,
+  "scope": "EXECUTION_PROGRESS_GENERIC_CODE_AND_FROZEN_PROTOCOL",
+  "state": "C15_PAUSED_CURRENT_QUOTA_UNAVAILABLE",
+  "new_real_model_calls": 13,
   "files": [
     {
       "path": "01_study_protocol.md",
@@ -19,8 +20,8 @@
     },
     {
       "path": "10_all_18_runs.csv",
-      "sha256": "48e96a4e04571b2efee81ab5285353f9e5e1094d18dcc9392cbe6800ba19373a",
-      "bytes": 1077
+      "sha256": "e9da9f42eb20c478a76290a40ce9a0fce3bbe4cf93661ffe0f133554cd70859c",
+      "bytes": 1287
     },
     {
       "path": "CASE_REGISTRY.csv",
@@ -34,13 +35,13 @@
     },
     {
       "path": "PREPARATION_STATUS.json",
-      "sha256": "74bd1ee14ffd1809f7f45b120f7a0f4ea425e69cb47c6c9bc5c089e1b6e488d0",
-      "bytes": 1386
+      "sha256": "7526073d493a91872d06a67d3351a6a9212e1f7cc9671a1a28b00461a21dc893",
+      "bytes": 1794
     },
     {
       "path": "README.md",
-      "sha256": "2abd6b6309ef51c1c355fcf37bc3ab5da4a082b96dc4c90b90574cf337808163",
-      "bytes": 1437
+      "sha256": "ac74e500064b5ac98b0124b92764b40248505b48e434ed7ca0073bf3f052be19",
+      "bytes": 1922
     },
     {
       "path": "scripts/c15_common.py",

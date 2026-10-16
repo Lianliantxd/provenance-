@@ -1,0 +1,6 @@
+run_unit_id,request_seq,phase,reflection_call_latency_sec,cli_wall_seconds,input_tokens,cached_input_tokens,output_tokens,reasoning_output_tokens,whole_ON_cli_starts,whole_ON_phase_counts,model_snapshot,sampling_runtime,billing,new_model_calls
+C1_R1_ON,5,reflection,22.32594656944275,17.391269041923806,19873,0,1710,0,5,"{""controller"": 4, ""reflection"": 1, ""repair"": 0, ""synthesis"": 0}",UNVERIFIED,UNVERIFIED,UNVERIFIED,0
+C1_R2_ON,5,reflection,24.335246086120605,22.614570959005505,19343,9984,1926,0,5,"{""controller"": 4, ""reflection"": 1, ""repair"": 0, ""synthesis"": 0}",UNVERIFIED,UNVERIFIED,UNVERIFIED,0
+C2_R2_ON,14,reflection,28.768659591674805,24.41502650012262,29734,9984,2074,0,14,"{""controller"": 10, ""reflection"": 1, ""repair"": 3, ""synthesis"": 0}",UNVERIFIED,UNVERIFIED,UNVERIFIED,0
+C2_R3_ON,18,reflection,33.991995334625244,31.98393024993129,34536,9984,3941,538,18,"{""controller"": 12, ""reflection"": 1, ""repair"": 5, ""synthesis"": 0}",UNVERIFIED,UNVERIFIED,UNVERIFIED,0
+C3_R3_ON,9,reflection,26.349384307861328,24.599614915903658,32145,10496,2051,353,9,"{""controller"": 6, ""reflection"": 1, ""repair"": 2, ""synthesis"": 0}",UNVERIFIED,UNVERIFIED,UNVERIFIED,0

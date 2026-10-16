@@ -1,0 +1,64 @@
+{
+  "scope": "C15S_POSTHOC_SNAPSHOT_DIAGNOSTIC",
+  "new_model_calls": 0,
+  "original_C15_commit": "5306e1c77e881773e302ed6d7f146ba262ac3ce6",
+  "files": [
+    {
+      "path": "04_final_score_reproduction.csv",
+      "sha256": "b48f5eafb67ec7a0bc861ba5d5cab1fe3101f55f0a9f6addeb4a8cea54b42011",
+      "bytes": 5114
+    },
+    {
+      "path": "05_snapshot_metrics.csv",
+      "sha256": "85aec037890e90a6484a33dea0004048bc3787bcfda2ab5f015c8dd382514fef",
+      "bytes": 6636
+    },
+    {
+      "path": "06_within_run_deltas.csv",
+      "sha256": "65df37f7cbf8ac6a18c921bcecaa41e86836d29fb958e64bcacb2b0c05c02f90",
+      "bytes": 4346
+    },
+    {
+      "path": "07_structural_and_citation_change_counts.csv",
+      "sha256": "2da5521a9ee55f0520d692fa1d92a1d69abedc42a653becdb4837a802e7d2064",
+      "bytes": 1752
+    },
+    {
+      "path": "08_existing_reflection_costs.csv",
+      "sha256": "d60cc5a9897e3eef57c5cb09bfc0ff365660b67868a7fe03fb15c3f679e05f0c",
+      "bytes": 1194
+    },
+    {
+      "path": "09_plain_language_closeout_zh.md",
+      "sha256": "aaeccb96f9167cc232f74b391043bcbb6c929c941ac4b132a01696bb0b2f71ab",
+      "bytes": 10229
+    },
+    {
+      "path": "10_limitations_and_original_C15_boundary.md",
+      "sha256": "cec40040532b3f0dad92583b9ee5413dd7136f9b2e69715ce6a12f15b0e3598b",
+      "bytes": 1548
+    },
+    {
+      "path": "11_final_gate.json",
+      "sha256": "9dcd35bc4f5211354c33bfc2d68ad280fecf99d2cac3c2b86fd961a853f7473d",
+      "bytes": 1482
+    },
+    {
+      "path": "README.md",
+      "sha256": "539f99ce83fa494ad0f30c8ed3fe288562379f8f388c79b53c5ad61bdd75835b",
+      "bytes": 971
+    },
+    {
+      "path": "reference_matching_change_counts.csv",
+      "sha256": "bd31d11743f678cf417de7395590a229c9b5a38d3e3195effadbb59c75972ac2",
+      "bytes": 177
+    },
+    {
+      "path": "scripts/analyze_reflection_snapshots.py",
+      "sha256": "4eac70b637bd7fbd66e03c1e90b65b601e4198dc988a706f359b5c044e3cbc87",
+      "bytes": 50396
+    }
+  ],
+  "manifest_excludes_itself": true,
+  "private_snapshots_published": false
+}

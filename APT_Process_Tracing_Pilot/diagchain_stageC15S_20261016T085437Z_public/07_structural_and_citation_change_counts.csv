@@ -1,0 +1,16 @@
+run_unit_id,comparison,step_count_before,step_count_after,step_count_delta,edge_count_before,edge_count_after,edge_count_delta,same_step_content_ignoring_id_order,step_id_or_order_changed,incident_summary_changed,attack_chain_exact_equal,causal_edges_exact_equal,mapping_is_semantic_ground_truth,text_changed,ambiguous_mapping_rows,step_citation_ids_added_count,step_citation_ids_removed_count,edge_citation_ids_added_count,edge_citation_ids_removed_count
+C1_R1_ON,POST_MINUS_PRE,3,8,5,2,7,5,False,True,True,False,False,False,True,0,6,0,5,0
+C1_R1_ON,FINAL_MINUS_PRE,3,8,5,2,7,5,False,True,True,False,False,False,True,0,6,0,5,0
+C1_R1_ON,FINAL_MINUS_POST,8,8,0,7,7,0,True,False,False,True,True,False,False,0,0,0,0,0
+C1_R2_ON,POST_MINUS_PRE,1,7,6,0,6,6,False,True,True,False,False,False,True,0,6,0,7,0
+C1_R2_ON,FINAL_MINUS_PRE,1,7,6,0,6,6,False,True,True,False,False,False,True,0,6,0,7,0
+C1_R2_ON,FINAL_MINUS_POST,7,7,0,6,6,0,True,False,False,True,True,False,False,0,0,0,0,0
+C2_R2_ON,POST_MINUS_PRE,6,9,3,5,8,3,False,True,True,False,False,False,True,3,2,2,4,1
+C2_R2_ON,FINAL_MINUS_PRE,6,9,3,5,8,3,False,True,True,False,False,False,True,3,2,2,4,1
+C2_R2_ON,FINAL_MINUS_POST,9,9,0,8,8,0,True,False,False,True,True,False,False,0,0,0,0,0
+C2_R3_ON,POST_MINUS_PRE,7,12,5,6,6,0,False,True,True,False,False,False,True,1,18,0,1,0
+C2_R3_ON,FINAL_MINUS_PRE,7,12,5,6,6,0,False,True,True,False,False,False,True,1,18,0,1,0
+C2_R3_ON,FINAL_MINUS_POST,12,12,0,6,6,0,True,False,False,True,True,False,False,0,0,0,0,0
+C3_R3_ON,POST_MINUS_PRE,6,8,2,5,7,2,False,True,True,False,False,False,True,0,2,0,2,0
+C3_R3_ON,FINAL_MINUS_PRE,6,8,2,5,7,2,False,True,True,False,False,False,True,0,2,0,2,0
+C3_R3_ON,FINAL_MINUS_POST,8,8,0,7,7,0,True,False,False,True,True,False,False,0,0,0,0,0

@@ -1,0 +1,6 @@
+run_unit_id,new_gold_positions_matched,old_gold_positions_no_longer_matched,matching_count_net_change
+C1_R1_ON,0,0,0
+C1_R2_ON,0,0,0
+C2_R2_ON,4,1,3
+C2_R3_ON,1,0,1
+C3_R3_ON,0,0,0

@@ -1,5 +1,5 @@
 {
-  "state": "C15_PAUSED_REPEATED_TRANSPORT_EVENT_PARSER_INCOMPATIBILITY",
+  "state": "C15_PROTOCOL_OR_SAFETY_BLOCKED",
   "planned": 18,
   "started": 5,
   "running": 0,
@@ -39,5 +39,9 @@
   "failure_scope": "SSH_FAILURE_PLUS_TWO_FROZEN_PARSER_RECONNECT_VARIANT_FAILURES",
   "preparation_release_commit": "d7861f49e5fa7f7acd078def22326bf94e12da4a",
   "internal_model_request_count": "NOT_IDENTIFIABLE",
-  "source_or_method_changed_after_start": false
+  "source_or_method_changed_after_start": false,
+  "pause_detail": "REPEATED_TRANSPORT_EVENT_PARSER_INCOMPATIBILITY",
+  "decision": "ABLATION_INVALID_OR_INCOMPLETE",
+  "decision_reason": "INCOMPLETE_NOT_ALL_18_TERMINAL_NO_EVALUATION",
+  "not_a_method_or_dataset_failure_claim": true
 }

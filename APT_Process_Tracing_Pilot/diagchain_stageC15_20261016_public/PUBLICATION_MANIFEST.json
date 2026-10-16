@@ -1,6 +1,6 @@
 {
   "scope": "EXECUTION_PROGRESS_GENERIC_CODE_AND_FROZEN_PROTOCOL",
-  "state": "C15_PAUSED_REPEATED_TRANSPORT_EVENT_PARSER_INCOMPATIBILITY",
+  "state": "C15_PROTOCOL_OR_SAFETY_BLOCKED",
   "new_real_model_cli_starts": 16,
   "internal_model_request_count": "NOT_IDENTIFIABLE",
   "files": [
@@ -36,8 +36,8 @@
     },
     {
       "path": "PREPARATION_STATUS.json",
-      "sha256": "8eceda914817fa5c31db9614025bd977c29d47b646e9c1074314a1a2819de248",
-      "bytes": 1920
+      "sha256": "3d0c3a7f6a37a8f9ac9ac3e0b190354692b4e9488603268c589755528b7e5493",
+      "bytes": 2127
     },
     {
       "path": "README.md",

@@ -1,0 +1,134 @@
+{
+  "scope": "C15S_AGGREGATES_AND_PAYLOAD_FREE_CODE_ONLY",
+  "files": [
+    {
+      "path": "01_five_reflection_selection.csv",
+      "sha256": "8820765fa20821b0897902b84f5846ccc6d4f184fce73e7725110c5fbf985a80",
+      "bytes": 734
+    },
+    {
+      "path": "02_snapshot_analysis_contract.json",
+      "sha256": "fb6a2baed347d933df8f7281ef3858505649415f8172770f1398ca088c946be2",
+      "bytes": 3050
+    },
+    {
+      "path": "02_snapshot_analysis_contract.md",
+      "sha256": "d8fe3f49b99532ba24ce9997e1fdb86a33b4c7a15912cf1cee9d104fee5fddbe",
+      "bytes": 3166
+    },
+    {
+      "path": "03_snapshot_provenance_and_comparability.csv",
+      "sha256": "ddd7ec28b687c1770da2bcd3b3dd92b22327bf3902f094d303ec220d1689ac8a",
+      "bytes": 2543
+    },
+    {
+      "path": "04_final_score_reproduction.csv",
+      "sha256": "bcb79d24bdf30604e2cf63390f9a3174609ebca45d5573a7bfd5b34d22dc95b5",
+      "bytes": 1503
+    },
+    {
+      "path": "05_snapshot_metrics.csv",
+      "sha256": "2d573170d9a1df6ebfb95663d55fd0de26939f6ee3302650588590121facfb35",
+      "bytes": 6105
+    },
+    {
+      "path": "06_within_run_deltas.csv",
+      "sha256": "d8b1a956ffe1b556ab243b895621ecaa35548f595577b232b5c5a56ef1552472",
+      "bytes": 4224
+    },
+    {
+      "path": "07_structural_and_citation_changes.csv",
+      "sha256": "6dcfe2c372fc9c22513ab78f1513a3747838ecc7e9c4c0a245430140e83b929d",
+      "bytes": 3185
+    },
+    {
+      "path": "08_existing_reflection_costs.csv",
+      "sha256": "2d8f82c97010d372d883f7bdddb8569a00ba474cfdd96a42789090aeb8bd7548",
+      "bytes": 1496
+    },
+    {
+      "path": "09_plain_language_closeout_zh.md",
+      "sha256": "7a8607efb57fc96f07e955ae720d2f9fb2488f864255d88d384bb417f05c34de",
+      "bytes": 9702
+    },
+    {
+      "path": "10_limitations_and_original_C15_boundary.md",
+      "sha256": "07e28501b621ea5b63dc8167c22085d836237a3316ab4e6545eeb3b229f50b87",
+      "bytes": 1895
+    },
+    {
+      "path": "11_final_gate.json",
+      "sha256": "eb85c013e24aea0625f020d51fbeee740e1fb0afc1f68e5e16a8e0fd3a6cc231",
+      "bytes": 1444
+    },
+    {
+      "path": "12_edge_and_match_structure_summary.csv",
+      "sha256": "a1e726feabc1969d7d7cea7688d830e29c9018190bdcd1e4427d5b490dc7b58f",
+      "bytes": 1424
+    },
+    {
+      "path": "README_REPRODUCE.md",
+      "sha256": "759c26a277ad02d1395353c8bfc22919ac6e9b53b62746049e032dd3cd03a9e5",
+      "bytes": 1306
+    },
+    {
+      "path": "SUMMARY.json",
+      "sha256": "09af61d49785b3be937f6de0142b30f251ee6b6fd922984c3988d17fe329049b",
+      "bytes": 1207
+    },
+    {
+      "path": "analysis-report.md",
+      "sha256": "69cbed8d967f1a7a6810bb154afca1071735167a54663668af8cdebd63e4499e",
+      "bytes": 699
+    },
+    {
+      "path": "figure-catalog.md",
+      "sha256": "3784bbf7d5fbf3962007c8cf1fc94b94bfeb81ab0b41aa183b79dd03afd5b971",
+      "bytes": 787
+    },
+    {
+      "path": "figures/figure-01-within-run-step-f1.pdf",
+      "sha256": "d6587d82fa9a8d44c4b51d0f8afeabb2da4f7fc95aa5ff6583ee842c8bca0c5e",
+      "bytes": 19185
+    },
+    {
+      "path": "figures/figure-01-within-run-step-f1.png",
+      "sha256": "2321e5057f09e11cea1fe57b1f26620de638a7edec4664d571d7fdf090a6812c",
+      "bytes": 96294
+    },
+    {
+      "path": "figures/figure-02-output-and-matched-counts.pdf",
+      "sha256": "10a3d490b86fb29c07f63ef264caa62fdd3bc2667df5b053a23f80e355848fc2",
+      "bytes": 20559
+    },
+    {
+      "path": "figures/figure-02-output-and-matched-counts.png",
+      "sha256": "7f8def857ca3ce22e0fe1941a62e4c2aa02408b2335d524e4a9b6d0904232498",
+      "bytes": 109233
+    },
+    {
+      "path": "scripts/analyze_reflection_snapshots.py",
+      "sha256": "6c2a97fc72c479202c6ee4717df5105ec2a7595699cdde7a49e75f71ccea7acc",
+      "bytes": 26732
+    },
+    {
+      "path": "scripts/structural_closeout_adapter.py",
+      "sha256": "5fd12646b4e10f0926765ddf0abadbb29fb6d008d82e132d4a2887de909a78e7",
+      "bytes": 5416
+    },
+    {
+      "path": "stats-appendix.md",
+      "sha256": "c1be7d4011f77c8100823cb84be665a9967faa0d64c34a33011169615f544e57",
+      "bytes": 581
+    },
+    {
+      "path": "tests/test_snapshot_boundaries.py",
+      "sha256": "0f4d586f427eb214ae329d861ae4f15684bd369897643e061ec088497b9f45c6",
+      "bytes": 4411
+    }
+  ],
+  "excludes": [
+    "PUBLIC_MANIFEST.json",
+    "SHA256SUMS.txt"
+  ]
+}

@@ -1,0 +1,15 @@
+本补充是 POSTHOC_WITHIN_RUN_REFLECTION_SNAPSHOTS，全部新评分为 C15S_POSTHOC_SNAPSHOT_DIAGNOSTIC。
+
+ARTIFACT_VERIFIED：5次实际接纳Reflection属于三个已暴露案例的成功条件子集；15个PRE/POST/FINAL对象不是新端到端试验。五个FINAL同版复算与原完整官方结果一致。五个POST与FINAL仅差metadata。可选POST_AUTHOR_ACCEPTED未单独保存，不构造历史。
+
+PRE不是OFF反事实，不补进原OFF组、不填NA、不重算原18单元均值。无跨家族平均F1、置信区间、p值或总体因果效应；此处不具备相应独立随机样本设计。仅报告逐次绝对变化与分子分母。
+
+元数据依赖的retrieval、attribution与暴露指标不用于快照比较。Step F1、Evidence F1、CEAF与边指标分别解释，不混用aligned_steps。排序匹配少于2步标NO_COMPARABLE_PAIRS，即使官方返回1.0也不称完美。
+
+POSTHOC_INTERPRETATION不是独立人工真值。非参考引用不自动无关，未匹配步骤不自动幻觉，引用ID正确不保证动作、对象、结果正确，边拓扑也不证明因果。模型自述改写理由不能充当验证。
+
+NOT_IDENTIFIABLE：行为语义真实性、真实幻觉率、独立场景泛化及普遍Reflection效果。服务端模型快照、实际采样、精确计费保留UNVERIFIED，服务器源码拷贝保留SOURCE_COMMIT_UNVERIFIABLE_COPY。
+
+传输版本差异、执行时间及成功触发选择偏差仍保留。原C15为C15_BATCH_CLOSED_WITH_FAILURES、HETEROGENEOUS_OR_INCONCLUSIVE；18终态/12评价/6NA/121CLI不变，7原FAILED记录与1同attempt消歧记录区别保留。本补充模型请求0，无补跑。
+
+本轮是C15结项补充。独立真人审查与新数据未完成不阻塞本轮官方快照诊断，但限制语义结论。不重开C14缺口审查，不生成新盲审包，不发展H2/H3/H4，不自动启动C16。

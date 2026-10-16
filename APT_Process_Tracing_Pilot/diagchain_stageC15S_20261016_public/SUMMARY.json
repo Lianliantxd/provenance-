@@ -1,0 +1,34 @@
+{
+  "state": "C15S_FIVE_REFLECTION_SNAPSHOTS_EVALUATED_CLOSEOUT_COMPLETE",
+  "scope": "POSTHOC_WITHIN_RUN_REFLECTION_SNAPSHOTS",
+  "source_C15_commit": "5306e1c77e881773e302ed6d7f146ba262ac3ce6",
+  "source_commit_status": "SOURCE_COMMIT_UNVERIFIABLE_COPY",
+  "selection": "ALL_FIVE_ACTUAL_ACCEPTED_REFLECTIONS_IN_THREE_DEVELOPMENT_CASES",
+  "new_model_calls": 0,
+  "new_end_to_end_samples": 0,
+  "main_snapshots_evaluated": 15,
+  "final_full_official_results_reproduced": 5,
+  "within_run_step_F1": {
+    "increased": 2,
+    "decreased": 3,
+    "tied": 0,
+    "incomparable": 0
+  },
+  "original_C15": {
+    "state": "C15_BATCH_CLOSED_WITH_FAILURES",
+    "decision": "HETEROGENEOUS_OR_INCONCLUSIVE",
+    "planned": 18,
+    "frozen_native_outputs": 12,
+    "failed_units": 6,
+    "evaluated": 12,
+    "model_cli_starts": 121,
+    "original_failed_terminal_records_retained": 7,
+    "same_original_attempt_completion_reconciled": 1
+  },
+  "optional_accepted_intermediate_not_saved": 5,
+  "primary_snapshot_gaps": 0,
+  "POST_equals_FINAL_semantics": true,
+  "POSTHOC_GOLD_ACCESS": "YES_LOCAL_TO_ANALYSIS_HOST",
+  "private_payloads_in_public_export": false,
+  "no_general_causal_or_semantic_truth_claim": true
+}

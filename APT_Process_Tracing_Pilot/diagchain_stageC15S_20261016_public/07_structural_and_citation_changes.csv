@@ -1,0 +1,16 @@
+run_unit_id,case_id,contrast,pred_steps_before,pred_steps_after,pred_edges_before,pred_edges_after,step_citations_before,step_citations_after,step_citations_added,step_citations_removed,edge_citations_added,edge_citations_removed,all_citations_added,all_citations_removed,official_reference_citations_before,official_reference_citations_after,official_reference_added,official_reference_removed,step_list_exact_equal,edge_list_exact_equal,incident_summary_equal,mapping_ambiguous_before_steps,mapping_no_candidate_before_steps,nonreference_citation_interpretation,semantic_truth
+C1_R1_ON,CVE-2023-25157.mixed-log,POST_MODEL_RAW_MINUS_PRE_REFLECTION,3,8,2,7,3,9,6,0,5,0,6,0,1,2,1,0,False,False,False,0,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE
+C1_R1_ON,CVE-2023-25157.mixed-log,FINAL_FROZEN_MINUS_PRE_REFLECTION,3,8,2,7,3,9,6,0,5,0,6,0,1,2,1,0,False,False,False,0,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE
+C1_R1_ON,CVE-2023-25157.mixed-log,FINAL_FROZEN_MINUS_POST_MODEL_RAW,8,8,7,7,9,9,0,0,0,0,0,0,2,2,0,0,True,True,True,0,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE
+C1_R2_ON,CVE-2023-25157.mixed-log,POST_MODEL_RAW_MINUS_PRE_REFLECTION,1,7,0,6,1,7,6,0,7,0,6,0,1,1,0,0,False,False,False,0,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE
+C1_R2_ON,CVE-2023-25157.mixed-log,FINAL_FROZEN_MINUS_PRE_REFLECTION,1,7,0,6,1,7,6,0,7,0,6,0,1,1,0,0,False,False,False,0,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE
+C1_R2_ON,CVE-2023-25157.mixed-log,FINAL_FROZEN_MINUS_POST_MODEL_RAW,7,7,6,6,7,7,0,0,0,0,0,0,1,1,0,0,True,True,True,0,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE
+C2_R2_ON,excytin-incident-34.alert-evidence,POST_MODEL_RAW_MINUS_PRE_REFLECTION,6,9,5,8,16,16,2,2,4,1,2,2,9,8,0,1,False,False,False,3,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE
+C2_R2_ON,excytin-incident-34.alert-evidence,FINAL_FROZEN_MINUS_PRE_REFLECTION,6,9,5,8,16,16,2,2,4,1,2,2,9,8,0,1,False,False,False,3,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE
+C2_R2_ON,excytin-incident-34.alert-evidence,FINAL_FROZEN_MINUS_POST_MODEL_RAW,9,9,8,8,16,16,0,0,0,0,0,0,8,8,0,0,True,True,True,0,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE
+C2_R3_ON,excytin-incident-34.alert-evidence,POST_MODEL_RAW_MINUS_PRE_REFLECTION,7,12,6,6,11,29,18,0,1,0,18,0,3,5,2,0,False,False,False,1,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE
+C2_R3_ON,excytin-incident-34.alert-evidence,FINAL_FROZEN_MINUS_PRE_REFLECTION,7,12,6,6,11,29,18,0,1,0,18,0,3,5,2,0,False,False,False,1,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE
+C2_R3_ON,excytin-incident-34.alert-evidence,FINAL_FROZEN_MINUS_POST_MODEL_RAW,12,12,6,6,29,29,0,0,0,0,0,0,5,5,0,0,True,True,True,0,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE
+C3_R3_ON,mordor-apt29-day1.L-noisy,POST_MODEL_RAW_MINUS_PRE_REFLECTION,6,8,5,7,8,10,2,0,2,0,2,0,8,10,2,0,False,False,False,0,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE
+C3_R3_ON,mordor-apt29-day1.L-noisy,FINAL_FROZEN_MINUS_PRE_REFLECTION,6,8,5,7,8,10,2,0,2,0,2,0,8,10,2,0,False,False,False,0,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE
+C3_R3_ON,mordor-apt29-day1.L-noisy,FINAL_FROZEN_MINUS_POST_MODEL_RAW,8,8,7,7,10,10,0,0,0,0,0,0,10,10,0,0,True,True,True,0,0,NOT_AUTOMATICALLY_IRRELEVANT,NOT_IDENTIFIABLE

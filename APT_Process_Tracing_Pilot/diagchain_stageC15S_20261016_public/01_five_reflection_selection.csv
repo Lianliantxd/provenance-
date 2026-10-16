@@ -1,0 +1,6 @@
+run_unit_id,case_id,actual_phase,seq,controller_turn,reflection_called,revision_accepted,selection_basis,source_final_f1
+C1_R1_ON,CVE-2023-25157.mixed-log,reflection,5,4,True,True,ALL_ACTUAL_ACCEPTED_REFLECTIONS_NOT_SCORE,0.2
+C1_R2_ON,CVE-2023-25157.mixed-log,reflection,5,4,True,True,ALL_ACTUAL_ACCEPTED_REFLECTIONS_NOT_SCORE,0.22222222222222224
+C2_R2_ON,excytin-incident-34.alert-evidence,reflection,14,10,True,True,ALL_ACTUAL_ACCEPTED_REFLECTIONS_NOT_SCORE,0.7999999999999999
+C2_R3_ON,excytin-incident-34.alert-evidence,reflection,18,12,True,True,ALL_ACTUAL_ACCEPTED_REFLECTIONS_NOT_SCORE,0.34782608695652173
+C3_R3_ON,mordor-apt29-day1.L-noisy,reflection,9,6,True,True,ALL_ACTUAL_ACCEPTED_REFLECTIONS_NOT_SCORE,0.11764705882352941

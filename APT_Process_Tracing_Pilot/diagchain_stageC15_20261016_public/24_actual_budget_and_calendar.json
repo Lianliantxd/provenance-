@@ -1,0 +1,15 @@
+{
+  "state": "ACTUAL_LEDGER_NOT_ACCOUNT_BILL",
+  "cli_starts": 121,
+  "reservations": 121,
+  "active_runner_seconds": 3360.7536414975766,
+  "calendar_first_start_to_last_terminal_seconds": 6688.054651021957,
+  "non_runner_calendar_intervals_seconds": 3327.301009524381,
+  "calendar_interval_note": "Includes quota checks, engineering and pauses; no fabricated per-cause time attribution",
+  "validated_reply_token_columns_note": "Original input/output token columns use parser receipts; observed_cli_* fields also include available failed-turn usage. Partial coverage is a lower observed sum, not an exact bill.",
+  "all_limits_unchanged": true,
+  "worker_model_requested": "gpt-6-luna",
+  "client_version": "codex-cli 0.160.0",
+  "server_snapshot": "UNVERIFIED",
+  "temperature_forwarding": "UNVERIFIED_NOT_FORWARDED_BY_TEXT_BRIDGE"
+}

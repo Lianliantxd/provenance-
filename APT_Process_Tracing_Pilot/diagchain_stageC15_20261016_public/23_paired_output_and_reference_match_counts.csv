@@ -1,0 +1,10 @@
+case_alias,repeat_id,complete_scored_pair,delta_pred_steps_ON_minus_OFF,delta_reference_matched_steps_ON_minus_OFF
+C1,R1,True,0,0
+C1,R2,True,4,-1
+C1,R3,False,NA,NA
+C2,R1,False,NA,NA
+C2,R2,True,9,8
+C2,R3,True,6,1
+C3,R1,False,NA,NA
+C3,R2,False,NA,NA
+C3,R3,True,-1,-2

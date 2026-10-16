@@ -1,8 +1,9 @@
 {
-  "state": "C15_PROTOCOL_OR_SAFETY_BLOCKED",
-  "scope": "EXECUTION_STATUS_AND_VERSIONED_TRANSPORT_COMPAT; NO_PRIVATE_PAYLOADS",
-  "new_real_model_cli_starts": 16,
-  "internal_model_request_count": "NOT_IDENTIFIABLE",
+  "state": "C15_BATCH_CLOSED_WITH_FAILURES",
+  "scope": "SANITIZED_FINAL_CODE_PROTOCOL_SCALAR_RESULTS_FAILURES_AND_LIMITATIONS",
+  "model_cli_starts": 121,
+  "evaluated_native_outputs": 12,
+  "failed_units": 6,
   "files": [
     {
       "path": "01_study_protocol.md",
@@ -21,13 +22,68 @@
     },
     {
       "path": "10_all_18_runs.csv",
-      "sha256": "d7f8242ada5dc92f5df6b8e475d63c6ca3a3074a3f200f91b6d2623985ea5e31",
-      "bytes": 1570
+      "sha256": "7f16e64612df01160002d72d7827e7f828e7d485497058e47c65dbf18da00fbe",
+      "bytes": 31932
+    },
+    {
+      "path": "11_casewise_on_off_summary.csv",
+      "sha256": "d9ba06b0a695553fb8e12f86f8850bbc3378d1e205a7e88f38fce814c0cab38b",
+      "bytes": 6076
+    },
+    {
+      "path": "12_paired_differences_and_missingness.csv",
+      "sha256": "9a4141f96dd062ee24b0e8dcd0c59d5d46dc6c9fd4e26dc1d829911c6a14f535",
+      "bytes": 535
+    },
+    {
+      "path": "13_cost_and_realized_reflection.csv",
+      "sha256": "01f553d885b449c252dab319cd4cfa2732ee3783e1e18b0ed1394bff458b9ea3",
+      "bytes": 5762
+    },
+    {
+      "path": "14_protocol_deviations.md",
+      "sha256": "f708c2e62500e07b800c26d7f783a12e5cfce6d55d89eedb999b468284571476",
+      "bytes": 2432
+    },
+    {
+      "path": "15_plain_language_conclusion_zh.md",
+      "sha256": "8dd43b6f4d64a77e0dd02db2c02117e9fe8ae6486ce923221bb93e97addebc4d",
+      "bytes": 3327
+    },
+    {
+      "path": "16_final_gate.json",
+      "sha256": "c7f82f9078763c5d15293cd718909f71d122beec54b619c262d12491b8f71f41",
+      "bytes": 1388
     },
     {
       "path": "18_transport_compat_amendment.md",
       "sha256": "a3b8da932b8690069b84d0b330b41cd89a8288f6d4feefcf5fd3abf6f9cba674",
       "bytes": 2385
+    },
+    {
+      "path": "20_ssh_mux_amendment.md",
+      "sha256": "cf71178100f735ef1065889d5d76d400585585393ad6534cf279c9584ef6e13d",
+      "bytes": 1613
+    },
+    {
+      "path": "22_transport_versions_and_cost_coverage.csv",
+      "sha256": "c5bfc7ba08f2120e46cbbeaad67dd3e1502b18614ba2d204ebf25f756d382e78",
+      "bytes": 3669
+    },
+    {
+      "path": "23_paired_output_and_reference_match_counts.csv",
+      "sha256": "0486fc8190eb9dbdcfe2b2980456afa6a63fc532e6d44162e46c492ebb69993f",
+      "bytes": 265
+    },
+    {
+      "path": "24_actual_budget_and_calendar.json",
+      "sha256": "c894bbfcc040f5d7cb7d16eaa69c40bc23877879cf7a82e3615464bfa66b590c",
+      "bytes": 836
+    },
+    {
+      "path": "26_postrun_reporting_and_reconciliation_policy.md",
+      "sha256": "3fca728d8f960f5295e6ca402a71126de96fafdcae1a22aa74c181f561e941b2",
+      "bytes": 1670
     },
     {
       "path": "CASE_REGISTRY.csv",
@@ -41,13 +97,13 @@
     },
     {
       "path": "PREPARATION_STATUS.json",
-      "sha256": "bb7520b0be4593774f74332391d7aa8fb8706647e68ec9616214dbbfbece8719",
-      "bytes": 2553
+      "sha256": "bb7a8657da47739b0a1f45165c4a5cf386e1c4a1c6ae919b942cd2ad471660d2",
+      "bytes": 2336
     },
     {
       "path": "README.md",
-      "sha256": "bc8d5e40aae0b98ad23c3511fa79898ec195b840a82e96c058b0e98b533b0540",
-      "bytes": 2120
+      "sha256": "d3b997fdccffa692860dd5077b14213708c050967e293c2bb7a1e793c8434ac0",
+      "bytes": 3064
     },
     {
       "path": "scripts/c15_common.py",
@@ -60,9 +116,29 @@
       "bytes": 9054
     },
     {
+      "path": "scripts/c15_finish_evaluation.py",
+      "sha256": "1a4b79dbd8caa6429d44c4ee4f69531c0673a37fe21b2bf1623072ff9eda6eb2",
+      "bytes": 2516
+    },
+    {
+      "path": "scripts/c15_postrun_finalize.py",
+      "sha256": "36be06fb930ba9d589deb00abaac346cb0cfdb4cf190c0d8adb01a9543861ca5",
+      "bytes": 9189
+    },
+    {
+      "path": "scripts/c15_reporting_addendum.py",
+      "sha256": "050e38998da1ff9a5bcdb4d7bacb58d4e380f7079254340c70a842858d1d20f2",
+      "bytes": 10597
+    },
+    {
       "path": "scripts/c15_resume_compat.py",
       "sha256": "70a5a60c9a3f7564acfada6be6e04f7cef4285ead51bb0ba5498ce4bafcd716c",
       "bytes": 2874
+    },
+    {
+      "path": "scripts/c15_resume_mux.py",
+      "sha256": "ac42da1906c3cc8800ad04e9e0bffbb41e655ccd26e1c0836c5cb5b874739018",
+      "bytes": 3316
     },
     {
       "path": "scripts/c15_run_batch.py",
@@ -73,6 +149,11 @@
       "path": "scripts/prepare_design.py",
       "sha256": "47134c306303efbbc8e48a500a89f781b335dc1638bbd436eea3b388509eeaca",
       "bytes": 3554
+    },
+    {
+      "path": "src/c15_eval_receipt_recovery.py",
+      "sha256": "6d442dd36acbec00d3197d0ecdfea7391fbfbc965acdafef47a9890e10a04e3c",
+      "bytes": 4269
     },
     {
       "path": "src/c15_server_native_controller.py",
@@ -95,10 +176,16 @@
       "bytes": 15732
     },
     {
+      "path": "tests/test_c15_ssh_mux.py",
+      "sha256": "2b2c41016b9741134b5b8500b560769c40253efb9609cc924b59ba35f02bf8c3",
+      "bytes": 2566
+    },
+    {
       "path": "tests/test_c15_transport_compat.py",
       "sha256": "c066926fff45b8c3c2b513cb744c7eb6de17d921f7750df047a9e502662d3768",
       "bytes": 3360
     }
   ],
+  "private_payloads_published": false,
   "self_excluded_to_avoid_recursive_hash": true
 }

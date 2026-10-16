@@ -1,0 +1,76 @@
+{
+  "state": "C16_TASK_ALIGNED_EXACT_DATA_ACCESS_PENDING",
+  "files": [
+    {
+      "path": "00_scope_and_source_map.json",
+      "sha256": "19c390cad3d1667470b6afe55e7bd3aa18893aa23c86b68ec61b5d03582507a7",
+      "bytes": 2003
+    },
+    {
+      "path": "01_main_task_contract.md",
+      "sha256": "b09820e39abac12018d444656b3eccfc000d3c78aedb9bed24b21e73cdd674f0",
+      "bytes": 3765
+    },
+    {
+      "path": "02_related_work_and_baseline_matrix.csv",
+      "sha256": "c8d46b0cb13cafc587904d8c6155f0995e9c1cc967229964f1328aaeff4a5631",
+      "bytes": 11457
+    },
+    {
+      "path": "03_research_gap_or_overlap.md",
+      "sha256": "61b01ef88b4099cd819a0bdef46da6f05f7b33b29b3ed88469db540734aceba1",
+      "bytes": 3726
+    },
+    {
+      "path": "04_data_member_and_reference_register.csv",
+      "sha256": "c560eb04f5dfd5903a905656deea1542ff3091994a181af59f48faf7afb1bb9f",
+      "bytes": 4205
+    },
+    {
+      "path": "05_data_readiness.md",
+      "sha256": "b7072c09161fe24f4ae23a96ec980798fb85f62825a1adda608fe768b8e0e9ba",
+      "bytes": 3772
+    },
+    {
+      "path": "06_minimum_baseline_experiment.md",
+      "sha256": "e51d8ea2d5c99071875e5f75bc3b87afdc5a9d1d190a265fca0ada9868c16128",
+      "bytes": 4950
+    },
+    {
+      "path": "07_go_nogo_and_next_exact_action.md",
+      "sha256": "e83327bfdf109fda3db7dc10f36cb287feaecedc9b9c82016417906a35733ca2",
+      "bytes": 2714
+    },
+    {
+      "path": "08_plain_language_summary_zh.md",
+      "sha256": "b31e62f27246e5ea48d7cdc11fa3f91e63052a3f4856ce5c05710bbdaaf4fc24",
+      "bytes": 4113
+    },
+    {
+      "path": "README.md",
+      "sha256": "b488a567fdcc5363a8a4e75eda3405381f1c9a1d16dc9308fe54163c5d1c6200",
+      "bytes": 780
+    },
+    {
+      "path": "references/bibliographic_source_index.json",
+      "sha256": "0066be7dc7ca2061503a1c472320211ce305a30e20e69959fd9cd31b399c62bb",
+      "bytes": 5959
+    },
+    {
+      "path": "references/cadets_official_current_member_register.csv",
+      "sha256": "9011d91bcbfd39d448f57302430ee8d1da93efa3e7eee3991a4d5ed3ac83464b",
+      "bytes": 44028
+    },
+    {
+      "path": "scripts/read_cdm_header_and_references.py",
+      "sha256": "9635f8e6d39579ec689018d2e98a55488b15c1c019798f4e764eecf027e26bb8",
+      "bytes": 4446
+    }
+  ],
+  "excludes": [
+    "self",
+    "SHA256SUMS.txt"
+  ],
+  "new_model_calls": 0,
+  "public_papers_republished": false
+}

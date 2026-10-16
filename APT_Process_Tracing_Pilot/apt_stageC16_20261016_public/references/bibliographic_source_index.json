@@ -1,0 +1,108 @@
+{
+  "read_utc": "2026-10-16T13:58:23.827786+00:00",
+  "mode": "related-work",
+  "records": [
+    {
+      "id": "BackTracker",
+      "title": "Backtracking Intrusions",
+      "year_version": "2003",
+      "primary_url": "https://web.eecs.umich.edu/~pmchen/papers/king03_1.pdf",
+      "version": "SOSP2003; DOI10.1145/945445.945467; 14page author PDF",
+      "sections_and_pages": "§2.2–2.4 PDFpp3–5; §3–5 implementation/cases",
+      "local_source_sha256": "f42a18628107d51e5531df71c1cef9e13ff9c75432f078fde0ce94df6f082f08",
+      "read_level": "FULLTEXT_METHOD_AND_EVALUATION_SECTIONS"
+    },
+    {
+      "id": "SLEUTH",
+      "title": "SLEUTH: Real-time Attack Scenario Reconstruction from COTS Audit Data",
+      "year_version": "2017",
+      "primary_url": "https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/hossain",
+      "version": "USENIXSecurity17; local publisher PDF",
+      "sections_and_pages": "§3–5 tags; §5.1 PDFp7; §6 PDFpp8–13",
+      "local_source_sha256": "14a933c5d87cc230371502066ad7c826f8819abe827bef8a4993271fdd2a56e8",
+      "read_level": "FULLTEXT_METHOD_AND_EVALUATION_SECTIONS"
+    },
+    {
+      "id": "PrioTracker",
+      "title": "Towards a Timely Causality Analysis for Enterprise Security",
+      "year_version": "2018",
+      "primary_url": "https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_07B-3_Liu_paper.pdf",
+      "version": "NDSS2018 DOI10.14722/ndss.2018.23254 verified on primary PDF; wrong23261 secondary ignored",
+      "sections_and_pages": "§II.B PDFp3; §III PDFpp4–6; evaluation PDFpp7–11",
+      "local_source_sha256": "ca3d4a37c82c948698a31d39c6caaaef98bcf146ecb65ecf07c7db48366a97b8",
+      "read_level": "FULLTEXT_METHOD_AND_EVALUATION_SECTIONS"
+    },
+    {
+      "id": "DEPIMPACT",
+      "title": "Back-Propagating System Dependency Impact for Attack Investigation",
+      "year_version": "2022",
+      "primary_url": "https://www.usenix.org/conference/usenixsecurity22/presentation/fang",
+      "version": "USENIXSecurity22; author repo main725263849b3656060504ce8156b0e85f13747338",
+      "sections_and_pages": "§4.1–4.3; entry rank §4.3.2 localPDFp9; GT §5.1.4 p11; entry rank evaluation§5.4",
+      "local_source_sha256": "f1efdb39853a8fd99dd65c502264452f6319700146651777e8e52abea864c451",
+      "read_level": "FULLTEXT_METHOD_AND_EVALUATION_SECTIONS"
+    },
+    {
+      "id": "ATLAS",
+      "title": "ATLAS: A Sequence-based Learning Approach for Attack Investigation",
+      "year_version": "2021",
+      "primary_url": "https://www.usenix.org/conference/usenixsecurity21/presentation/alsaheel",
+      "version": "USENIXSecurity21; author repo e46096d1947e4f059e73a0ac2b9a9707812fd4bc",
+      "sections_and_pages": "§2.1 PDFp4; §4–5 sequence learning/investigation; §6.1 pp11–12; §6.5 p15",
+      "local_source_sha256": "561e298c63cc1f30384eb1e07ee63911743f30214a5601c9f4a4eeb5fc5f199c",
+      "read_level": "FULLTEXT_METHOD_AND_EVALUATION_SECTIONS"
+    },
+    {
+      "id": "POIROT",
+      "title": "POIROT: Aligning Attack Behavior with Kernel Audit Records for Cyber Threat Hunting",
+      "year_version": "2019",
+      "primary_url": "https://arxiv.org/abs/1910.00056",
+      "version": "CCS2019; arXiv1910.00056v1; DOI10.1145/3319535.3363217",
+      "sections_and_pages": "§3 PDFpp3–5; §4.2 p7; §5 evaluation",
+      "local_source_sha256": "087abeeba28d21abaea628b365e7b275bd789537809520a4a767d0921b62d9f9",
+      "read_level": "FULLTEXT_METHOD_AND_EVALUATION_SECTIONS"
+    },
+    {
+      "id": "HOLMES",
+      "title": "HOLMES: Real-Time APT Detection through Correlation of Suspicious Information Flows",
+      "year_version": "2019",
+      "primary_url": "https://ieeexplore.ieee.org/document/8835390/",
+      "version": "IEEE S&P2019 DOI10.1109/SP.2019.00026",
+      "sections_and_pages": "§III overview PDFp2; §IV design p4 onward; §VI evaluation p9 onward",
+      "local_source_sha256": "0197146df641a1dded5f92bda5c3051a15c4314b1210616b520172a235008110",
+      "read_level": "FULLTEXT_METHOD_AND_EVALUATION_SECTIONS"
+    },
+    {
+      "id": "KAIROS",
+      "title": "Kairos: Practical Intrusion Detection and Investigation using Whole-system Provenance",
+      "year_version": "2024 publication;2023v3",
+      "primary_url": "https://arxiv.org/abs/2308.05034",
+      "version": "IEEE S&P2024; arXiv2308.05034v3; local24page PDF",
+      "sections_and_pages": "§4.1–4.4; anomaly investigation PDFp8; §5.1 p10; §5.5 p15",
+      "local_source_sha256": "451feb967312f5be97ff6d1ce8282165f7ba0ba904fa00cc2004105c59610c4d",
+      "read_level": "FULLTEXT_METHOD_AND_EVALUATION_SECTIONS"
+    },
+    {
+      "id": "Minos",
+      "title": "Minos: A Multi-Agent Collaborative Framework for Provenance-Based Backward Tracking",
+      "year_version": "2026-07-01 preprint",
+      "primary_url": "https://arxiv.org/html/2607.00440v1",
+      "version": "arXiv2607.00440v1; not independently reproduced",
+      "sections_and_pages": "§2.2 formulation; §3 RAG; §4 FSM; §5.1 seed/resources;§5 evaluation",
+      "local_source_sha256": "14bd38ea16f91ddab70812b9f7717dd114ff0e7aa5f93047c1aebf18b65a0909",
+      "read_level": "FULLTEXT_METHOD_AND_EVALUATION_SECTIONS"
+    },
+    {
+      "id": "ANCHOR",
+      "title": "Know the Normal, Track the Attack: Context-Grounded and Stateful LLM Investigation over System Provenance",
+      "year_version": "2026-09-29 preprint",
+      "primary_url": "https://arxiv.org/html/2609.36494v1",
+      "version": "arXiv2609.36494v1; not independently reproduced",
+      "sections_and_pages": "§4 evidence queues/dual-context;§5; AppendixB/C/G",
+      "local_source_sha256": "0ed270b9ce48051654d882d8cbc123e3524ad5191007f6781538309e3c16fd4f",
+      "read_level": "FULLTEXT_METHOD_AND_EVALUATION_SECTIONS"
+    }
+  ],
+  "BibTeX": "NOT_GENERATED_FROM_MEMORY; task uses primary-source links and version-bound metadata",
+  "recent_preprints_not_peer_reviewed_results": true
+}

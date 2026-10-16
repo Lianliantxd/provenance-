@@ -1,0 +1,44 @@
+{
+  "task_id": "APT_STAGE_C16_MAIN_TASK_REALIGNMENT_AND_SOURCE_TRACING_FEASIBILITY_V1",
+  "utc": "2026-10-16T13:58:23.827786+00:00",
+  "task_state": "ALIGNED_WITH_DIRECT_USER_SOURCE_TRACING_REQUIREMENT",
+  "source_entity_scope": "INBOUND_CONNECTION_SESSION_INSTANCE_PROPOSED_NOT_USER_CONFIRMED_FINAL_TITLE",
+  "new_research_model_calls": 0,
+  "new_GPU_use": 0,
+  "attack_execution": 0,
+  "software_installation": 0,
+  "old_experiment_files_modified": 0,
+  "raw_events_scanned": 0,
+  "diagnostic_backward_traversal": "NOT_EXECUTED_NO_RAW_MAPPED_TERMINAL_B",
+  "raw_data_downloaded_bytes": 0,
+  "checksum_metadata_downloaded_bytes": 8672,
+  "current_remote_versions": {
+    "darpa_tc_master": "244ae2401032ce92ac3b72f49b8039cae67d60d6",
+    "depimpact_main": "725263849b3656060504ce8156b0e85f13747338",
+    "atlas_author_commit": "e46096d1947e4f059e73a0ac2b9a9707812fd4bc",
+    "historical_H1_H2_last_change": "2294313104cfd4b85a4fcf231b0bb05ad3b0abb0",
+    "C15S_delivery": "41b791b1193d042048c91ad0390bff4555224046"
+  },
+  "limits": {
+    "raw_member_download_bytes": 134217728,
+    "total_new_raw_download_bytes": 268435456,
+    "expanded_bytes": 1073741824,
+    "raw_events": 250000,
+    "relations": 1000000,
+    "CPU_job_seconds": 600,
+    "target_memory_bytes": 4294967296
+  },
+  "privacy": "No private paths, prompts, raw security events or support-ID maps. Papers are linked, not redistributed.",
+  "primary_status": "C16_TASK_ALIGNED_EXACT_DATA_ACCESS_PENDING",
+  "baseline_status": "DEPIMPACT_SAME_TASK_CANDIDATE_NOT_CDM20_EVENT_SEED_READY",
+  "method_gap": "METHOD_GAP_NOT_ESTABLISHED",
+  "reference_level": "PUBLISHER_REPORT_ONLY_FOR_TARGET; RAW_SOURCE_AND_PATH_NOT_MAPPED",
+  "new_public_pdf_files": 0,
+  "source_levels": [
+    "SOURCE_VERIFIED",
+    "PRIOR_PROJECT_CONCLUSION",
+    "CURRENT_AGENT_INFERENCE",
+    "NOT_VERIFIED"
+  ],
+  "collection_order_note": "Preliminary release metadata and paper reading interleaved; final admission decision after both. No experiment was triggered."
+}

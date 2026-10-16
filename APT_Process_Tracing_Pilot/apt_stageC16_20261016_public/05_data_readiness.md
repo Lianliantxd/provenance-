@@ -1,0 +1,19 @@
+# 具体执行实例与数据准入
+
+主线固定为E5 TA5.1 Rev1.0（2019-06-28）§10.4、2019-05-17 CADETS-1 Nginx Drakon F2分支。该实例身份来自发布者报告，不是本轮已在CDM中识别的攻击。实际读的是3457780B官方更新PDF，SHA-256 95785dd6e32e1585e3a3b49f7f69aac785ca9d2db05593ad919b1b627897f0a1；与3384538B旧项目副本分开，不按同章节编号混认同一版本。
+
+SOURCE_VERIFIED，本轮官方仓库master仍为244ae2401032ce92ac3b72f49b8039cae67d60d6；读取pinned README、Drive根/Data/cadets和starc。CADETS目录本次返回123项=122gzip+校验表，总压缩35118036628B，最小222850915B；没有一个gzip在本轮128MiB上限内。列表metadata有can_download=true，但不等于本轮已下载。通过连接器实际取得8672B校验清单，122行与旧清单逐字节相同，SHA68bf93b4400fba94157a5c8386ba6d17eff7fb9706770e967ae9bc7551f088cf。
+
+SOURCE_VERIFIED，精确下一候选120仍在官方Drive，ID1Z6khUpjmM0ALlX9HJ13jcCV_riO7q2-Y，299647139B（约285.77MiB），MD5 09e6d64ac074582833eee1ab3cb2a34a。没有本地120字节，不能给它虚假的SHA、Avro版本、展开大小或时间范围。本轮不下载它：既超过单成员128MiB，也超过累计256MiB包络。旧HTTP413是PRIOR_PROJECT_CONCLUSION，本轮没有再次发起超限下载，不能声称当前连接器必然仍以同样方式失败。
+
+SOURCE_VERIFIED，已有121的文件SHA4c426950799576f4cc317a9a8febaa35a6c4c602d32e66d127878d42d7a93560及MD5与新官方清单实测一致；已只读解析gzip/Avro OCF头，namespace=CDM20、TCCDMDatum、null codec，未扫事件。PRIOR_PROJECT_CONCLUSION，旧完整读取7887172条记录中的7735567 Event覆盖2019-05-17 20:25:53.648577–21:50:40.720021 UTC；本轮没有重算这一范围或CRC，沿用时显式标历史测量，不能外推其他121成员的时段。
+
+报告的10:47 F2重复入站、10:55侦察、11:31文件读取可作评估侧R4/R5/B1登记，但后两动作所在小节标题与F2返回身份有矛盾，保留原问题；报告console与HTTP GMT配对提示+4小时只是未传感器校准的假设。既有14:00–16:00 UTC筛选窗口不是已确认CDM时区。候选120的编号邻近121并不证明其覆盖目标时段。
+
+本轮starc目录返回空列表；未取得注释文件、事件UUID或来源实例标签。没有报告原始事件映射，所以未固定可执行B，未建立A的连接UUID/生命周期，未验证R4→R5→B的传播边，不能把计划/console命令或同一Nginx进程当路径真值。现有Subject/NetFlow字段只证明schema有表达能力。服务器限深4层、已授权ATT与旧项目路径共853目录未发现目标120原始成员；该检查非全盘搜索，未读二进制E3图数组或运行下载脚本。
+
+CPU诊断状态：DIAGNOSTIC_BACKWARD_TRAVERSAL_NOT_EXECUTED；原始事件扫描0，派生关系0，路径/Source Top-k/MRR/边P-R均NOT_ESTIMABLE。本轮真实执行了来源元数据、校验、OCF头、文档提取和工件静态检查；它们不是来源定位实验。没有用合成图补真实结果，也没有把“无B可运行”写成NO_PATH_IN_AVAILABLE_SCOPE。probe/只含实际头部核验，不含假预测。
+
+数据结论：没有DATA_READY的具体来源查询实例；主状态C16_TASK_ALIGNED_EXACT_DATA_ACCESS_PENDING。已定位下一取数对象，不代表它已被证明是攻击时段成员，也不承诺只取得它就具备来源/路径真值或B1原生兼容性。
+
+不启用第二数据实验线。ATLAS仅在文献表核对公开材料类型；Mordor Day2归档43成员中仅读两份必要文本，维持旧B-only负结论，没有重跑。Day1指定publication tar本机缺失，已读现存最终报告并登记缺失，未伪造归档SHA。

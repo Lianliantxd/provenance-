@@ -1,0 +1,198 @@
+{
+  "task_id": "E5_BIN120_SINGLE_MEMBER_FULL_SCAN_AND_B_MAPPING_V1",
+  "status": "PARTIAL_SCAN_RESOURCE_LIMIT",
+  "B": "B_UNRESOLVED",
+  "B_mapping_status": "B_HINT_LINEAGE_UNVERIFIED",
+  "raw_integrity": {
+    "member": "ta1-cadets-1-e5-official-2.bin.120.gz",
+    "size": 299647139,
+    "official_md5": "09e6d64ac074582833eee1ab3cb2a34a",
+    "sha256": "2d4369553a54abe3986b2d0482656a9813acafd4e978cb8a304b5cf7b5dddaf9",
+    "status": "FILE_VERIFIED"
+  },
+  "scan_coverage": {
+    "file_eof_reached": false,
+    "gzip_crc_status": "NOT_VERIFIED_TO_EOF",
+    "record_positions": [
+      1,
+      9775687
+    ],
+    "complete_records": 9775687,
+    "decode_attempts": 9775687,
+    "Event_positions": 9544163,
+    "old_prefix_positions_reread": 250000,
+    "new_positions_beyond_old_prefix": 9525687,
+    "previous_500000_decodes_are_repeated_prefix_not_distinct_coverage": true,
+    "blocks_started": 9775687,
+    "blocks_fully_validated": 9775686,
+    "fully_decoded_last_record_block_sync_validated": false,
+    "fully_decoded_records_may_include_one_unvalidated_block_record": true,
+    "termination_reason": "ACTIVE_WALL_CLOCK_LIMIT",
+    "parse_anomalies_count": 0,
+    "utf8_replacement_strings": 0,
+    "semantic_matching_completeness": "NO_UTF8_REPLACEMENTS_OR_SHORT_NAME_AMBIGUITIES_OBSERVED_NOT_A_GENERAL_SEMANTIC_PROOF",
+    "validated_block_record_positions": [
+      1,
+      9775686
+    ],
+    "last_decoded_record_sync_state": "NOT_VALIDATED_TIME_LIMIT"
+  },
+  "index_completeness": {
+    "application_reported_committed_through_record": 9775687,
+    "independent_index_reconciliation_completed": false,
+    "duplicate_conflict_stats": "NOT_COMPUTED_PREFIX_PLACEHOLDER_ZERO_NOT_A_RESULT",
+    "application_reported_events_committed": 9544163,
+    "qualification_counts_unknown_not_zero": true,
+    "five_minute_bucket_export": "NOT_EXPORTED_RETAINED_IN_SQLITE"
+  },
+  "hint_role_totals": null,
+  "qualification_queries_complete": false,
+  "fixed_secondary_hints": [],
+  "hint_lineage": "UNVERIFIED_SECONDARY_HINT",
+  "hosts": {
+    "H3": {
+      "event_count": 3387988,
+      "valid_timestamp_count": 3387988,
+      "min_ns": 1558119836340647529,
+      "max_ns": 1558124669410449948,
+      "first_event_ns": 1558119836470403842,
+      "last_event_ns": 1558124669410449948,
+      "time_regressions_in_read_order": 2774,
+      "time_ties_in_read_order": 3273111,
+      "min_utc": "2019-05-17T19:03:56.340647529Z",
+      "max_utc": "2019-05-17T20:24:29.410449948Z",
+      "first_event_utc": "2019-05-17T19:03:56.470403842Z",
+      "last_event_utc": "2019-05-17T20:24:29.410449948Z",
+      "host_mapping_status": "HOST_MAPPING_UNRESOLVED_IN_READ_SCOPE"
+    },
+    "H2": {
+      "event_count": 3215322,
+      "valid_timestamp_count": 3215322,
+      "min_ns": 1558119771908755571,
+      "max_ns": 1558124596658764665,
+      "first_event_ns": 1558119772048632143,
+      "last_event_ns": 1558124596658764665,
+      "time_regressions_in_read_order": 3033,
+      "time_ties_in_read_order": 3050041,
+      "min_utc": "2019-05-17T19:02:51.908755571Z",
+      "max_utc": "2019-05-17T20:23:16.658764665Z",
+      "first_event_utc": "2019-05-17T19:02:52.048632143Z",
+      "last_event_utc": "2019-05-17T20:23:16.658764665Z",
+      "host_mapping_status": "HOST_MAPPING_UNRESOLVED_IN_READ_SCOPE"
+    },
+    "H1": {
+      "event_count": 2940853,
+      "valid_timestamp_count": 2940853,
+      "min_ns": 1558119838051543653,
+      "max_ns": 1558124647011086367,
+      "first_event_ns": 1558119838061174632,
+      "last_event_ns": 1558124647011086367,
+      "time_regressions_in_read_order": 2774,
+      "time_ties_in_read_order": 2815488,
+      "min_utc": "2019-05-17T19:03:58.051543653Z",
+      "max_utc": "2019-05-17T20:24:07.011086367Z",
+      "first_event_utc": "2019-05-17T19:03:58.061174632Z",
+      "last_event_utc": "2019-05-17T20:24:07.011086367Z",
+      "host_mapping_status": "HOST_MAPPING_UNRESOLVED_IN_READ_SCOPE"
+    }
+  },
+  "coverage_time_level": "READ_SCOPE_MIN_MAX",
+  "timestamp_validity": {
+    "event_total": 9544163,
+    "integer_timestamp": 9544163
+  },
+  "record_types": {
+    "Event": 9544163,
+    "SrcSinkObject": 44186,
+    "IpcObject": 25851,
+    "Subject": 68705,
+    "FileObject": 89560,
+    "NetFlowObject": 3222
+  },
+  "event_types": {
+    "EVENT_READ": 2583041,
+    "EVENT_WRITE": 1789871,
+    "EVENT_FLOWS_TO": 223124,
+    "EVENT_MMAP": 834886,
+    "EVENT_CLOSE": 1314141,
+    "EVENT_MPROTECT": 166323,
+    "EVENT_OPEN": 1253565,
+    "EVENT_EXIT": 59492,
+    "EVENT_UNLINK": 67939,
+    "EVENT_FCNTL": 287354,
+    "EVENT_CREATE_OBJECT": 25916,
+    "EVENT_FORK": 61033,
+    "EVENT_LSEEK": 196473,
+    "EVENT_EXECUTE": 59237,
+    "EVENT_MODIFY_PROCESS": 530949,
+    "EVENT_CONNECT": 3974,
+    "EVENT_ADD_OBJECT_ATTRIBUTE": 1446,
+    "EVENT_SENDTO": 23116,
+    "EVENT_RECVFROM": 23087,
+    "EVENT_RENAME": 14665,
+    "EVENT_MODIFY_FILE_ATTRIBUTES": 3260,
+    "EVENT_ACCEPT": 678,
+    "EVENT_BIND": 37,
+    "EVENT_SIGNAL": 308,
+    "EVENT_CHANGE_PRINCIPAL": 14646,
+    "EVENT_LINK": 153,
+    "EVENT_TRUNCATE": 1542,
+    "EVENT_OTHER": 640,
+    "EVENT_SENDMSG": 1263,
+    "EVENT_LOGIN": 720,
+    "EVENT_RECVMSG": 1284
+  },
+  "cdm_versions": {
+    "20": 9775687
+  },
+  "path_field_availability": {
+    "predicateObjectPath": {
+      "null": 8145451,
+      "nonempty_string": 1398712,
+      "nonempty_fraction_of_read_events": 0.14655156245759843
+    },
+    "predicateObject2Path": {
+      "null": 9495945,
+      "nonempty_string": 48218,
+      "nonempty_fraction_of_read_events": 0.005052093096063007
+    }
+  },
+  "resources": {
+    "scan_seconds": 5400.017542546848,
+    "active_scan_and_query_seconds": 5400.017763432814,
+    "peak_rss_bytes": 58265600,
+    "output_bytes_after_close": 5190700869,
+    "expanded_bytes_delivered": 2191443180,
+    "wall_clock_stop_cleanup_seconds": 0.017763432814
+  },
+  "limits": {
+    "seconds": 5400,
+    "expanded_bytes": 17179869184,
+    "memory_bytes": 4294967296,
+    "output_bytes": 8589934592,
+    "start_free_bytes": 10737418240,
+    "minimum_free_bytes": 2147483648,
+    "checkpoint_records": 250000,
+    "progress_seconds": 60,
+    "transaction_records": 1000,
+    "candidate_export_limit": 4096,
+    "records": null,
+    "database_reserve_bytes": 268435456,
+    "expected_size": 299647139,
+    "expected_md5": "09e6d64ac074582833eee1ab3cb2a34a",
+    "expected_sha256": "2d4369553a54abe3986b2d0482656a9813acafd4e978cb8a304b5cf7b5dddaf9"
+  },
+  "index_location_policy": "REMOTE_INDEX_SERVER_ONLY",
+  "new_downloads": 0,
+  "extra_model_requests": 0,
+  "GPU_runs": 0,
+  "source_accuracy": "NOT_RUN_NOT_APPLICABLE",
+  "MRR": "NOT_RUN_NOT_APPLICABLE",
+  "Path_F1": "NOT_RUN_NOT_APPLICABLE",
+  "no_new_model_or_attack_execution_or_DEPIMPACT_or_installation": true,
+  "source_unchanged": true,
+  "code_limitations": [
+    "Raw per-host duplicate_event_identity_conflicts=0 is a prefix-check placeholder, not a computed full-scope zero; removed from public host aggregates.",
+    "Full-scope independent index row-count/reference/duplicate/hint queries were not executed because the active wall clock envelope was exhausted."
+  ]
+}

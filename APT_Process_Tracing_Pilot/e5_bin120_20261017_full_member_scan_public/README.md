@@ -1,0 +1,17 @@
+# E5 single-member full scan
+
+Status: `PARTIAL_SCAN_RESOURCE_LIMIT`. True EOF: **False**. Complete positions: **9,775,687**; new positions beyond the previously verified prefix: **9,525,687**. B remains **B_UNRESOLVED / B_HINT_LINEAGE_UNVERIFIED**.
+
+One authorized serial CPU pass used the already acquired member. The application reported committing 9,544,163 Events; final SQL row-count reconciliation was not run. It retained event positions without deduplicating positions. Exact fixed secondary hint role hits: UNKNOWN_NOT_QUERIED; direct registered-path Event positions: UNKNOWN_NOT_QUERIED; entity-path-associated positions: UNKNOWN_NOT_QUERIED; candidate Event positions: UNKNOWN_NOT_QUERIED. The matching hints are unverified secondary lineage and do not establish an attack instance. Researcher mapping from a publisher report is permitted, but host/time/actor/action/object uniqueness has not been established. No assumed clock offset or expected upstream origin was used to select B.
+
+`summary.json` separates integrity, coverage, index and B status. Host aliases carry no private UUID/name crosswalk. Five-minute bucket rows remain in private SQLite and were not exported within the active time budget; no empty coverage CSV is published. Min/max does not establish continuous coverage or target execution identity. The member was not fully read. No hint hit/absence conclusion was computed; partial record coverage is established.
+
+The private SQLite index remains on the computation server and is not uploaded to Git/Git LFS. Reports and receipts distinguish shared artifacts from server-only index residency. Raw logs, actual UUID hints, host identity mappings, candidates, private source paths and report-to-event reference mappings are excluded.
+
+The entry `scripts/full_member_scan.py` imports utility functions from the preserved older budget entry, but does not call its prefix probe. It uses a versioned guarded copy of the existing CDM decoder, explicit single-gzip CRC/ISIZE/trailing-content checks, bounded SQLite transactions and a process memory cap. The old decoder is retained for provenance. Private runtime authorization/config/hints are required; no payload or private input is bundled. Synthetic tests never open a real member.
+
+No further scan, download, model/GPU run, attack execution, DEPIMPACT or Source Accuracy/MRR/Path F1 was performed. Scores are NOT_RUN_NOT_APPLICABLE. The next read-scope planning must start from the unvalidated block at position 9,775,687 and unread positions from 9,775,688; saved ordinals do not provide gzip decoder state, so direct seeking is unsupported. No automatic restart is authorized.
+
+Implementation references: [Avro](https://avro.apache.org/docs/1.12.0/specification/), [Python gzip](https://docs.python.org/3.10/library/gzip.html), [Python SQLite](https://docs.python.org/3.10/library/sqlite3.html).
+
+The raw per-host duplicate_event_identity_conflicts=0 field was an initialization placeholder for prefix comparison, not a computed full-scope result; it is excluded from the public aggregates. The final decoded record is indexed but its block sync was not validated. Index qualification queries/coverage CSV export were not completed within the active envelope. Unknown hint/candidate totals are not zero matches; the missing CSV export is not zero coverage. Retained index tables preserve the committed events/entities/buckets.

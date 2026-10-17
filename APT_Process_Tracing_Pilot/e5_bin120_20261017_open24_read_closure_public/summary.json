@@ -1,0 +1,97 @@
+{
+  "main_status": "OPEN24_QUERY_COMPLETE_WITH_ADDITIONAL_READ_CANDIDATES",
+  "QUERY_STATUS": "QUERY_COMPLETE",
+  "CANDIDATE_SCOPE_RESULT": "ADDITIONAL_READ_CANDIDATES",
+  "CONTEXT_STATUS": {
+    "TEMPORAL_OR_DESCRIPTOR_CONFLICT": 7,
+    "SUPPORTED_PRIOR_OPEN_CONTEXT": 34
+  },
+  "READ_CONTEXT_STATUS": {
+    "TEMPORAL_OR_DESCRIPTOR_CONFLICT": 3,
+    "SUPPORTED_PRIOR_OPEN_CONTEXT": 17
+  },
+  "CLOSE_CONTEXT_STATUS": {
+    "TEMPORAL_OR_DESCRIPTOR_CONFLICT": 4,
+    "SUPPORTED_PRIOR_OPEN_CONTEXT": 17
+  },
+  "ATTACK_REFERENCE_STATUS": "NO_NEW_INDEPENDENT_REPORT_BINDING; REPORT_LINK_UNRESOLVED",
+  "B": "B_UNRESOLVED",
+  "B_usable_as_attack_seed": false,
+  "anchors": 24,
+  "anchor_queries_completed": 24,
+  "unique_query_keys": 24,
+  "host_object_scopes": 3,
+  "actual_object_UUID_strings": 2,
+  "query_unique_events": 65,
+  "query_event_types": {
+    "EVENT_OPEN": 24,
+    "EVENT_READ": 20,
+    "EVENT_CLOSE": 21
+  },
+  "unique_READ_events": 20,
+  "READ_subject_instances": 17,
+  "old_READ_recovered": 13,
+  "additional_unique_READ_events": 7,
+  "old_READ_missing": 0,
+  "READ_relation_rows": 20,
+  "CLOSE_relation_rows": 21,
+  "all_relation_rows": 41,
+  "anchors_without_READ": 7,
+  "new_raw_records_extracted": 14,
+  "new_raw_Event_types": {
+    "EVENT_CLOSE": 7,
+    "EVENT_READ": 7
+  },
+  "complete_prior_Event_JSON_reused": 51,
+  "direct_Subject_definitions_reused": 24,
+  "RAW_CONTEXT_STATUS": "COMPLETE_FOR_ALL_QUERY_RESULT_EVENTS",
+  "other_role_READ_candidates": 0,
+  "READ_positive_size": 16,
+  "READ_zero_size": 4,
+  "query_seconds": 0.3926804158836603,
+  "extraction_seconds": 4.2376749811228365,
+  "postprocess_seconds": 0.04371195822022855,
+  "metrics": "NOT_RUN_NOT_APPLICABLE",
+  "scope_limit": "24 known direct-path OPEN same-host/subject/object role scopes only; not all member/path/E5 access",
+  "task_id": "E5_BIN120_OPEN24_CROSS_OBJECT_READ_CLOSURE_V1",
+  "source_integrity_sha256": "2d4369553a54abe3986b2d0482656a9813acafd4e978cb8a304b5cf7b5dddaf9",
+  "source_integrity_MD5": "09e6d64ac074582833eee1ab3cb2a34a",
+  "source_compressed_size": 299647139,
+  "old_index_integrity_this_run": "FILE_IDENTITY_SCHEMA_SOURCE_METADATA_MATCH_PREVIOUS_FROZEN_HASH; NOT_REHASHED",
+  "candidate_SQL_statements_completed": 96,
+  "expanded_bytes": 1917320658,
+  "skipped_expanded_bytes": 1917278341,
+  "decode_attempts": 14,
+  "replay_attempts": 1,
+  "peak_RSS_bytes": 27873280,
+  "stop_reason": "HIGHEST_TARGET_BLOCK_AND_SYNC_VERIFIED",
+  "current_attempt_EOF": false,
+  "no_attack_handoff": true,
+  "no_model_GPU_new_downloads_attacks_installs": true,
+  "anonymous_groups": [
+    {
+      "OPEN_anchors": 10,
+      "unique_READs": 9,
+      "prior_READ13_overlap": 9,
+      "added_READs": 0,
+      "unique_READs_not_strong_context": 2,
+      "query_complete": true
+    },
+    {
+      "OPEN_anchors": 7,
+      "unique_READs": 4,
+      "prior_READ13_overlap": 4,
+      "added_READs": 0,
+      "unique_READs_not_strong_context": 0,
+      "query_complete": true
+    },
+    {
+      "OPEN_anchors": 7,
+      "unique_READs": 7,
+      "prior_READ13_overlap": 0,
+      "added_READs": 7,
+      "unique_READs_not_strong_context": 1,
+      "query_complete": true
+    }
+  ]
+}

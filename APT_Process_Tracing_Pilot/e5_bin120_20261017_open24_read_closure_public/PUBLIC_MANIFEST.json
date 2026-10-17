@@ -1,0 +1,18 @@
+{
+  "files": {
+    "summary.json": {
+      "sha256": "3252906114308713129ceadfb8d6de798d97c7b1e09495da5056145245e584e4",
+      "size": 3168
+    },
+    "README.md": {
+      "sha256": "8914720c5a733eaa12072d7bf652c478ecaf1a2839514649d3dd27ed658800f1",
+      "size": 2188
+    },
+    "identity_scope_helpers.py": {
+      "sha256": "7c0b8403661c9cd5d58e0a0b6c65242228eaf1bd57e87b657bb3d3db0c34f8a7",
+      "size": 3831
+    }
+  },
+  "self_excluded": true,
+  "data_release": "AGGREGATES_AND_GENERIC_CODE_ONLY"
+}

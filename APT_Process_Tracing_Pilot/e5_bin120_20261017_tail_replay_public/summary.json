@@ -1,0 +1,289 @@
+{
+  "task": "E5_BIN120_BOUNDED_FORWARD_REPLAY_TAIL_AND_INDEX_QUALIFICATION",
+  "status": "FULL_MEMBER_SCANNED_B_UNRESOLVED",
+  "B": "B_UNRESOLVED",
+  "B_identification": "B_MAPPING_BLOCKED_BY_REPORT_OR_CLOCK",
+  "raw_integrity": {
+    "size": 299647139,
+    "official_md5": "09e6d64ac074582833eee1ab3cb2a34a",
+    "sha256": "2d4369553a54abe3986b2d0482656a9813acafd4e978cb8a304b5cf7b5dddaf9",
+    "verified": true
+  },
+  "validation_mode": "FROZEN_PREFIX_OCF_BLOCK_VALIDATION_PLUS_NEW_SEQUENTIAL_GZIP_REPLAY_AND_TAIL_VALIDATION_NOT_A_SINGLE_ALL_RECORD_DECODE_PASS",
+  "file_eof_reached": true,
+  "gzip_crc_status": "VERIFIED_TO_EOF",
+  "composed_record_positions": [
+    1,
+    10000000
+  ],
+  "combined_records": 10000000,
+  "combined_events": 9763824,
+  "old_verified_prefix_positions_reused_without_CDM_decode": 9775686,
+  "redecoded_boundary_position": 9775687,
+  "new_CDM_decode_attempts": 224314,
+  "new_unique_positions_beyond_previous_scan": 224313,
+  "new_blocks_validated": 224314,
+  "combined_blocks_validated": 10000000,
+  "expanded_bytes_delivered_including_discarded_replay": 2240512625,
+  "replayed_prefix_bytes_including_header": 2191442989,
+  "scan_seconds": 112.30005358415656,
+  "total_active_seconds_including_queries": 298.69043461000547,
+  "peak_rss_bytes": 1359208448,
+  "new_output_bytes_after_close": 120555812,
+  "queries_complete": true,
+  "index_statistics": {
+    "indexed_events": 9763824,
+    "indexed_entities": 236176,
+    "validated_blocks": 10000000,
+    "candidate_total": 76,
+    "entity_path_association_events": 0,
+    "direct_path_events": 24,
+    "object_and_subject_events": 0,
+    "object_and_subject_read_events": 0,
+    "candidate_export_limit": 4096,
+    "candidate_exported": 76,
+    "candidate_export_truncated": false,
+    "unresolved_event_references": {
+      "subject": {
+        "event_reference_occurrences_unresolved_same_host": 2142124,
+        "distinct_uuid_strings_unresolved_same_host": 56,
+        "definition_temporal_validity_not_inferred": true
+      },
+      "obj": {
+        "event_reference_occurrences_unresolved_same_host": 7662294,
+        "distinct_uuid_strings_unresolved_same_host": 59548,
+        "definition_temporal_validity_not_inferred": true
+      },
+      "obj2": {
+        "event_reference_occurrences_unresolved_same_host": 748036,
+        "distinct_uuid_strings_unresolved_same_host": 53565,
+        "definition_temporal_validity_not_inferred": true
+      }
+    },
+    "unresolved_entity_references": {
+      "parentSubject": {
+        "occurrences_not_defined_in_same_host_scope": 1017
+      },
+      "localPrincipal": {
+        "occurrences_not_defined_in_same_host_scope": 70348
+      }
+    },
+    "duplicate_event_uuid_groups": 0,
+    "additional_event_positions_with_repeated_uuid": 0,
+    "event_uuid_identity_conflict_groups": 0,
+    "duplicate_statistics_method": "Streaming merge of two physical UUID indexes, excluding the overlapping old position; no whole-member Python UUID set or unbounded SQL DISTINCT fingerprint store.",
+    "event_uuid_conflict_fingerprint_fields": [
+      "host",
+      "ns",
+      "event_type",
+      "subject",
+      "obj",
+      "obj2"
+    ],
+    "repeated_entity_definitions_same_host_type_uuid_groups": 0
+  },
+  "exact_hint_role_hits_total": 69,
+  "fixed_secondary_hints": [
+    {
+      "alias": "S1",
+      "kind": "subject",
+      "roles": {
+        "subject": {
+          "total": 6,
+          "distinct_record_positions": 6,
+          "distinct_event_uuids": 6
+        }
+      },
+      "distinct_positions": 6
+    },
+    {
+      "alias": "O1",
+      "kind": "object",
+      "roles": {
+        "predicateObject": {
+          "total": 44,
+          "distinct_record_positions": 44,
+          "distinct_event_uuids": 44
+        }
+      },
+      "distinct_positions": 44
+    },
+    {
+      "alias": "S2",
+      "kind": "subject",
+      "roles": {
+        "subject": {
+          "total": 19,
+          "distinct_record_positions": 19,
+          "distinct_event_uuids": 19
+        }
+      },
+      "distinct_positions": 19
+    }
+  ],
+  "hosts": {
+    "H3": {
+      "event_count": 3426906,
+      "valid_timestamp_count": 3426906,
+      "min_ns": 1558119836340647529,
+      "max_ns": 1558124754510218121,
+      "first_event_ns": 1558119836470403842,
+      "last_event_ns": 1558124754510218121,
+      "time_regressions_in_read_order": 2832,
+      "time_ties_in_read_order": 3310202,
+      "min_utc": "2019-05-17T19:03:56.340647529Z",
+      "max_utc": "2019-05-17T20:25:54.510218121Z",
+      "first_event_utc": "2019-05-17T19:03:56.470403842Z",
+      "last_event_utc": "2019-05-17T20:25:54.510218121Z",
+      "host_mapping_status": "HOST_MAPPING_UNRESOLVED_IN_MEMBER"
+    },
+    "H2": {
+      "event_count": 3299058,
+      "valid_timestamp_count": 3299058,
+      "min_ns": 1558119771908755571,
+      "max_ns": 1558124752638509135,
+      "first_event_ns": 1558119772048632143,
+      "last_event_ns": 1558124752638509135,
+      "time_regressions_in_read_order": 3155,
+      "time_ties_in_read_order": 3125400,
+      "min_utc": "2019-05-17T19:02:51.908755571Z",
+      "max_utc": "2019-05-17T20:25:52.638509135Z",
+      "first_event_utc": "2019-05-17T19:02:52.048632143Z",
+      "last_event_utc": "2019-05-17T20:25:52.638509135Z",
+      "host_mapping_status": "HOST_MAPPING_UNRESOLVED_IN_MEMBER"
+    },
+    "H1": {
+      "event_count": 3037860,
+      "valid_timestamp_count": 3037860,
+      "min_ns": 1558119838051543653,
+      "max_ns": 1558124753471076010,
+      "first_event_ns": 1558119838061174632,
+      "last_event_ns": 1558124753471076010,
+      "time_regressions_in_read_order": 2829,
+      "time_ties_in_read_order": 2906602,
+      "min_utc": "2019-05-17T19:03:58.051543653Z",
+      "max_utc": "2019-05-17T20:25:53.471076010Z",
+      "first_event_utc": "2019-05-17T19:03:58.061174632Z",
+      "last_event_utc": "2019-05-17T20:25:53.471076010Z",
+      "host_mapping_status": "HOST_MAPPING_UNRESOLVED_IN_MEMBER"
+    }
+  },
+  "record_types": {
+    "Event": 9763824,
+    "SrcSinkObject": 45025,
+    "IpcObject": 26420,
+    "Subject": 70348,
+    "FileObject": 91110,
+    "NetFlowObject": 3273
+  },
+  "event_types": {
+    "EVENT_READ": 2689307,
+    "EVENT_WRITE": 1813284,
+    "EVENT_FLOWS_TO": 228729,
+    "EVENT_MMAP": 854002,
+    "EVENT_CLOSE": 1335460,
+    "EVENT_MPROTECT": 169818,
+    "EVENT_OPEN": 1273681,
+    "EVENT_EXIT": 60978,
+    "EVENT_UNLINK": 68458,
+    "EVENT_FCNTL": 293788,
+    "EVENT_CREATE_OBJECT": 26485,
+    "EVENT_FORK": 62545,
+    "EVENT_LSEEK": 202864,
+    "EVENT_EXECUTE": 60716,
+    "EVENT_MODIFY_PROCESS": 531121,
+    "EVENT_CONNECT": 4036,
+    "EVENT_ADD_OBJECT_ATTRIBUTE": 1471,
+    "EVENT_SENDTO": 23479,
+    "EVENT_RECVFROM": 23450,
+    "EVENT_RENAME": 15154,
+    "EVENT_MODIFY_FILE_ATTRIBUTES": 3323,
+    "EVENT_ACCEPT": 688,
+    "EVENT_BIND": 39,
+    "EVENT_SIGNAL": 320,
+    "EVENT_CHANGE_PRINCIPAL": 14949,
+    "EVENT_LINK": 161,
+    "EVENT_TRUNCATE": 1564,
+    "EVENT_OTHER": 647,
+    "EVENT_SENDMSG": 1277,
+    "EVENT_LOGIN": 731,
+    "EVENT_RECVMSG": 1299
+  },
+  "cdm_versions": {
+    "20": 10000000
+  },
+  "timestamp_validity": {
+    "event_total": 9763824,
+    "integer_timestamp": 9763824
+  },
+  "path_field_availability": {
+    "predicateObjectPath": {
+      "null": 8342438,
+      "nonempty_string": 1421386
+    },
+    "predicateObject2Path": {
+      "null": 9714539,
+      "nonempty_string": 49285
+    }
+  },
+  "parse_anomalies_count": 0,
+  "UTF8_replacement_strings": 0,
+  "source_unchanged": true,
+  "authorization_basis": "User continuation instruction with inherited prior approved outer caps; separate attempt recorded, previous run frozen.",
+  "limits": {
+    "total_active_seconds": 5400,
+    "scan_sub_limit_seconds": 3600,
+    "query_time_reserved_seconds": 1800,
+    "expanded_bytes": 17179869184,
+    "memory_bytes": 4294967296,
+    "new_output_bytes": 8589934592
+  },
+  "index_policy": "FROZEN_PREFIX_AND_NEW_TAIL_DATABASES_SERVER_ONLY",
+  "no_new_raw_download_model_GPU_attack_DEPIMPACT_install": true,
+  "Source_Accuracy": "NOT_RUN_NOT_APPLICABLE",
+  "MRR": "NOT_RUN_NOT_APPLICABLE",
+  "Path_F1": "NOT_RUN_NOT_APPLICABLE",
+  "candidate_semantic_aggregate_audit": {
+    "candidate_positions_exported": 76,
+    "object_uuid_event_types": {
+      "EVENT_READ": 13,
+      "EVENT_CLOSE": 14,
+      "EVENT_OPEN": 17
+    },
+    "subject_uuid_event_types": [
+      {
+        "EVENT_RECVFROM": 2,
+        "EVENT_MPROTECT": 1,
+        "EVENT_SENDTO": 2,
+        "EVENT_CLOSE": 1
+      },
+      {
+        "EVENT_RECVFROM": 2,
+        "EVENT_MPROTECT": 1,
+        "EVENT_OPEN": 1,
+        "EVENT_READ": 9,
+        "EVENT_CLOSE": 2,
+        "EVENT_SENDTO": 4
+      }
+    ],
+    "direct_registered_path_event_types": {
+      "EVENT_OPEN": 24
+    },
+    "object_uuid_and_direct_path_events": 17,
+    "object_and_subject_same_event": 0,
+    "object_and_subject_READ_same_event": 0,
+    "candidate_events_with_subject_definition": 51,
+    "candidate_events_with_nonempty_subject_cmdLine": 0,
+    "exact_subject_hints_with_definition_seen": [
+      false,
+      false
+    ],
+    "raw_derived_not_publisher_attack_identity": true
+  },
+  "limitations": [
+    "Exact raw UUID/path observability is supported, while attack-instance label lineage remains unverified.",
+    "No Event combines the specified object and either specified subject.",
+    "Event.properties.exec is not retained in this compact index; absence in index is not absence in raw logs.",
+    "Candidate Subject definitions carry no nonempty cmdLine. Publisher-to-raw host/clock mapping remains unestablished."
+  ]
+}

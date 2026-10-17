@@ -1,0 +1,15 @@
+# E5 member continuation and index qualification
+
+Status `FULL_MEMBER_SCANNED_B_UNRESOLVED`; true EOF **True**. Composed unique positions: **10,000,000**; new beyond the prior scan: **224,313**; new CDM decode attempts: **224,314**, including one boundary revalidation.
+
+This is a separate bounded continuation under the user's instruction to continue, inheriting the prior outer caps, with scan time capped at 60 minutes to reserve query time within a 90-minute total. The old timeout record remains frozen. Forward gzip inflation starts at byte zero, counts all discarded replay bytes, verifies the writer schema and boundary sync/block/record, and rebuilds actual gzip state; no compressed random seek or saved decoder-state claim is made. Prior verified blocks and newly validated tail blocks compose coverage; all records were not redecoded in one pass.
+
+Combined Events: 9,763,824; index reconciliation complete: True. Fixed secondary-hint role hits: 69; direct registered-path Events: 24; candidate positions: 76. B remains B_UNRESOLVED / B_MAPPING_BLOCKED_BY_REPORT_OR_CLOCK. Secondary hint lineage is unverified; exact strings, names or time proximity do not alone establish an attack instance. Researcher mapping is permitted without a publisher Event UUID when host/time/actor/action/object correspondence is traced and unique. No assumed clock offset or expected upstream origin was used.
+
+`summary.json` separates integrity, coverage, index and B status. Host aliases have no public UUID/name crosswalk. Five-minute buckets and event-type totals are provided. Min/max is not continuous coverage or target execution identity. Negative exact-field results apply only to this member and this encoding; they do not prove an object/attack absent from all E5.
+
+The private composed index consists of the frozen prefix database and a new tail database, both server-only. Logical views exclude the old unvalidated boundary record and subtract its old bucket contribution exactly once. Entity versions remain scoped to host/type/UUID. Duplicate statistics stream-merge two physical UUID indexes to bound memory. Source UUIDs, host maps, private paths, candidates and report-to-event mappings are excluded from this publication.
+
+Generic code and synthetic tests are provided; private runtime/config/anchors are required for an authorized real run. No raw input, keys or payload are bundled. No new raw download, model/GPU, attack, DEPIMPACT or installation was performed. Source Accuracy/MRR/Path F1 are NOT_RUN_NOT_APPLICABLE.
+
+Semantic audit: exact object UUID Events include 13 READ, 17 OPEN and 14 CLOSE; 17 OPEN also carry the registered path. All 24 direct-path Events are OPEN. No Event combines the specified object with either specified subject. Exact Subject hints have no retained definition in the member; candidate definitions provide no nonempty cmdLine. Event.properties.exec was not retained in the compact index, so missing index fields do not establish absence in raw logs. No automatic additional raw pass was made to enrich them.

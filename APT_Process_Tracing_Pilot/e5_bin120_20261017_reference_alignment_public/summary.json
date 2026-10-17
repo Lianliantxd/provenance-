@@ -1,0 +1,41 @@
+{
+  "status": "NEW_REFERENCE_HINTS_VERIFIED_RAW_B_UNRESOLVED",
+  "B": "B_UNRESOLVED",
+  "previous_probe_unchanged": true,
+  "publisher_report_sha256": "95785dd6e32e1585e3a3b49f7f69aac785ca9d2db05593ad919b1b627897f0a1",
+  "publisher_table_reviewed": {
+    "pdf_page": 136,
+    "section": "11.2.2",
+    "table": 8
+  },
+  "publisher_actor_action_description_clarified": true,
+  "publisher_raw_event_host_UUID_or_time_calibration_obtained": false,
+  "secondary_author_source": {
+    "repository": "ubc-provenance/PIDSMaker",
+    "commit": "438a05a7c55256f639e5b5945cf4828fe3ee078e",
+    "path": "Ground_Truth/orthrus/E5-CADETS/node_Nginx_Drakon_APT_17.csv",
+    "sha256": "10c3d8f11aa11f53a1fefa7fb84519e5a7a52be31ba805a696bb92e034949918",
+    "rows": 107,
+    "tier": "SECONDARY_NODE_LABELS_NOT_OFFICIAL_RAW_EVENT_GT"
+  },
+  "private_exact_object_lookup_hints": 1,
+  "private_subject_lookup_hints": 2,
+  "private_hint_identifiers_not_published": true,
+  "synthetic_injection_configuration_excluded_as_GT": true,
+  "official_operational_log_sha256": "70b111fff7bc4662d4c22664be19c4c08702a36676f31f160d4b3a856ee5c3c9",
+  "official_operational_log_bytes": 16894,
+  "operational_log_target_date_section_has_no_event_entries": true,
+  "new_raw_CDM_records_read": 0,
+  "new_raw_member_downloads": 0,
+  "new_secondary_reference_read": true,
+  "new_model_GPU_attack_runs": 0,
+  "source_accuracy_MRR_pathF1": "NOT_RUN_NOT_APPLICABLE",
+  "next_probe_status": "PROPOSED_NOT_EXECUTED_ADDITIONAL_RAW_READ_AUTHORIZATION_REQUIRED",
+  "proposed_additional_max_all_type_records": 250000,
+  "prior_records_already_read": 250000,
+  "proposed_max_cumulative_decodes_including_repeated_prefix": 500000,
+  "proposed_expanded_byte_cap": 1073741824,
+  "proposed_seconds": 600,
+  "proposed_memory_bytes": 4294967296,
+  "no_evidence_of_whole_member_target_absence": true
+}

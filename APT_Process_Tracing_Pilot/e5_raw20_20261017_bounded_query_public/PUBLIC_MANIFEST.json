@@ -1,0 +1,22 @@
+{
+  "files": {
+    "summary.json": {
+      "sha256": "7a762f11cde6ea6b2c662b7ee59bde2e72024361cc25cddc3a684d35b0b88b01",
+      "size": 2276
+    },
+    "config_structure.json": {
+      "sha256": "fb886554e6a348cbeee1eca6fd2c8201c47779e9fd5a5427aff7fc94084ff6de",
+      "size": 744
+    },
+    "README.md": {
+      "sha256": "3811ec5e29aa8ee94d4bface2505ebf31c27b88604ab3307120fd5726e8596b9",
+      "size": 2744
+    },
+    "query_core_helpers.py": {
+      "sha256": "9087d6ebadac0bdb5be1a7c60e724692491db1548d42ef7be4f91c77972c66a7",
+      "size": 2009
+    }
+  },
+  "self_excluded": true,
+  "release": "AGGREGATES_GENERIC_HELPERS_CONFIGURATION_STRUCTURE_ONLY"
+}

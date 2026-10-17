@@ -1,0 +1,27 @@
+{
+  "seconds": 5400,
+  "seed_seconds": 180,
+  "memory_bytes": 4294967296,
+  "output_bytes": 1073741824,
+  "expanded_bytes": 8589934592,
+  "decode_attempts": 20000,
+  "new_raw_targets_cap": 8192,
+  "max_batches": 2,
+  "depth_limit": 6,
+  "node_limit": 256,
+  "edge_limit": 512,
+  "class_candidates": 128,
+  "seed_sql_rows": 10000,
+  "total_sql_rows": 200000,
+  "sql_seconds": 30,
+  "path_limit": 16,
+  "source_member": "<private sealed CDM member>",
+  "indices": [
+    "<private frozen prefix>",
+    "<private frozen tail>"
+  ],
+  "seed_manifest": "<private20 original Event snapshots>",
+  "relation_policy": "<frozen engineering relation contract>",
+  "schedule": "all seeds first layer, then per-seed round robin",
+  "not_a_new_model": true
+}

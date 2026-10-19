@@ -1,12 +1,12 @@
 {
   "files": {
     "README.md": {
-      "sha256": "6968d536a7a7375bde595c6c0e3716b287aff9ba98f11b36c3a371efefacc577",
-      "size": 1112
+      "sha256": "2337819de5a81a5dc93d808c3907e7890eebbf6aa097aea9b8d2ec4e9de22973",
+      "size": 1848
     },
     "summary.json": {
-      "sha256": "0ccbad52ae8c899233f089a590cd9f3116d1d636a9607b89ab652999ab96c629",
-      "size": 792
+      "sha256": "ed67ce72653caeebdc5fd4198431cc76c29daa0ee128d7ec2a81a1c17bfe9e06",
+      "size": 1156
     },
     "PRE_READ_PROTOCOL.md": {
       "sha256": "b406338eadfb9c9cf552e7965c7906df07a23896741e77564f6f6f840a5c0baa",
@@ -15,6 +15,14 @@
     "native_stream_support.py": {
       "sha256": "9e967119c50b056c7092cbe797e38d354077e6c9e47c391b2c31113319897dcc",
       "size": 4100
+    },
+    "session_identity_rules.py": {
+      "sha256": "c08729e3954cf9c1a046be46b41a52f215b76cf5aae072e19845b1620b988c63",
+      "size": 3578
+    },
+    "OUTCOME_PROTOCOL.md": {
+      "sha256": "03f390d5e25c377687e726a620b0a60638fcbc6ce85377e6012c4f4f9659d6ae",
+      "size": 2027
     }
   },
   "private_evidence_included": false

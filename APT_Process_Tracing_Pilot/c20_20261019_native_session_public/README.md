@@ -1,9 +1,11 @@
-# C20 native-session binding: preparation
+# C20: native remote-execution session reference qualified
 
-Preparation is complete; explicit stage-specific approval to replay the existing archive is pending. No member payload has been opened, no original event parsed, and no new source-instance result claimed. The fixed target manifest contains 135 unique physical JSONL locations. Fourteen synthetic checks passed.
+The single authorized read extracted all 135 frozen targets with matching raw-byte and canonical hashes. One pass parsed 587286 events, delivered 1714987031 uncompressed bytes, reached member EOF and verified CRC. Non-target records counted toward these totals. No second replay or new telemetry download occurred.
 
-The next authorized execution would read the single existing member once, counting all delivered bytes and all parsing attempts, including non-target records. Only the frozen targets would be retained. It will distinguish raw-byte and canonical hashes, preserve native field states and time domains, and reject locator mismatches. A single-use lock prevents automatic replay after failure.
+One receiving remote-execution session qualifies as a development-exposed, researcher-posthoc A2 reference for the fixed attack endpoint. The mapping uses a native remote runspace and host instance, provider emitting PID, corroborated process-creation/token identity, and an exact process-parent link. A second observed remote runspace is distinguished by native identities. This is a session reference, not publisher Gold or a blind evaluation result.
 
-The investigation must separately validate process-parent, process-logon, process-shell and session-network identities, retain competitors, and avoid nearest-time or endpoint-only binding. No source ranking or path metric is enabled.
+The underlying transport connection and initiator endpoint remain unresolved. Six related receiving network observations cannot be joined to the qualified runspace through a stable shared key; successful logons have address placeholders. Matching endpoints or time proximity are not accepted substitutes. A configuration name is not treated as a unique remote-shell identifier.
 
-Private target identities, original records, account details and payloads are excluded. See summary.json and PRE_READ_PROTOCOL.md.
+Status: `C20_A2_REFERENCE_FOUND_PILOT_NOT_READY`. The reference-conditioned target set is not a frozen general session candidate universe. Source ranking and path metrics remain disabled. Twenty-three synthetic and identity-rule checks passed. No attack, model, GPU, baseline or scoring experiment was run.
+
+Only anonymous coverage, generic rules and resource statistics are published. Private identities, source mappings, original records, account names and command payloads are excluded. Preparation remains available in the previous commit; final results supersede its pending-approval status. See summary.json and OUTCOME_PROTOCOL.md.

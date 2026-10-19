@@ -1,0 +1,21 @@
+{
+  "files": {
+    "README.md": {
+      "sha256": "153cc69d03f8324b8ea9d68c45f0cf30490d9b3121b9febae964c79eb8ce4c21",
+      "size": 1030
+    },
+    "summary.json": {
+      "sha256": "61752b46c7ba3df423990dda28aaa4cdf983fb8971cf7938166b753f46e69b4b",
+      "size": 712
+    },
+    "QUERY_AND_EVIDENCE_PROTOCOL.md": {
+      "sha256": "8d512b11304927f5b771ac7c621188816e4344c90bc82d9baebc8660efd19769",
+      "size": 1226
+    },
+    "qualification_guards.py": {
+      "sha256": "e24a2f2892b7c0a55bae58160ffaf43b3277bb19224d3100c455fa41f2536271",
+      "size": 683
+    }
+  },
+  "private_evidence_included": false
+}

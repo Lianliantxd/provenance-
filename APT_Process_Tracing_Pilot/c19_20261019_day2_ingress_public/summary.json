@@ -1,0 +1,21 @@
+{
+  "task": "C19_APT29_DAY2_INGRESS_VERIFICATION",
+  "status": "C19_DAY2_A1_ONLY_BINDING_INSUFFICIENT",
+  "B_level": "B2_RESEARCHER_POSTHOC_MAPPING",
+  "A_level": "A1_UNBOUND_EVIDENCE",
+  "A2_instances": 0,
+  "SQL_statements": 24,
+  "billed_rows": 2546,
+  "unique_compact_event_rows": 2516,
+  "evidence_row_count": 24,
+  "receiver_network_leads": 6,
+  "receiver_success_logon_records_logon_type_unavailable": 12,
+  "receiver_PowerShell_context_records": 6,
+  "receiver_distinct_remote_host_process_creations": 2,
+  "origin_partial_query_groups": 3,
+  "source_ranking_ready": false,
+  "path_F1_ready": false,
+  "archive_replays": 0,
+  "new_raw_downloads": 0,
+  "exposure": "DEVELOPMENT_EXPOSED_POSTHOC_MAPPING"
+}

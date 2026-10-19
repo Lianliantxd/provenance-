@@ -1,0 +1,5 @@
+category,frozen_targets,raw_available,raw_missing,reused,newly_extracted
+session,23,23,0,6,17
+process,138,138,0,3,135
+authentication,127,127,0,73,54
+total,288,288,0,82,206

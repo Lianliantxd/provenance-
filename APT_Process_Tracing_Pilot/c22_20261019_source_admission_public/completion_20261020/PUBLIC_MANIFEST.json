@@ -1,0 +1,66 @@
+{
+  "phase": "AUTHORIZED_COMPLETION_NO_GO",
+  "files": {
+    "README.md": {
+      "sha256": "6063aba89f2a23afcf4e54ba2996de5b197e270b27ee10b93b011395901c5256",
+      "size": 2970
+    },
+    "summary.json": {
+      "sha256": "2f2e9744dbf5c57ba26710f760e28bd6ccb1d28c5c43d4615e0137feb1212101",
+      "size": 1895
+    },
+    "POST_INCIDENT_PROTOCOL.json": {
+      "sha256": "952aa2e4b0254b232c6550592ad44ab9b2fc1064c7b3a119206bc2b8a455fd41",
+      "size": 1115
+    },
+    "coverage_summary.csv": {
+      "sha256": "1b0d1c4417c70a053b3de641b059d6846a374ad95cc1b3ed0aeb2c724f3fc4b2",
+      "size": 172
+    },
+    "implementation/public/access_gate.py": {
+      "sha256": "01554e66e1bbdcf626a6f2fab8445c6fc1451c0406a04b0477cb22cd01b43909",
+      "size": 3664
+    },
+    "implementation/public/native_stream_support.py": {
+      "sha256": "9e967119c50b056c7092cbe797e38d354077e6c9e47c391b2c31113319897dcc",
+      "size": 4100
+    },
+    "implementation/public/post_incident_rules.py": {
+      "sha256": "cda4c66c81179f5eb2989f1b980d95c86e8d4d388c10099767027306270f6665",
+      "size": 11362
+    },
+    "implementation/public/ps_context_sections_v2.py": {
+      "sha256": "5c5e5e494b2b62b572ed9fdc8e5792add1d9be510e89606766aa4d12e2572704",
+      "size": 1284
+    },
+    "implementation/public/session_identity_rules.py": {
+      "sha256": "ac74354d5a48f8fca51cdaa2fb743cffad406b749b57d22781701b6ac90b787e",
+      "size": 3798
+    },
+    "implementation/scripts/build_candidates.py": {
+      "sha256": "3ebe6244f7a693378441d9bd3d7a11e1ef4a7f630f1e73ea05537b472b7aa17e",
+      "size": 7918
+    },
+    "implementation/scripts/extract_native_once.py": {
+      "sha256": "c74badf6f4c506cf89fa58e44cd3525af9fd9fb441ac9be0b12cb6f9257e1053",
+      "size": 7801
+    },
+    "implementation/scripts/run_direct_parent_baseline.py": {
+      "sha256": "50bbb29ff20c6b41f187d340844cfcd9f7ecc8a1b2943e7ea15de1227827a5ae",
+      "size": 2265
+    },
+    "implementation/scripts/run_post_read_tests.py": {
+      "sha256": "a42bb93ae701c9ec69982bc09ba11454bfa9b3194b07ac3bca11c59324d68a80",
+      "size": 927
+    },
+    "implementation/tests/test_c22_controls.py": {
+      "sha256": "a3ecf878600a29adb2100c4cdb99bb249d8122c4fbb78e601591f7e1fcf6ab44",
+      "size": 10706
+    },
+    "implementation/tests/test_post_read_completion.py": {
+      "sha256": "78865c6d1ef6c4d0ba5d20aeaad1776813793618102be13d370b5bfd67533801",
+      "size": 2599
+    }
+  },
+  "private_data_included": false
+}

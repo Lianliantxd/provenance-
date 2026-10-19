@@ -1,0 +1,58 @@
+{
+  "files": {
+    "README.md": {
+      "sha256": "7f02dff027e9fe1b3475d8d71c8eda17da986d42128676b34a5c8fd728071e1e",
+      "size": 2474
+    },
+    "summary.json": {
+      "sha256": "fefb739412ac3a3ee4731c17aa82d29228bc3fe45c90758d387094b29a724e93",
+      "size": 1369
+    },
+    "POST_INCIDENT_PROTOCOL.json": {
+      "sha256": "acc09d7f9b3dee54483380b5ba60396c32a27e9093abb53862e49be9339fbf1d",
+      "size": 1242
+    },
+    "coverage_summary.csv": {
+      "sha256": "ca5682e2e9910f5437d71046aee93e856624c5ef52ca2b696200059a05c8405b",
+      "size": 128
+    },
+    "implementation/public/access_gate.py": {
+      "sha256": "01554e66e1bbdcf626a6f2fab8445c6fc1451c0406a04b0477cb22cd01b43909",
+      "size": 3664
+    },
+    "implementation/public/native_stream_support.py": {
+      "sha256": "9e967119c50b056c7092cbe797e38d354077e6c9e47c391b2c31113319897dcc",
+      "size": 4100
+    },
+    "implementation/public/post_incident_rules.py": {
+      "sha256": "cda4c66c81179f5eb2989f1b980d95c86e8d4d388c10099767027306270f6665",
+      "size": 11362
+    },
+    "implementation/public/session_identity_rules.py": {
+      "sha256": "ac74354d5a48f8fca51cdaa2fb743cffad406b749b57d22781701b6ac90b787e",
+      "size": 3798
+    },
+    "implementation/scripts/build_candidates.py": {
+      "sha256": "3ebe6244f7a693378441d9bd3d7a11e1ef4a7f630f1e73ea05537b472b7aa17e",
+      "size": 7918
+    },
+    "implementation/scripts/evaluate_preparation_admission.py": {
+      "sha256": "c9ed017960d05781be974316019f47214565b3ceb36efafeb16fec926bcd6001",
+      "size": 3299
+    },
+    "implementation/scripts/extract_native_once.py": {
+      "sha256": "c74badf6f4c506cf89fa58e44cd3525af9fd9fb441ac9be0b12cb6f9257e1053",
+      "size": 7801
+    },
+    "implementation/scripts/run_direct_parent_baseline.py": {
+      "sha256": "50bbb29ff20c6b41f187d340844cfcd9f7ecc8a1b2943e7ea15de1227827a5ae",
+      "size": 2265
+    },
+    "implementation/tests/test_c22_controls.py": {
+      "sha256": "a3ecf878600a29adb2100c4cdb99bb249d8122c4fbb78e601591f7e1fcf6ab44",
+      "size": 10706
+    }
+  },
+  "private_evidence_included": false,
+  "phase": "REVISED_PREPARATION_ONLY"
+}

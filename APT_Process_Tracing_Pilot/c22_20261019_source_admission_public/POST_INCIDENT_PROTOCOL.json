@@ -1,0 +1,22 @@
+{
+  "T_Q": "OFFLINE_ARCHIVE_SNAPSHOT_AFTER_CAPTURE",
+  "T_Q_wall_clock": null,
+  "T_B": "FIXED_ENDPOINT_NATIVE_UTC",
+  "T_E": "PRESERVE_NATIVE_PROVIDER_TIME_OFFSET_PRECISION_AND_PROVENANCE",
+  "source_unit": "RECEIVING_REMOTE_EXECUTION_RUNSPACE_INSTANCE",
+  "source_unit_is_transport_connection": false,
+  "posthoc_identity_is_historical_causal_predecessor": false,
+  "ingestion_before_endpoint_required_for_posthoc_identity": false,
+  "fit_clock_offset": false,
+  "same_second": "UNRESOLVED_WITHOUT_INDEPENDENT_ORDER",
+  "scope_completeness": "COMPLETE_WITHIN_FROZEN_DISCOVERY_SCOPE_NOT_WHOLE_SCENARIO",
+  "unresolved_session_events": "KEEP_IN_SEPARATE_EVENT_LEDGER_NOT_EXTRA_RUNSPACES",
+  "missing_identity": "KEEP_PARTIAL_NO_INVENTION",
+  "competing_label": "UNLABELED_COMPETITOR",
+  "parent_GUID_filters_candidate_universe": false,
+  "identity_join": "ALL_SAMEHOST_NATIVE_RECEIVER_GUID_MATCHES_WITHOUT_EXPLICIT_LIFETIME_CONFLICT",
+  "identity_join_and_historical_eligibility": "SEPARATE_OUTPUTS",
+  "reference_evaluation": "AFTER_CANDIDATE_AND_BASELINE_FREEZE",
+  "simple_join_sufficiency": "IF_FULLY_QUALIFIED_THEN_ENGINEERING_CASE_NOT_MULTIHOP_INNOVATION",
+  "new_archive_member_read": "REQUIRES_SEPARATE_EXPLICIT_C22_HUMAN_APPROVAL"
+}

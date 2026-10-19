@@ -1,0 +1,21 @@
+{
+  "T_Q": "OFFLINE_ARCHIVE_SNAPSHOT_AFTER_CAPTURE",
+  "T_Q_wall_clock": null,
+  "T_B": "FIXED_NATIVE_ENDPOINT_EVENT_UTC",
+  "T_E": "NATIVE_TIME_WITH_PROVIDER_OFFSET_PRECISION_AND_PROVENANCE",
+  "source_unit": "RECEIVING_REMOTE_EXECUTION_RUNSPACE_INSTANCE",
+  "posthoc_identity_is_causal_predecessor": false,
+  "collection_before_endpoint_required_for_offline_identity": false,
+  "clock_offset_fit": false,
+  "same_second_order": "UNRESOLVED_WITHOUT_INDEPENDENT_ORDER",
+  "candidate_frame": "INHERITED_REFERENCE_INDEPENDENT_FROZEN_LOCATORS",
+  "raw_coverage_proves_native_time_recall": false,
+  "missing_identity": "RETAIN_PARTIAL_WITH_UNKNOWN_FIELDS",
+  "PID_reuse": "DO_NOT_MERGE_LIFECYCLES",
+  "reference_evaluation": "ONLY_AFTER_CANDIDATE_AND_BASELINE_FREEZE",
+  "generator_parent_filter": false,
+  "baseline": "ALL_SCOPED_DIRECT_PARENT_IDENTITY_MATCHES",
+  "incomplete_or_unresolved": "BASELINE_NOT_EVALUABLE",
+  "unique_complete_solution": "TRIVIAL_ENGINEERING_CASE_NOT_MULTIHOP_INNOVATION",
+  "new_member_read_requires_separate_human_approval": true
+}

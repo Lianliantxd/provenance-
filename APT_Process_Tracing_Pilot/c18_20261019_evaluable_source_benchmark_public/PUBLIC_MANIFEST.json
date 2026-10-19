@@ -1,0 +1,26 @@
+{
+  "files": {
+    "summary.json": {
+      "size": 1812,
+      "sha256": "a78c24ad4bf39c48d386f5fb42484dc0c909c756986fa43c15a8ba54331510b8"
+    },
+    "BENCHMARK_PROTOCOL_V1.md": {
+      "size": 6382,
+      "sha256": "374c69926efcecfb211b5b571c06f47785e7477f85bcf2adab06c91815f34bb9"
+    },
+    "README.md": {
+      "size": 2292,
+      "sha256": "6b341ed599a4caa39d15f5a9512d5d1b83d39350a7e62ae02722788123f834ef"
+    },
+    "eligibility_guards.py": {
+      "size": 2265,
+      "sha256": "b79532ec32d020a24baf7d451e7d64fa857fbbe02e2e454ed3eafb1aee7f4522"
+    },
+    "dataset_eligibility_abstract.csv": {
+      "size": 2581,
+      "sha256": "871dbe9228e185d2c81f4ca01a9536996456d8d49824cb2bb76c9d9f3a10ab38"
+    }
+  },
+  "self_excluded": true,
+  "raw_identifiers_or_private_paths": false
+}

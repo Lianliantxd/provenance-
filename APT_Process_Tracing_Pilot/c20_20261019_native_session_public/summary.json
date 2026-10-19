@@ -1,0 +1,26 @@
+{
+  "task": "C20_APT29_DAY2_NATIVE_SESSION_BINDING",
+  "phase": "PREPARATION_COMPLETE",
+  "status": "C20_NATIVE_READ_AUTHORIZATION_PENDING",
+  "frozen_target_count": 135,
+  "duplicate_physical_locators": 0,
+  "archive_metadata_checked": true,
+  "archive_member_payload_opened": false,
+  "new_archive_replays": 0,
+  "uncompressed_bytes_delivered": 0,
+  "original_event_parse_attempts": 0,
+  "native_targets_extracted": 0,
+  "synthetic_tests_passed": 14,
+  "new_A2_claim": false,
+  "source_ranking_ready": false,
+  "path_F1_ready": false,
+  "read_envelope_pending_approval": {
+    "passes": 1,
+    "delivered_bytes": 3221225472,
+    "event_parse_attempts": 800000,
+    "wall_seconds": 3600,
+    "RSS_supervision_bytes": 4294967296,
+    "new_output_bytes": 268435456,
+    "CPU_workers": 1
+  }
+}

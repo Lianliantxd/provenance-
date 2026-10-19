@@ -1,0 +1,6 @@
+provider,indexed_event_rows,retained_native_rows,missing_native_rows,index_query_complete,native_field_coverage_complete
+PowerShell,18,3,15,True,False
+Microsoft-Windows-PowerShell,5,3,2,True,False
+Microsoft-Windows-WinRM,0,0,0,True,True
+Microsoft-Windows-Sysmon,138,3,135,True,False
+Microsoft-Windows-Security-Auditing,127,73,54,True,False

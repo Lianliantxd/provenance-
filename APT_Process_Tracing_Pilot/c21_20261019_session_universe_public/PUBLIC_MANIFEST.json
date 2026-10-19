@@ -1,0 +1,29 @@
+{
+  "files": {
+    "README.md": {
+      "sha256": "b776ad0e3058aeb45811ada7d989833d557908997f43edeaa614c3b323255d0f",
+      "size": 2057
+    },
+    "summary.json": {
+      "sha256": "e2f180f138fc4bb48fb6c422521404c3d656dc9156aaf9f27b988076e3c9c436",
+      "size": 1614
+    },
+    "METHOD_INPUT_PROTOCOL.md": {
+      "sha256": "581d0876555d82843a38bdb364ef44001fb23064e89a51b60450555c882e797d",
+      "size": 1948
+    },
+    "universe_rules.py": {
+      "sha256": "01554e66e1bbdcf626a6f2fab8445c6fc1451c0406a04b0477cb22cd01b43909",
+      "size": 3664
+    },
+    "session_identity_rules.py": {
+      "sha256": "c08729e3954cf9c1a046be46b41a52f215b76cf5aae072e19845b1620b988c63",
+      "size": 3578
+    },
+    "coverage_summary.csv": {
+      "sha256": "54c9d1d2715e31c88af4e7cfbcd14ea4da3e0af1b1c8dd6d2e3254485c141def",
+      "size": 346
+    }
+  },
+  "private_evidence_included": false
+}

@@ -1,0 +1,22 @@
+{
+  "files": {
+    "README.md": {
+      "sha256": "3266644129ccf3bd1478243675cc538cedf8a7c10b6dc4b7cc487d6cd2a478fa",
+      "size": 1803
+    },
+    "admission_guards.py": {
+      "sha256": "2e898afced8d8b0174a654899dd959bd3dac1b15abb4a4124cd8db52ec0b650e",
+      "size": 2169
+    },
+    "interface_matrix.csv": {
+      "sha256": "30b4a54787bc63f2287074c71ef2c47834468e7ecaedacfb70efd8f67391b18a",
+      "size": 4038
+    },
+    "summary.json": {
+      "sha256": "b708275dd11c67e62be9b22dfb9d4ff4480fc7dfdfbd562c511ca71c08b75e37",
+      "size": 1055
+    }
+  },
+  "self_excluded": true,
+  "private_artifacts_included": false
+}

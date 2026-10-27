@@ -1,0 +1,96 @@
+{
+  "schema": "PUBLIC_ALLOWLIST_V1",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1752,
+      "sha256": "574611f26d192ae6fdfcb052b3566b23ce649a1aaf1024591cd849be35d81c44"
+    },
+    {
+      "path": "SOURCE_REPORT_HASHES.json",
+      "bytes": 977,
+      "sha256": "38b28723db4ca2ab11aed04cd3427aa16611951b555bdee7f3ea6999507314df"
+    },
+    {
+      "path": "aggregates/airtag/added_vs_control_comparison.csv",
+      "bytes": 1176,
+      "sha256": "f4f1ff564bb33fa153c3334539de88d6dc58129486238de2ef98033ebba6ef91"
+    },
+    {
+      "path": "aggregates/airtag/evidence_structure_cross_table.csv",
+      "bytes": 229,
+      "sha256": "09763bf4122c91467e08d51450bc14cd18050bbcec85701412dbac7043ad8bc8"
+    },
+    {
+      "path": "aggregates/airtag/graph_summary.csv",
+      "bytes": 473,
+      "sha256": "078e5860fa60775f8d7a4273d5a8859d3a14b39e533bfc8bda16e7334dcf9b69"
+    },
+    {
+      "path": "aggregates/airtag/poi_reachability_comparison.csv",
+      "bytes": 261,
+      "sha256": "1ca226ad86b374316b232dc26d5b24b0af6183d8154749b16b06d448bd67af77"
+    },
+    {
+      "path": "aggregates/airtag/publication_row_projection_matrix.csv",
+      "bytes": 86,
+      "sha256": "849d527b8ed47f56ac94ce2688fd0961626b3a918364af70084f68836e30e297"
+    },
+    {
+      "path": "aggregates/saga_r19/loao_event_results.csv",
+      "bytes": 1930,
+      "sha256": "c99f77eb34ed23e7be35273f92a0d56a689db79cdc701a880e43dd076622d522"
+    },
+    {
+      "path": "reports/airtag_edge_audit.md",
+      "bytes": 2310,
+      "sha256": "2ac48037ab524bfbd9f4938fe9bb8a2e055ccf632e7279efa01e8592ca8c1c6a"
+    },
+    {
+      "path": "reports/baseline_admission.md",
+      "bytes": 11787,
+      "sha256": "64e93b009e0edf274988ba9299a554162a1d358cc4a785337344ae41c9a00448"
+    },
+    {
+      "path": "reports/common_baseline_execution.md",
+      "bytes": 7246,
+      "sha256": "d2022d2ead2e2e6c0b94d31d936471c9ac411ad6134040b3c58c3136c93201b5"
+    },
+    {
+      "path": "reports/evidence_semantics_and_saga.md",
+      "bytes": 3519,
+      "sha256": "49d2771ea830d437b34ee5744f1167ed0d9aad1792a10f79d0b669bbbb68ab7c"
+    },
+    {
+      "path": "reports/four_methods.md",
+      "bytes": 8325,
+      "sha256": "6d59ed55dd7f9ffa27126dd90a6878902d7fda9af9eccdc01aa153b54b35520a"
+    },
+    {
+      "path": "reports/orthrus_recovery.md",
+      "bytes": 7390,
+      "sha256": "d0b00cdde6267a001b871f074365f10097d7725a930f909384589ed76b2a1b47"
+    },
+    {
+      "path": "tools/multidigraph_ablation.py",
+      "bytes": 3579,
+      "sha256": "0d65b51607f58b0621bb701b4b55f2074552f0a19ae98d89fe646113e6beb94c"
+    },
+    {
+      "path": "tools/verify_public_manifest.py",
+      "bytes": 1235,
+      "sha256": "c70cc206af0bcebf0bc57b3f882c964c621984eea3cd77d916ef3b2466b132d4"
+    }
+  ],
+  "source": "Existing frozen research; no reruns",
+  "excludes": [
+    "raw logs",
+    "event excerpts",
+    "Gold text",
+    "private mappings",
+    "prompts/replies",
+    "credentials",
+    "model weights",
+    "environments"
+  ]
+}

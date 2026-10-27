@@ -1,0 +1,4 @@
+graph,nodes,edges,weak_components,strong_components,largest_weak_component,largest_strong_component,isolates,poi_weak_component,poi_descendants,poi_ancestors,weak_bridge_edge_instances,direction_interpretation
+G0,858,1816,1,845,858,6,0,858,63,3,358,GRAPH_TOPOLOGY_ONLY_NOT_ATTACK_FLOW
+G1_REMOVE_ADDED,858,1788,19,845,811,6,9,811,62,0,350,GRAPH_TOPOLOGY_ONLY_NOT_ATTACK_FLOW
+G2_REMOVE_MATCHED_NONADDED,858,1788,7,845,852,6,6,852,59,3,357,GRAPH_TOPOLOGY_ONLY_NOT_ATTACK_FLOW

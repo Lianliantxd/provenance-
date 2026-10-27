@@ -1,0 +1,22 @@
+{
+  "four_methods": {
+    "source_report_basename": "FINAL_REPRODUCTION_REPORT.md",
+    "private_original_sha256": "808d126f4c3d9e2638d3f4267d252b3b87232da893e36b820419c2864a68c34d"
+  },
+  "orthrus_recovery": {
+    "source_report_basename": "FINAL_ORTHRUS_RECOVERY_REPORT.md",
+    "private_original_sha256": "f9ed8401489d98c38b073b084cd936189f3f6d18e712bfe47bd7ff4c4f5d5ba0"
+  },
+  "baseline_admission": {
+    "source_report_basename": "FINAL_BASELINE_ADMISSION_REPORT.md",
+    "private_original_sha256": "ad063c07cb33e469bacb66b6ae8e30460e57e84ccd505867ef9fab75f17474a5"
+  },
+  "common_baseline_execution": {
+    "source_report_basename": "FINAL_BASELINE_EXECUTION_REPORT.md",
+    "private_original_sha256": "eec2b9732832816e674eb07753b096ee0a6a6d5473868bb334458f61c7a04046"
+  },
+  "airtag_edge_audit": {
+    "source_report_basename": "FINAL_AIRTAG_EDGE_AUDIT_REPORT.md",
+    "private_original_sha256": "7551dd981dca89452cfc193d9c2d7a52a839ba0e98572ffa68f77c768ce86836"
+  }
+}

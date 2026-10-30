@@ -1,0 +1,20 @@
+{
+  "date_window": [
+    "2023-10-30",
+    "2026-10-30"
+  ],
+  "paper_count": 55,
+  "groups": {
+    "S": 17,
+    "N": 22,
+    "G": 16
+  },
+  "publication_verification": "publisher/proceedings or author paper with conference confirmation; Crossref second-source automated verification unavailable",
+  "reading_depth": "abstract and selected excerpts, not full paper or code audit",
+  "files": {
+    "PAPER_INVENTORY.csv": "1b0ccacec416246c270a3fdc4ca5b1e2ebe22a18b343a77fd910dc6235c610ea",
+    "REVIEW_55_PAPERS.md": "30d2d9e135c5f2c8031b40c8a2d533c91c86ecad09d73061a80a1603d10cf57d",
+    "build_review.py": "e439fcbfcaa3435c3ffd1f254e6ff373e8f84b22ba3e1b06a04b39bdbdcbc475",
+    "verify_review.py": "81d24d0deca0e04ce09e280ef8b3986438d2c637f9d485c555e03a7d0a914ef5"
+  }
+}

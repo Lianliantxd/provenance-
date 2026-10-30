@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "prediction_files_checked": 148,
+  "comparison_slices": 120,
+  "read_files": 158,
+  "first_read_bytes": 45248452,
+  "integrity_reread_bytes": 9171070,
+  "total_tracked_read_bytes": 54419522,
+  "wall_seconds": 0.6925362790934741,
+  "predictions_unchanged": true,
+  "raw_log_files_read": 0,
+  "model_runs": 0,
+  "threshold_changes": 0,
+  "research_llm_calls": 0,
+  "independent_attacks": 1,
+  "statistical_inference": "NOT_IDENTIFIABLE_WITH_ONE_EXPOSED_CASE",
+  "reference_sha256": "41b60345dcb551b5899b11fb116dc240493931a97ea3acd92c19d9a8a7730e88"
+}

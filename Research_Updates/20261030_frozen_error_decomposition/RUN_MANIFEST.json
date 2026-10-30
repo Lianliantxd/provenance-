@@ -1,0 +1,21 @@
+{
+  "task": "FROZEN_ERROR_DECOMPOSITION",
+  "generated_at": "2026-10-30T15:37:54.392283+00:00",
+  "prior_prediction_files": 148,
+  "independent_attacks": 1,
+  "new_model_runs": 0,
+  "raw_archives_read": 0,
+  "sqlite_selected_records_read": 526169,
+  "audit_tracked_byte_reads": 54419522,
+  "whole_task_physical_io_bytes": "NOT_MEASURED",
+  "wall_clock_entire_turn": "NOT_MEASURED",
+  "peak_rss": "NOT_MEASURED",
+  "gpu_used": false,
+  "research_llm_calls": 0,
+  "packages_installed": false,
+  "data_downloaded": false,
+  "figures_generated_with": "existing Matplotlib, CPU",
+  "visual_qa": "PASS, revised figure2 layout; initial layout retained privately",
+  "formal_accuracy_experiment_started": false,
+  "new_scientific_claim": "descriptive bottleneck localization only"
+}

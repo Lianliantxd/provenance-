@@ -1,0 +1,39 @@
+{
+  "status": "FRONTIER_COVERAGE_AND_EVENT_CONCENTRATION_IDENTIFIED",
+  "original_predictions_modified": false,
+  "new_model_runs": 0,
+  "independent_attacks": 1,
+  "full_primary_reference_hits": 22,
+  "primary_misses": 21,
+  "miss_outside_scored_input": 2,
+  "miss_outside_frontier": 17,
+  "miss_within_frontier": 2,
+  "pre_ranking_fraction_of_primary_misses": 0.9047619047619048,
+  "candidate_misses_within_Q_alert_windows": 17,
+  "B_anomaly_largest_pair_fraction": 0.986,
+  "low_budget_full_minus_plain_gains": [
+    {
+      "input": "A",
+      "condition": "n25_e500",
+      "gain": 1
+    },
+    {
+      "input": "A",
+      "condition": "n50_e500",
+      "gain": 2
+    },
+    {
+      "input": "B",
+      "condition": "n50_e500",
+      "gain": 2
+    }
+  ],
+  "all_slices_joint_hits_equal_single_modules": true,
+  "all_shuffle_seeds_match_or_exceed_full_in_each_slice": true,
+  "joint_mechanism_value_established": false,
+  "activity_or_causal_reconstruction_established": false,
+  "next_priority": "LOCALIZE_EXISTING_FRONTIER_EXCLUSION_BEFORE_NEW_RANKER",
+  "next_priority_scope": "Existing frozen events only; distinguish hop, time, tie-abstention and missing native relations",
+  "posthoc_reference_use": "Diagnostic only; may not be reused as untouched validation",
+  "automatic_next_stage_started": false
+}

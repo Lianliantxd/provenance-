@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "task": "retrospective missed-reference location only",
+  "reference_nodes": 43,
+  "scored_reference_nodes": 41,
+  "candidate_reference_nodes": 24,
+  "scored_but_outside_candidates": 17,
+  "missing_reference_outside_all_Q_alert_windows": 0,
+  "missing_reference_in_Q_alert_windows_but_outside_candidate_frontier": 17,
+  "selected_database_records_read": 526169,
+  "selected_rows_sha256": "d1aa51e690c590ffe842080f816045b98431178c50925482956aa765833d7024",
+  "sqlite_size_mtime_unchanged": true,
+  "database_whole_file_sha256": "NOT_COMPUTED",
+  "physical_io_bytes": "NOT_MEASURED",
+  "raw_logs_read": 0,
+  "new_predictions_generated": 0,
+  "model_runs": 0,
+  "uses_reference_for_posthoc_diagnosis": true,
+  "not_valid_for_blind_test_selection": true,
+  "input_metadata_sha256": {
+    "private_node_uuid_map.json": "2db7bbcf7da98b94eb218d4439973a783f20c4152df17f67951bcf58dd0180f7",
+    "NODE_SCORES.json": "28cb4a2728516afd3de99aa240c48ac5999741d259863ab9431ab0cebb843528",
+    "Q.json": "224f283563e17230692b10034c817e1b40e31fc282025d207e20473090361c8e",
+    "retrieval_predictions/CANDIDATE_RECORDS_A.json": "b7829c504f7593c209a96265b0b36b8eac7aac477f9ed420b8edba59368ba644"
+  },
+  "wall_seconds": 3.9281030506826937
+}

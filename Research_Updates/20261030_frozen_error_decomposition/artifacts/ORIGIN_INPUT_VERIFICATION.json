@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "origin_model_prediction_freeze_sha256": "ad88c2e86ae1dac254ccf95314d0ade86250a6a56b67c4b18d988925e492edfc",
+  "frozen_metadata_hashes_verified": {
+    "Q.json": "224f283563e17230692b10034c817e1b40e31fc282025d207e20473090361c8e",
+    "NODE_SCORES.json": "28cb4a2728516afd3de99aa240c48ac5999741d259863ab9431ab0cebb843528"
+  },
+  "scope": "Q and NODE_SCORES bytes match earlier frozen prediction manifest; not a proof of reference completeness"
+}

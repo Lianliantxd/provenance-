@@ -1,0 +1,26 @@
+{
+  "A": {
+    "reference_total": 43,
+    "reference_scored": 41,
+    "reference_outside_scored_universe": 2,
+    "reference_in_candidates": 24,
+    "reference_scored_but_outside_candidates": 17,
+    "candidate_nodes": 421,
+    "candidate_events": 966,
+    "Q_nodes": 18,
+    "Q_reference_hits": 13,
+    "nested_sets_verified": true
+  },
+  "B": {
+    "reference_total": 43,
+    "reference_scored": 41,
+    "reference_outside_scored_universe": 2,
+    "reference_in_candidates": 24,
+    "reference_scored_but_outside_candidates": 17,
+    "candidate_nodes": 414,
+    "candidate_events": 1503,
+    "Q_nodes": 18,
+    "Q_reference_hits": 13,
+    "nested_sets_verified": true
+  }
+}

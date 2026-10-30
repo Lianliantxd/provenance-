@@ -1,0 +1,281 @@
+{
+  "report_date": "2026-10-31",
+  "scope": "cross-stage summary; no new experiments",
+  "source_count": 32,
+  "sources": [
+    {
+      "id": "E01",
+      "title": "主数据与基线固定决定",
+      "path": "apt_dataset_baseline_lock_20261029/DATASET_BASELINE_DECISION.md",
+      "level": "历史决定",
+      "bytes": 2289,
+      "sha256": "c6486ab9510a45a1630fe8d7331a58c0fd372aade655658c0f8ce9dc54af01cd"
+    },
+    {
+      "id": "E02",
+      "title": "ORTHRUS作者首例执行报告",
+      "path": "orthrus_cadets_run_20261030/FINAL_BASELINE_RUN_REPORT.md",
+      "level": "历史运行报告",
+      "bytes": 7285,
+      "sha256": "afc11a03fc13bf8f222802910675b5dd71a9921e714ce31d2dd8875a71360513"
+    },
+    {
+      "id": "E03",
+      "title": "ORTHRUS作者首例原始指标表",
+      "path": "orthrus_cadets_run_20261030/RESULTS.csv",
+      "level": "历史指标表",
+      "bytes": 734,
+      "sha256": "622f17670e589bcf7a803ad33c6f2948ddb6479196d5febcf425e15f8214a4e3"
+    },
+    {
+      "id": "E04",
+      "title": "四方法复现范围报告",
+      "path": "repro_four_methods_20261026/FINAL_REPRODUCTION_REPORT.md",
+      "level": "历史运行报告",
+      "bytes": 8300,
+      "sha256": "808d126f4c3d9e2638d3f4267d252b3b87232da893e36b820419c2864a68c34d"
+    },
+    {
+      "id": "E05",
+      "title": "AIRTAG与NODLINK共同执行审查",
+      "path": "apt_common_baseline_execution_20261027/FINAL_BASELINE_EXECUTION_REPORT.md",
+      "level": "历史运行报告",
+      "bytes": 6962,
+      "sha256": "eec2b9732832816e674eb07753b096ee0a6a6d5473868bb334458f61c7a04046"
+    },
+    {
+      "id": "E06",
+      "title": "历史成果收敛与证据总报告",
+      "path": "apt_provenance_research_consolidation_20261027/FINAL_RESEARCH_CONSOLIDATION_REPORT.md",
+      "level": "历史汇总，非本次重跑",
+      "bytes": 15996,
+      "sha256": "4575a12e04b82fc308fffbbae53b5a2de89e8e65f549029fac34bde9b86a703b"
+    },
+    {
+      "id": "E07",
+      "title": "55篇跨域文献清单",
+      "path": "apt_cross_domain_review_20261030_v2/PAPER_INVENTORY.csv",
+      "level": "已存在文献索引",
+      "bytes": 22581,
+      "sha256": "1b0ccacec416246c270a3fdc4ca5b1e2ebe22a18b343a77fd910dc6235c610ea"
+    },
+    {
+      "id": "E08",
+      "title": "55篇阅读深度与方法综述",
+      "path": "apt_cross_domain_review_20261030_v2/REVIEW_55_PAPERS.md",
+      "level": "已存在综述",
+      "bytes": 37479,
+      "sha256": "30d2d9e135c5f2c8031b40c8a2d533c91c86ecad09d73061a80a1603d10cf57d"
+    },
+    {
+      "id": "E09",
+      "title": "8,650事件权重诊断",
+      "path": "apt_research_execution_20261030/validation_probe_01/result.json",
+      "level": "实际诊断回执",
+      "bytes": 1939,
+      "sha256": "9feda923354efe767ebc366228d4e9a556301fbc3fae3b87cb35993574257bc2"
+    },
+    {
+      "id": "E10",
+      "title": "20轮训练与统一对照主报告",
+      "path": "apt_research_execution_20261030/runs/20261030T130726Z_fourstep_r2/FINAL_MASTER_REPORT.md",
+      "level": "实际实验报告",
+      "bytes": 9339,
+      "sha256": "39a0c65c59d5ebe75d1c1c564f0037cda80f98494ddeb538564780c1e15849e6"
+    },
+    {
+      "id": "E11",
+      "title": "20轮训练结果",
+      "path": "apt_research_execution_20261030/runs/20261030T130726Z_fourstep_r2/receipts_final/TRAINING_RESULT.json",
+      "level": "实际运行回执",
+      "bytes": 654,
+      "sha256": "945aa5d6e0f02318a0ec4c8664c96de9d1e0ceac4d12f485e31eb5ccc14bb43d"
+    },
+    {
+      "id": "E12",
+      "title": "新Q检测指标",
+      "path": "apt_research_execution_20261030/runs/20261030T130726Z_fourstep_r2/receipts_final/DEVELOPMENT_DETECTION_METRICS.json",
+      "level": "冻结后评价",
+      "bytes": 643,
+      "sha256": "a06fee8b4589637f5ce2a37e05215311c5f4de3014a607f59b8e4fa670ec5ba5"
+    },
+    {
+      "id": "E13",
+      "title": "148份检索输出指标",
+      "path": "apt_research_execution_20261030/runs/20261030T130726Z_fourstep_r2/receipts_final/RETRIEVAL_METRICS.csv",
+      "level": "冻结后评价",
+      "bytes": 20881,
+      "sha256": "4bd236c1864d8d19e7a13d2e29f64f4878cd9e73a235383145a4908cf0be1128"
+    },
+    {
+      "id": "E14",
+      "title": "A/B精确压缩核验",
+      "path": "apt_research_execution_20261030/runs/20261030T130726Z_fourstep_r2/receipts_final/COMPRESSION_FACTOR_READY.json",
+      "level": "实际输入核验",
+      "bytes": 50012,
+      "sha256": "f3acb35ae873b5055f2dd19763202ac2a4bbd2bfdf7e58e69e8abaa09464967a"
+    },
+    {
+      "id": "E15",
+      "title": "误差分解分析",
+      "path": "apt_research_error_decomposition_20261030/analysis-report.md",
+      "level": "严格分析",
+      "bytes": 7285,
+      "sha256": "2093f67893b86e0f2576fb72914802105c49dabd7c2cd41879f7cb8c65135be4"
+    },
+    {
+      "id": "E16",
+      "title": "成本比较的必要补充",
+      "path": "apt_research_error_decomposition_20261030/COST_SCOPE_ADDENDUM.md",
+      "level": "严格分析限定",
+      "bytes": 1378,
+      "sha256": "db3283a22b6f41a962fb7c335cf0199b95eb295d91f724fcdceee64623f695c9"
+    },
+    {
+      "id": "E17",
+      "title": "预算切片与随机路由统计",
+      "path": "apt_research_error_decomposition_20261030/artifacts/BUDGET_SUMMARY.csv",
+      "level": "描述统计",
+      "bytes": 1465,
+      "sha256": "875ca97803753fd7afe7bb52be7b84d2457d132e8b7bd9164edb4cc3cc5061a8"
+    },
+    {
+      "id": "E18",
+      "title": "17节点的窗口范围核验",
+      "path": "apt_research_error_decomposition_20261030/artifacts/CANDIDATE_SCOPE_AUDIT.json",
+      "level": "实际只读查询",
+      "bytes": 1245,
+      "sha256": "b328976af0949a519487c2ff9c6713a16ca0016123c9ba98fed5ca2f01402a0c"
+    },
+    {
+      "id": "E19",
+      "title": "16种前沿条件结果",
+      "path": "apt_research_frontier_localization_20261030/artifacts/CONDITION_PROFILES.csv",
+      "level": "实际组合诊断",
+      "bytes": 1134,
+      "sha256": "1cc96dd774e8fd7c9cbc66f58e1179afa10f422ddc097cb4c0850d0f8c59b86c"
+    },
+    {
+      "id": "E20",
+      "title": "17个匿名节点最小条件分类",
+      "path": "apt_research_frontier_localization_20261030/artifacts/FRONTIER_CASES.csv",
+      "level": "实际集合诊断",
+      "bytes": 1497,
+      "sha256": "cde9b223549da082bc256ad582b9bf19c168b4b26d4dc1d60fc26ff525f0c724"
+    },
+    {
+      "id": "E21",
+      "title": "前沿定位运行回执",
+      "path": "apt_research_frontier_localization_20261030/artifacts/RUN_RECEIPT.json",
+      "level": "实际运行回执",
+      "bytes": 1649,
+      "sha256": "5159f9a79ed0149529707fbac25eff2953f476a13043db02228298546302b66d"
+    },
+    {
+      "id": "E22",
+      "title": "私有上下文见证完整性核验",
+      "path": "apt_research_frontier_localization_20261030/artifacts/PRIVATE_WITNESS_AUDIT.json",
+      "level": "聚合回执，不含原生身份",
+      "bytes": 567,
+      "sha256": "ed778c734e65362354edf5c1c4b86c1c5f4f59f8525e7de0bb776c3850e01bb7"
+    },
+    {
+      "id": "E23",
+      "title": "见证时间组屏障核验",
+      "path": "apt_research_frontier_localization_20261030/witness_group_audit/WITNESS_GROUP_RECEIPT.json",
+      "level": "事后补充诊断",
+      "bytes": 799,
+      "sha256": "15f0495a1adb1a744138d291060c0fe20206efe4ace0b9ed420ad42c422457f9"
+    },
+    {
+      "id": "E24",
+      "title": "下一步三臂方案",
+      "path": "apt_research_frontier_localization_20261030/NEXT_PILOT_PROTOCOL.json",
+      "level": "计划，尚未运行",
+      "bytes": 1854,
+      "sha256": "714090b9d79c57f4bdb8b078efe6fd3319c8268f6ea6f70042cd1a8ea5866b21"
+    },
+    {
+      "id": "E25",
+      "title": "DGPR-V1历史研发报告",
+      "path": "dgpr_algorithm_development_20261027/FINAL_DGPR_RESEARCH_REPORT.md",
+      "level": "历史已执行，不在本次重跑",
+      "bytes": 6803,
+      "sha256": "285a4b4b8927a975f52def485d4e5795830e238e397b5ffb555d240bc859e564"
+    },
+    {
+      "id": "E26",
+      "title": "DGPR-V2历史研发报告",
+      "path": "dgpr_frontier_development_20261027/FINAL_DGPR_V2_RESEARCH_REPORT.md",
+      "level": "历史已执行，不在本次重跑",
+      "bytes": 6647,
+      "sha256": "57dd2087b74a820aec9eb8a641a1e14606191c5a075bb91697726c0331f89a27"
+    },
+    {
+      "id": "E27",
+      "title": "COWR历史研发报告",
+      "path": "cowr_cross_operation_development_20261027/FINAL_COWR_RESEARCH_REPORT.md",
+      "level": "历史已执行，不在本次重跑",
+      "bytes": 11321,
+      "sha256": "4ac12bba61d16b92f0b34010e3d23e8a37c6f360fbe2deacdbe6fcad06543017"
+    },
+    {
+      "id": "E28",
+      "title": "JACR历史研发报告",
+      "path": "jacr_joint_reconstruction_20261028/FINAL_JACR_RESEARCH_REPORT.md",
+      "level": "历史已执行，不在本次重跑",
+      "bytes": 10057,
+      "sha256": "e6833e7f0f98676252024213b8d2bb947aa784db1c6902dbcb7cb1b7db7d2bee"
+    },
+    {
+      "id": "E29",
+      "title": "误差分析统计边界",
+      "path": "apt_research_error_decomposition_20261030/stats-appendix.md",
+      "level": "统计限制",
+      "bytes": 1895,
+      "sha256": "812ba6ef4dcc335feaf02b79328946577ddf3bf166b4529fd162c3386b0dcf2f"
+    },
+    {
+      "id": "E30",
+      "title": "前沿诊断统计边界",
+      "path": "apt_research_frontier_localization_20261030/stats-appendix.md",
+      "level": "统计限制",
+      "bytes": 1477,
+      "sha256": "6cfcd434415f6459273ce748eb582199cb22ce996e327ce41a248648be57d7a9"
+    },
+    {
+      "id": "E31",
+      "title": "冻结检索控制的实际实现",
+      "path": "apt_research_execution_20261030/runs/20261030T130726Z_fourstep_r2/retrieval_experiment_v2.py",
+      "level": "实际执行源码",
+      "bytes": 15730,
+      "sha256": "43d246259d8d690075e0cac1e6d81de88f1592b1dee54e0669949310d5fbce35"
+    },
+    {
+      "id": "E32",
+      "title": "四步实验协议",
+      "path": "apt_research_execution_20261030/experiment_protocol.json",
+      "level": "运行前固定方案，原状态字段保留",
+      "bytes": 6433,
+      "sha256": "b4a1465ca1591238cfe8d855f3ce02dd2403fccd6c0efe558d372d54c0539f4c"
+    }
+  ],
+  "recent_delivery_manifests_rechecked": [
+    {
+      "files": 24,
+      "stage": "paired training"
+    },
+    {
+      "files": 28,
+      "stage": "frozen error decomposition"
+    },
+    {
+      "files": 30,
+      "stage": "frontier localization"
+    }
+  ],
+  "historical_execution_repeated": false,
+  "models_or_raw_archives_reread": false,
+  "no_obsidian_writeback": true,
+  "round_zero_is_document_placeholder": true
+}

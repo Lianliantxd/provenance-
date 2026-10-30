@@ -1,0 +1,14 @@
+{
+  "2026-10-31--apt-reconstruction--r00--progress-summary.md": "7bf9c045a358e00e2839d30e084e8eaeae22a752a557ba6e775f6c606905f220",
+  "SOURCE_LEDGER.json": "b09c6ef78f83a2996bb667eccfe1fb6ac5b8109f6f7bd0ef47f7aad415908799",
+  "SUMMARY_STATUS.json": "c98aa6a8199d3eed9745f6e9dab01e291ced95f9484c59886d75032c10a59425",
+  "assets/budget-sensitivity.pdf": "ee72ba451ef17b6d8c9f76ed8217273282f1eab86f230b7f16e5db71072a1488",
+  "assets/budget-sensitivity.png": "9ca6af9ebb8a58ec306f6db2ca6a535f84be65658fb8968d1539c4442d8a81ec",
+  "assets/frontier-coverage-cost.pdf": "69088b58e4251dc3c9ed145a69b578591daaf90d4870f61579a3214d718c600f",
+  "assets/frontier-coverage-cost.png": "571889523220668d0b480a5aa1060f122dc46f5c08d0ddf8311b020a088c2464",
+  "assets/frontier-node-classes.pdf": "856198a430576adb0f870ba662e4464a3e11f2e36ffe7aed6e35a5984dcc041f",
+  "assets/frontier-node-classes.png": "cd95b6718e2786e85b62738e935b39c29d7f108d0146d9e82bbd57f3b4a626d2",
+  "assets/loss-and-concentration.pdf": "4d84d7dce1be94e5f174414863b93c3ecb59326f5f4b999eb6a1848cf4de4e92",
+  "assets/loss-and-concentration.png": "3414316aff64fa34c475897a5cad8452417db65e859ae6b6cde9e79275b3a257",
+  "verify_summary.py": "545511c334006d50af9161baf7696aa33368bd77d9b5dc5d35fc96bb7f51b683"
+}

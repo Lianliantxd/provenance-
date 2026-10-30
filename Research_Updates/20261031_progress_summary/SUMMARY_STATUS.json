@@ -1,0 +1,20 @@
+{
+  "report_date": "2026-10-31",
+  "main_dataset": "DARPA TC E3 CADETS/CDM18",
+  "main_baseline": "ORTHRUS author implementation, single-case CPU pipeline complete; not full-paper replication",
+  "paired_epochs": 20,
+  "selected_epoch": 19,
+  "Q_count": 18,
+  "Q_reference_hits": 13,
+  "retrieval_prediction_files": 148,
+  "frontier_node_partition": [
+    14,
+    1,
+    2
+  ],
+  "three_arm_pilot_executed": false,
+  "paper_level_method_superiority_established": false,
+  "new_experiments_in_summary_task": 0,
+  "historical_work_reexecuted": false,
+  "historical_reports_are_not_current_reproduction_results": true
+}

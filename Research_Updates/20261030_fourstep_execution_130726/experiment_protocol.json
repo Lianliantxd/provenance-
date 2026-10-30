@@ -1,0 +1,80 @@
+{
+  "status": "PROPOSED_NEXT_EXPERIMENTS_NOT_RUN",
+  "task": "Alert-conditioned event retrieval under fixed investigation costs",
+  "primary_claim": "Event relevance retrieval; activity disentanglement requires separate independent membership references",
+  "development_case": "TC E3 CADETS graph_12, previously exposed",
+  "phase_0": {
+    "entrypoint": "run_weight_probe.py",
+    "validation_prefix_windows": 3,
+    "arms": ["local_epoch_1", "published_weights"],
+    "history": "empty at arm start, continuous across selected windows",
+    "purpose": "Check loading and describe scoring differences on identical features",
+    "not_identified": "The causal effect of feature-space mismatch"
+  },
+  "phase_1": {
+    "status": "NOT_RUN",
+    "scope": "Consistent local adaptation, not exact author reproduction",
+    "train_graphs": ["graph_3", "graph_4"],
+    "validation_graphs": ["graph_5"],
+    "development_test_graphs": ["graph_12"],
+    "word2vec_fit_scope": "Only entities and metadata visible in training graphs; metadata must not use future updates",
+    "word2vec_oov": "Average known-token vectors; if none, zero semantic vector with original node-type features retained; never normalize zero",
+    "word2vec_workers": 1,
+    "seed": 4,
+    "gnn_epochs": 20,
+    "checkpoint_selection": "Minimum event-weighted validation negative log likelihood; earliest epoch breaks ties",
+    "training_and_validation_history": "Reset at epoch start; process training in time order, then later validation; same policy at every checkpoint",
+    "development_test_history": "Restore selected checkpoint history and apply the predeclared validation-to-test policy; log unobserved gaps, do not manufacture missing events",
+    "selection_constraint": "Do not choose weights/checkpoints/thresholds using graph_12 labels",
+    "alert_threshold": "Common-input adaptation: threshold=max selected-checkpoint validation event loss; node score=max incident event loss, both endpoints; alert iff node_score > threshold; use_kmeans=false",
+    "author_original_alert_policy": "Frozen run has use_kmeans=true, kmeans_top_K=20: two-cluster KMeans on top-20 test node scores selects the higher-score cluster. This bypasses threshold-based decisions; preserve separately as original offline policy, not validation-only thresholding.",
+    "empty_alert_policy": "Record NO_ALERTS and skip conditioned retrieval; do not retune using development attack labels",
+    "q_policy": "Export only node identity, score, alert flag; freeze identities and their alert windows; no forced Q size of 16",
+    "required_artifacts": ["split_manifest", "fitted_word2vec", "checkpoint", "threshold_rule", "feature_manifest", "Q", "prediction_manifest"],
+    "note": "These split and parameter choices are a proposed starting protocol, not empirically optimal settings. Verify graph availability before execution."
+  },
+  "phase_2": {
+    "status": "NOT_RUN",
+    "diagnostic_target_fragments": 24,
+    "strata": ["shared_process_different_activity", "same_activity_across_processes", "ordinary_operation_relevant_in_context", "similar_benign_workflow"],
+    "reference_states": ["RELATED", "UNRELATED", "UNKNOWN"],
+    "reference_requirement": "Each RELATED/UNRELATED judgment needs evidence independent of model score and grouping rule; do not force filling strata",
+    "privacy": "No raw logs or credentials in public artifacts",
+    "sampling": "Document fixed strata and sample selection before reading model comparisons; hide method IDs/scores during adjudication",
+    "claim_limit": "24 fragments are diagnostic material, not 24 independent attacks and not a population-accuracy estimate"
+  },
+  "phase_3": {
+    "status": "NOT_RUN",
+    "input_versions": ["A_author_compressed_events", "B_retained_events_before_run_compression"],
+    "operation_vocabulary": "Identical between A/B initially; FORK/ACCEPT inclusion is a separate factor",
+    "q": "Same frozen phase_1 Q across all arms",
+    "candidate_policy": "Generate original neighbor relations once per input version; use induced restriction after truncation; identical candidates across methods within each version",
+    "candidate_start": "Events incident to frozen Q in their recorded alert windows; preserve equal per-anchor initial mass",
+    "candidate_parameters": {"before": 8, "after": 8, "max_gap_seconds": 300, "hops": 3, "max_events": 50000, "cross_author_window": false},
+    "candidate_reporting": "Report truncation and known-node coverage ceiling before interpreting ranking results; these bounds do not establish long-duration APT recovery",
+    "time_ties": "Adjacent timestamp groups; abstain when either group has multiple events, and report abstention rate",
+    "methods": ["frozen_node_anomaly_score", "time_distance", "first_order_diffusion", "operation_gate_only", "memory_only", "operation_plus_memory", "row_mass_preserving_route_shuffle"],
+    "restart_controls": [0.1, 0.2, 0.4, 0.6, 0.8],
+    "shuffle_seeds": [0, 1, 2, 3, 4],
+    "primary_node_budget": 100,
+    "primary_event_budget": 500,
+    "budget_scope": "Node budget includes Q; if Q exceeds a budget, record INFEASIBLE instead of silently changing Q or the budget",
+    "secondary_node_budgets": [25, 50, 200],
+    "secondary_event_budgets": [100, 2000],
+    "cost_reporting": "Report actual input records read and actual output events/nodes, not just budget ceilings",
+    "primary_endpoint": "New hits on fixed node reference at the primary budget; explicitly only a retrieval metric",
+    "secondary_endpoint": "Relevant/irrelevant/unknown event counts on the independently adjudicated subset; disclose selection and uncertainty",
+    "forbidden_inference": "Node-hit gains do not establish activity membership or causal path recovery"
+  },
+  "phase_4": {
+    "status": "NOT_RUN",
+    "holdout_rule": "Group by distinct attack instance/host/scenario and document prior exposure; nearby windows and random seeds are not independent attacks",
+    "stop_rules": [
+      "No independently supported activity-mixing examples: remove disentanglement motivation",
+      "Input repair explains gains: retain engineering result, withdraw mechanism attribution",
+      "Simple method matches result at comparable actual cost: remove unnecessary module",
+      "Only development-case gain: do not claim generalization",
+      "No independent event reference: keep event membership/causal metrics unavailable"
+    ]
+  }
+}

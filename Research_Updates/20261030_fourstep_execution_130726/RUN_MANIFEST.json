@@ -1,0 +1,32 @@
+{
+  "execution_id": "20261030T130726Z_fourstep_r2",
+  "final_report_generated_utc": "2026-10-30T15:08:00.238113+00:00",
+  "actual_execution": "existing server environment, CPU only",
+  "source_artifacts": "CODE_ORIGIN.json",
+  "phases": [
+    "paired_features_and_20_epoch_training",
+    "9_candidate_independent_diagnostic_reviews",
+    "frozen_Q_retrieval_controls_or_declared_budget_stop",
+    "post_freeze_evaluation_and_scientific_decision"
+  ],
+  "boundary_tests": {
+    "unique_cases": 20,
+    "local_cases": 13,
+    "server_cases": 7,
+    "scope": "implementation boundaries only"
+  },
+  "downloads": false,
+  "packages_installed": false,
+  "research_llm_calls": false,
+  "gpu_used": false,
+  "emails_sent": false,
+  "raw_logs_in_public_release": false,
+  "historical_outputs_overwritten": false,
+  "new_followup_stage_started": false,
+  "private_total_files_read_and_io_bytes": "NOT_MEASURED",
+  "training_selected_raw_read_bytes": 19278748727,
+  "training_selected_raw_lines": 22345275,
+  "whole_task_wall_clock": "NOT_MEASURED; runner/arm timings retained in reports",
+  "resource_limit": "20 GiB address-space main runner; CPU4 main training; auxiliary CPU probes separately recorded",
+  "synchronization": "verified separately by private server/GitHub receipts"
+}

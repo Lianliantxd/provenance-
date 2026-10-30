@@ -1,0 +1,51 @@
+{
+  "training": "TWENTY_EPOCH_TRAINING_COMPLETE",
+  "selected_epoch": 19,
+  "validation_loss": 0.45511423790640104,
+  "threshold": 12.888322830200195,
+  "Q_count": 18,
+  "retrieval": {
+    "status": "POST_FREEZE_EVALUATION_COMPLETE",
+    "predictions_checked": 148,
+    "predictions_unchanged": true,
+    "reference_scope": "43 positive nodes + 3 limited development event targets; no confirmed negative event reference",
+    "independent_attack_count": 1,
+    "random_seeds_are_not_independent_attacks": true
+  },
+  "scientific_decision": {
+    "status": "DEVELOPMENT_RETRIEVAL_CONTROLS_COMPLETE_NO_ACTIVITY_OR_CAUSAL_CLAIM",
+    "paired_training_complete": true,
+    "epochs": 20,
+    "selected_epoch": 19,
+    "validation_loss": 0.45511423790640104,
+    "threshold": 12.888322830200195,
+    "Q_count": 18,
+    "prediction_files": 148,
+    "primary_feasible_outputs": 22,
+    "activity_mixing_confirmed": false,
+    "diagnostic_fragments": 9,
+    "raw_witness_records": 18,
+    "activity_membership_qualified": 0,
+    "limited_relevance_event_targets": 3,
+    "limited_legacy_omission_fragments": 1,
+    "verified_negative_activity_references": 0,
+    "independent_heldout_attacks": 0,
+    "simple_methods_matching_full_at_no_greater_output_cost": [
+      {
+        "input": "A",
+        "method": "frozen_node_anomaly_score"
+      },
+      {
+        "input": "A",
+        "method": "time_distance"
+      }
+    ],
+    "mechanism_superiority_established": false,
+    "generalization_established": false,
+    "true_precision": null,
+    "activity_f1": null,
+    "causal_path_f1": null,
+    "next_action": "REVIEW_FROZEN_DEVELOPMENT_RESULTS_BEFORE_ANY_NEW_EXPERIMENT",
+    "automatic_next_stage_authorized": false
+  }
+}

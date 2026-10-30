@@ -1,0 +1,17 @@
+{
+  "reference_sha256": "41b60345dcb551b5899b11fb116dc240493931a97ea3acd92c19d9a8a7730e88",
+  "reference_nodes": 43,
+  "reference_nodes_in_scored_universe": 41,
+  "scored_nodes": 100786,
+  "Q_count": 18,
+  "Q_annotation_hits": 13,
+  "Q_recall43": 0.3023255813953488,
+  "Q_reference_overlap_fraction": 0.7222222222222222,
+  "unannotated_Q_nodes": 5,
+  "unannotated_semantics": "UNKNOWN, not verified benign",
+  "true_attack_precision": null,
+  "activity_membership_f1": null,
+  "causal_edge_f1": null,
+  "causal_path_f1": null,
+  "claim_scope": "controlled adaptation, exposed development case, validation-only checkpoint/threshold selection"
+}

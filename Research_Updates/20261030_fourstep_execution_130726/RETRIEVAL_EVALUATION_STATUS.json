@@ -1,0 +1,8 @@
+{
+  "status": "POST_FREEZE_EVALUATION_COMPLETE",
+  "predictions_checked": 148,
+  "predictions_unchanged": true,
+  "reference_scope": "43 positive nodes + 3 limited development event targets; no confirmed negative event reference",
+  "independent_attack_count": 1,
+  "random_seeds_are_not_independent_attacks": true
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "input": "A",
+    "candidate_node_annotation_hits": 24,
+    "candidate_node_recall43_ceiling": 0.5581395348837209,
+    "limited_event_targets_in_candidates": 3
+  },
+  {
+    "input": "B",
+    "candidate_node_annotation_hits": 24,
+    "candidate_node_recall43_ceiling": 0.5581395348837209,
+    "limited_event_targets_in_candidates": 3
+  }
+]

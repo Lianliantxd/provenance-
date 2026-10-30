@@ -1,0 +1,68 @@
+{
+  "status": "DEVELOPMENT_RETRIEVAL_CONTROLS_COMPLETE_NO_ACTIVITY_OR_CAUSAL_CLAIM",
+  "paired_training_complete": true,
+  "epochs": 20,
+  "selected_epoch": 19,
+  "validation_loss": 0.45511423790640104,
+  "threshold": 12.888322830200195,
+  "Q_count": 18,
+  "prediction_files": 148,
+  "primary_feasible_outputs": 22,
+  "activity_mixing_confirmed": false,
+  "diagnostic_fragments": 9,
+  "raw_witness_records": 18,
+  "activity_membership_qualified": 0,
+  "limited_relevance_event_targets": 3,
+  "limited_legacy_omission_fragments": 1,
+  "verified_negative_activity_references": 0,
+  "independent_heldout_attacks": 0,
+  "simple_methods_matching_full_at_no_greater_output_cost": [
+    {
+      "input": "A",
+      "method": "frozen_node_anomaly_score"
+    },
+    {
+      "input": "A",
+      "method": "time_distance"
+    }
+  ],
+  "mechanism_superiority_established": false,
+  "generalization_established": false,
+  "true_precision": null,
+  "activity_f1": null,
+  "causal_path_f1": null,
+  "next_action": "REVIEW_FROZEN_DEVELOPMENT_RESULTS_BEFORE_ANY_NEW_EXPERIMENT",
+  "automatic_next_stage_authorized": false,
+  "candidate_reference_node_ceiling": {
+    "A": 24,
+    "B": 24
+  },
+  "scored_reference_nodes": 41,
+  "primary_full_annotation_hits": {
+    "A": 22,
+    "B": 22
+  },
+  "primary_shuffle_annotation_hits": {
+    "A": [
+      23,
+      23,
+      23,
+      24,
+      23
+    ],
+    "B": [
+      23,
+      23,
+      23,
+      23,
+      23
+    ]
+  },
+  "nonconverged_sensitivity_conditions": [
+    "A first_order alpha0.1",
+    "B first_order alpha0.1"
+  ],
+  "primary_alpha_converged": true,
+  "action": "RETAIN_PAIRED_ENGINEERING_ARTIFACTS_WITHDRAW_MECHANISM_GAIN_CLAIM",
+  "input_expansion_primary_gain_observed": false
+}

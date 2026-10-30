@@ -1,0 +1,6 @@
+{
+  "exit_code": 0,
+  "output": "test_all_minimal_alternatives_retained (test_frontier_core.TestFrontier) ... ok\ntest_eight_group_limit_changes_shortest_hops (test_frontier_core.TestFrontier) ... ok\ntest_exhaustive_small_random_graph_comparison (test_frontier_core.TestFrontier) ... ok\ntest_gap_boundary_and_hops (test_frontier_core.TestFrontier) ... ok\ntest_tie_barrier_is_not_a_total_order (test_frontier_core.TestFrontier) ... ok\ntest_window_separation (test_frontier_core.TestFrontier) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.042s\n\nOK\n",
+  "unit_test_methods": 6,
+  "randomized_graph_comparisons": 240
+}

@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "scope": "posthoc saved context witnesses only",
+  "witness_sha256": "14455534351134c9982871ad8b9dd1f9a59aeda3e68b9a1d0ff244583bdf154d",
+  "context_steps": 36,
+  "steps_unavailable_under_baseline": 28,
+  "baseline_block_reason_step_counts_overlapping": {
+    "INTERMEDIATE_GROUP_BARRIER": 19,
+    "SOURCE_GROUP_ABSTENTION": 24,
+    "TARGET_GROUP_BARRIER": 26,
+    "NEIGHBOR_GROUP_LIMIT": 1
+  },
+  "equal_timestamp_steps": 0,
+  "group_queries": 36,
+  "matching_event_rows_aggregated_including_repeats": 589,
+  "database_size_mtime_unchanged": true,
+  "physical_io_bytes": "NOT_MEASURED",
+  "wall_seconds": 0.014795094262808561,
+  "raw_archive_reads": 0,
+  "model_runs": 0,
+  "interpretation": "reasons overlap; group abstention/barrier checks do not prove attack causality"
+}

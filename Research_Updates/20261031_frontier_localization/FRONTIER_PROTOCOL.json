@@ -1,0 +1,24 @@
+{
+  "task": "FROZEN_FRONTIER_LOCALIZATION",
+  "input": "A compressed only",
+  "baseline": {
+    "hop_limit": 3,
+    "neighbors_each_direction": 8,
+    "max_gap_seconds": 300,
+    "ties": "source abstention and target barrier",
+    "event_limit": 50000
+  },
+  "profiles": "all 16 combinations of relaxing hops, neighbors, gap and unordered tie context",
+  "unlimited_scope": "finite existing input within the same frozen alert windows; no new data",
+  "baseline_replay_required": true,
+  "labels": "reference read after unlabeled traversals; retrospective diagnosis only",
+  "bounds": {
+    "test_records": 526169,
+    "loaded_alert_window_events": 30000,
+    "seconds": 120,
+    "address_space_gib": 2,
+    "cpu_affinity_count": 1
+  },
+  "forbidden_claim": "shared-entity context reachability does not prove native dependency, attack membership or causality",
+  "no_new_model_or_ranked_predictions": true
+}

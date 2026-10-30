@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "private_file_sha256": "14455534351134c9982871ad8b9dd1f9a59aeda3e68b9a1d0ff244583bdf154d",
+  "private_bytes": 22323,
+  "target_nodes": 17,
+  "nodes_with_witnesses": 15,
+  "context_witness_paths": 16,
+  "context_hop_histogram": {
+    "2": 3,
+    "1": 5,
+    "3": 7,
+    "4": 1
+  },
+  "paths_using_equal_timestamp_context_steps": 0,
+  "maximum_context_hops": 4,
+  "all_steps_share_an_entity": true,
+  "all_paths_within_one_frozen_window": true,
+  "semantics": "context only; no ordering among equal timestamps or attack causality established"
+}

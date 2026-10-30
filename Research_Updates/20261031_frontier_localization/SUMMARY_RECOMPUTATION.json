@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "current_analysis_code_reproduced_decision_object": true,
+  "decision_byte_layout_equal": false,
+  "note": "JSON key order differs from interim draft; canonical objects are identical; delivery hash is frozen only after this check",
+  "current_analysis_code_reproduced_supplemental_record_bytes": true,
+  "new_model_runs": 0
+}

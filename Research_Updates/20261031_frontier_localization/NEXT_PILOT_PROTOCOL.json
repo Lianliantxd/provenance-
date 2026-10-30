@@ -1,0 +1,41 @@
+{
+  "task": "THREE_ARM_CANDIDATE_POLICY_PILOT_WITH_FROZEN_RANKER",
+  "status": "PROPOSED_NOT_RUN",
+  "predictions_generated": false,
+  "design_origin": "after observed development errors; not a preregistered untouched validation",
+  "input": "existing A compressed input and frozen Q only",
+  "candidate_policies": {
+    "C0": "original strict source-group abstention and target barriers; 8 groups / 300s / 3 hops",
+    "C1": "allow shared-entity context between distinct timestamp groups; no direct within-timestamp links; retain unknown intra-group order; 8 groups / 300s / 3 hops",
+    "C2": "ordinary same-window shared-entity connected components incident to the same Q seed events; simple strong coverage control"
+  },
+  "C1_implementation_status": "planned extension; not presented as executed",
+  "common_ranker": "existing frozen endpoint-max anomaly score, unchanged",
+  "common_decoder": "same original deterministic node/event decoder including all Q",
+  "primary_node_cap": 100,
+  "primary_event_cap": 500,
+  "candidate_event_cap": 50000,
+  "labels_in_generation": false,
+  "freeze_before_evaluation": true,
+  "primary_endpoint": "new hits beyond Q on fixed 43-node reference, development retrieval only",
+  "costs": [
+    "full input records",
+    "candidate events and nodes",
+    "actual returned records and nodes",
+    "runtime",
+    "memory"
+  ],
+  "unavailable_metrics": [
+    "true attack precision",
+    "activity F1",
+    "causal path F1"
+  ],
+  "no_new_training_or_llm": true,
+  "no_new_operation_vocabulary": true,
+  "stops": [
+    "If C1 does not improve C0, do not claim candidate-policy retrieval gain",
+    "If simple C2 matches C1, do not claim special group-mechanism necessity",
+    "Any gain remains exposed-development retrieval evidence, not independent validation or originality"
+  ],
+  "automatic_execution": false
+}

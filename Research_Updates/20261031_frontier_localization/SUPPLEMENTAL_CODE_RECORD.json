@@ -1,0 +1,6 @@
+{
+  "file": "audit_witness_groups.py",
+  "sha256": "01171e1eb358786955807b09d66711657eae424fe8af280f0c86d7cd76ab3144",
+  "timing": "recorded after supplemental diagnostic execution; not a preregistration",
+  "purpose": "validate saved context witness group barriers without generating predictions"
+}

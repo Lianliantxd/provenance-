@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "input": "A_author_compressed",
+  "selected_records_scanned": 526169,
+  "selected_rows_sha256": "d1aa51e690c590ffe842080f816045b98431178c50925482956aa765833d7024",
+  "events_in_frozen_alert_windows": 29072,
+  "seed_events": 113,
+  "baseline_candidate_events": 966,
+  "baseline_exactly_reproduced": true,
+  "target_reference_nodes": 17,
+  "profiles": 16,
+  "raw_archive_reads": 0,
+  "model_runs": 0,
+  "new_ranked_predictions": 0,
+  "sqlite_size_mtime_unchanged": true,
+  "source_metadata_hashes_unchanged": true,
+  "reference_read_after_unlabeled_traversals": true,
+  "semantics": "retrospective shared-entity context reachability; no attack causality claims",
+  "wall_seconds": 4.679926248267293,
+  "peak_rss_kib": 263268,
+  "CPU_affinity": [
+    0
+  ],
+  "address_space_limit_bytes": 2147483648,
+  "time_limit_seconds": 120,
+  "physical_io_bytes": "NOT_MEASURED",
+  "input_metadata": {
+    "PREDICTION_FREEZE.json": {
+      "bytes": 14161,
+      "sha256": "ad88c2e86ae1dac254ccf95314d0ade86250a6a56b67c4b18d988925e492edfc"
+    },
+    "Q.json": {
+      "bytes": 4395,
+      "sha256": "224f283563e17230692b10034c817e1b40e31fc282025d207e20473090361c8e"
+    },
+    "NODE_SCORES.json": {
+      "bytes": 14523818,
+      "sha256": "28cb4a2728516afd3de99aa240c48ac5999741d259863ab9431ab0cebb843528"
+    },
+    "retrieval_predictions/CANDIDATE_RECORDS_A.json": {
+      "bytes": 219447,
+      "sha256": "b7829c504f7593c209a96265b0b36b8eac7aac477f9ed420b8edba59368ba644"
+    },
+    "private_node_uuid_map.json": {
+      "bytes": 20942227,
+      "sha256": "2db7bbcf7da98b94eb218d4439973a783f20c4152df17f67951bcf58dd0180f7"
+    }
+  }
+}
